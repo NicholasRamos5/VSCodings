@@ -40,6 +40,22 @@
   
 
   
+      ,"page3": {
+          "title": "Notes",
+          "content": "Hello my name is Nicholas .",
+          "url": "https://nicholasramos5.github.io/VSCodings/notes/",
+          "relUrl": "/notes/",
+          "date": ""
+      }
+      
+  
+
+  
+  
+
+  
+
+  
   
 
   
@@ -48,18 +64,13 @@
   
 
   
-
-  
   
 
   
   
 
   
-  
-
-  
-      ,"page10": {
+      ,"page11": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://nicholasramos5.github.io/VSCodings/robots.txt",
