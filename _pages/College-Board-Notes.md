@@ -9,11 +9,11 @@ A collection of College Board tools and learning for CSA.
 
 [Code.org Link](https://studio.code.org/s/csa1-2022)
 
-## 
+## Unit 1: Primitive Types
 
 > Learn the fundamentals of Java, a programming language, as well as other foundational concepts for coding like primitives.
 
-- [Primitives](https://dontran15.github.io/CSAFastPages/java/primitives/2022/08/23/primitives.html)
+- [Primitives]
 
 ## Unit 2: Using Objects
 
