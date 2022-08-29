@@ -1,3 +1,10 @@
+---
+layout: page
+title: Bash Notebook
+toc: true
+search_exclude: true
+---
+
 {
  "cells": [
   {
