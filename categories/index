@@ -4,20 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Notes | Nicholas’ fastpages</title>
+<title>College Board Notes | Nicholas’ fastpages</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Notes" />
+<meta property="og:title" content="College Board Notes" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="A very cool blog platform" />
 <meta property="og:description" content="A very cool blog platform" />
-<link rel="canonical" href="https://nicholasramos5.github.io/VSCodings/notes/" />
-<meta property="og:url" content="https://nicholasramos5.github.io/VSCodings/notes/" />
+<link rel="canonical" href="https://nicholasramos5.github.io/VSCodings/categories/" />
+<meta property="og:url" content="https://nicholasramos5.github.io/VSCodings/categories/" />
 <meta property="og:site_name" content="Nicholas’ fastpages" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Notes" />
+<meta property="twitter:title" content="College Board Notes" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"A very cool blog platform","headline":"Notes","url":"https://nicholasramos5.github.io/VSCodings/notes/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"A very cool blog platform","headline":"College Board Notes","url":"https://nicholasramos5.github.io/VSCodings/categories/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/VSCodings/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://nicholasramos5.github.io/VSCodings/feed.xml" title="Nicholas' fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/VSCodings/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -69,19 +69,11 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <article class="post">
+        <div class="home">
 
-  <header class="post-header">
-    <h1 class="post-title">Notes</h1>
-  </header>
+College Board Notes Example
 
-  <div class="post-content">
-    <p>Hello my name is Nicholas</p>
-
-  </div>
-
-</article>
-
+</div>
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/VSCodings/"></data>
