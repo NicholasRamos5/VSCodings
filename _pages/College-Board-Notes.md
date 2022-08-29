@@ -5,11 +5,11 @@ toc: true
 search_exclude: true
 ---
 
-A collection of my College Board tools and learning for CSA. It'll contain test prep notes, college board notes, and other resources for each unit up until the AP Exam. I'm so looking forward to this! :|
+A collection of College Board tools and learning for CSA.
 
 [Code.org Link](https://studio.code.org/s/csa1-2022)
 
-## Unit 1: Primitive Types
+## 
 
 > Learn the fundamentals of Java, a programming language, as well as other foundational concepts for coding like primitives.
 
