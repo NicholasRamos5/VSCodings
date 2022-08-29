@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Bash Notebook | Nicholas’ fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Bash Notebook" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A very cool blog platform" />
+<meta property="og:description" content="A very cool blog platform" />
+<link rel="canonical" href="https://nicholasramos5.github.io/VSCodings/_pages/Bash-Notebook.html" />
+<meta property="og:url" content="https://nicholasramos5.github.io/VSCodings/_pages/Bash-Notebook.html" />
+<meta property="og:site_name" content="Nicholas’ fastpages" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Bash Notebook" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"A very cool blog platform","headline":"Bash Notebook","url":"https://nicholasramos5.github.io/VSCodings/_pages/Bash-Notebook.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/VSCodings/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://nicholasramos5.github.io/VSCodings/feed.xml" title="Nicholas' fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/VSCodings/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/VSCodings/">Nicholas&#39; fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/VSCodings/_pages/Bash-Notebook.html">Bash Notebook</a><a class="page-link" href="/VSCodings/_pages/College-Board-Notes.html">College Board Notes</a><a class="page-link" href="/VSCodings/_pages/PBL.html">PBL</a><a class="page-link" href="/VSCodings/about/">About Me</a><a class="page-link" href="/VSCodings/notes/">Notes</a><a class="page-link" href="/VSCodings/search/">Search</a><a class="page-link" href="/VSCodings/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Bash Notebook</h1>
+  </header>
+
+  <div class="post-content">
+    <p>{
+ “cells”: [
+  {
+   “cell_type”: “markdown”,
+   “metadata”: {},
+   “source”: [
+    “# "Bash Notebook"\n”,
+    “&gt; "Key Tools for Bash proof"\n”,
+    “\n”,
+    “- toc: true\n”,
+    “- branch: master\n”,
+    “- badges: true\n”,
+    “- comments: true\n”,
+    “- categories: [KeyLearnings]”
+   ]
+  },
+  {
+   “cell_type”: “markdown”,
+   “metadata”: {},
+   “source”: [
+    “# Checking if Java and Anaconda are installed”
+   ]
+  },
+  {
+   “cell_type”: “code”,
+   “execution_count”: 1,
+   “metadata”: {
+    “vscode”: {
+     “languageId”: “shellscript”
+    }
+   },
+   “outputs”: [
+    {
+     “name”: “stdout”,
+     “output_type”: “stream”,
+     “text”: [
+      “Lets check if Java is installed\n”,
+      “java 18.0.2.1 2022-08-18\n”,
+      “Java(TM) SE Runtime Environment (build 18.0.2.1+1-1)\n”,
+      “Java HotSpot(TM) 64-Bit Server VM (build 18.0.2.1+1-1, mixed mode, sharing)\n”,
+      “\n”,
+      “Lets check if Annaconda is installed\n”,
+      “# packages in environment at /Users/nathanmanangan/opt/anaconda3:\n”,
+      “#\n”,
+      “# Name                    Version                   Build  Channel\n”,
+      “_ipyw_jlab_nb_ext_conf    0.1.0            py39hecd8cb5_1  \n”,
+      “aiohttp                   3.8.1            py39hca72f7f_1  \n”,
+      “aiosignal                 1.2.0              pyhd3eb1b0_0  \n”,
+      “alabaster                 0.7.12             pyhd3eb1b0_0  \n”,
+      “anaconda                  2022.05                  py39_0  \n”,
+      “anaconda-client           1.9.0            py39hecd8cb5_0  \n”,
+      “anaconda-navigator        2.1.4            py39hecd8cb5_0  \n”,
+      “anaconda-project          0.10.2             pyhd3eb1b0_0  \n”,
+      “anyio                     3.5.0            py39hecd8cb5_0  \n”,
+      “appdirs                   1.4.4              pyhd3eb1b0_0  \n”,
+      “applaunchservices         0.2.1              pyhd3eb1b0_0  \n”,
+      “appnope                   0.1.2           py39hecd8cb5_1001  \n”,
+      “appscript                 1.1.2            py39h9ed2024_0  \n”,
+      “argon2-cffi               21.3.0             pyhd3eb1b0_0  \n”,
+      “argon2-cffi-bindings      21.2.0           py39hca72f7f_0  \n”,
+      “arrow                     1.2.2              pyhd3eb1b0_0  \n”,
+      “astroid                   2.6.6            py39hecd8cb5_0  \n”,
+      “astropy                   5.0.4            py39h67323c0_0  \n”,
+      “asttokens                 2.0.5              pyhd3eb1b0_0  \n”,
+      “async-timeout             4.0.1              pyhd3eb1b0_0  \n”,
+      “atomicwrites              1.4.0                      py_0  \n”,
+      “attrs                     21.4.0             pyhd3eb1b0_0  \n”,
+      “automat                   20.2.0                     py_0  \n”,
+      “autopep8                  1.6.0              pyhd3eb1b0_0  \n”,
+      “babel                     2.9.1              pyhd3eb1b0_0  \n”,
+      “backcall                  0.2.0              pyhd3eb1b0_0  \n”,
+      “backports                 1.1                pyhd3eb1b0_0  \n”,
+      “backports.functools_lru_cache 1.6.4              pyhd3eb1b0_0  \n”,
+      “backports.tempfile        1.0                pyhd3eb1b0_1  \n”,
+      “backports.weakref         1.0.post1                  py_1  \n”,
+      “bash-kernel               0.7.2                    pypi_0    pypi\n”,
+      “bcrypt                    3.2.0            py39h9ed2024_0  \n”,
+      “beautifulsoup4            4.11.1           py39hecd8cb5_0  \n”,
+      “binaryornot               0.4.4              pyhd3eb1b0_1  \n”,
+      “bitarray                  2.4.1            py39hca72f7f_0  \n”,
+      “bkcharts                  0.2              py39hecd8cb5_0  \n”,
+      “black                     19.10b0                    py_0  \n”,
+      “blas                      1.0                         mkl  \n”,
+      “bleach                    4.1.0              pyhd3eb1b0_0  \n”,
+      “blosc                     1.21.0               h2842e9f_0  \n”,
+      “bokeh                     2.4.2            py39hecd8cb5_0  \n”,
+      “boto3                     1.21.32            pyhd3eb1b0_0  \n”,
+      “botocore                  1.24.32            pyhd3eb1b0_0  \n”,
+      “bottleneck                1.3.4            py39h67323c0_0  \n”,
+      “brotli                    1.0.9                hb1e8313_2  \n”,
+      “brotlipy                  0.7.0           py39h9ed2024_1003  \n”,
+      “brunsli                   0.1                  h23ab428_0  \n”,
+      “bzip2                     1.0.8                h1de35cc_0  \n”,
+      “c-ares                    1.18.1               hca72f7f_0  \n”,
+      “ca-certificates           2022.3.29            hecd8cb5_1  \n”,
+      “cachetools                4.2.2              pyhd3eb1b0_0  \n”,
+      “certifi                   2021.10.8        py39hecd8cb5_2  \n”,
+      “cffi                      1.15.0           py39hc55c11b_1  \n”,
+      “cfitsio                   3.470                hee0f690_6  \n”,
+      “chardet                   4.0.0           py39hecd8cb5_1003  \n”,
+      “charls                    2.2.0                h23ab428_0  \n”,
+      “charset-normalizer        2.0.4              pyhd3eb1b0_0  \n”,
+      “click                     8.0.4            py39hecd8cb5_0  \n”,
+      “cloudpickle               2.0.0              pyhd3eb1b0_0  \n”,
+      “clyent                    1.2.2            py39hecd8cb5_1  \n”,
+      “colorama                  0.4.4              pyhd3eb1b0_0  \n”,
+      “colorcet                  2.0.6              pyhd3eb1b0_0  \n”,
+      “conda                     4.13.0           py39hecd8cb5_0  \n”,
+      “conda-build               3.21.8           py39hecd8cb5_2  \n”,
+      “conda-content-trust       0.1.1              pyhd3eb1b0_0  \n”,
+      “conda-env                 2.6.0                         1  \n”,
+      “conda-pack                0.6.0              pyhd3eb1b0_0  \n”,
+      “conda-package-handling    1.8.1            py39hca72f7f_0  \n”,
+      “conda-repo-cli            1.0.4              pyhd3eb1b0_0  \n”,
+      “conda-token               0.3.0              pyhd3eb1b0_0  \n”,
+      “conda-verify              3.4.2                      py_1  \n”,
+      “constantly                15.1.0             pyh2b92418_0  \n”,
+      “cookiecutter              1.7.3              pyhd3eb1b0_0  \n”,
+      “cryptography              3.4.8            py39h2fd3fbb_0  \n”,
+      “cssselect                 1.1.0              pyhd3eb1b0_0  \n”,
+      “curl                      7.82.0               hca72f7f_0  \n”,
+      “cycler                    0.11.0             pyhd3eb1b0_0  \n”,
+      “cython                    0.29.28          py39he9d5cce_0  \n”,
+      “cytoolz                   0.11.0           py39h9ed2024_0  \n”,
+      “daal4py                   2021.5.0         py39h24a4e90_0  \n”,
+      “dal                       2021.5.0           hecd8cb5_782  \n”,
+      “dask                      2022.2.1           pyhd3eb1b0_0  \n”,
+      “dask-core                 2022.2.1           pyhd3eb1b0_0  \n”,
+      “dataclasses               0.8                pyh6d0b6a4_7  \n”,
+      “datashader                0.13.0             pyhd3eb1b0_1  \n”,
+      “datashape                 0.5.4            py39hecd8cb5_1  \n”,
+      “debugpy                   1.5.1            py39he9d5cce_0  \n”,
+      “decorator                 5.1.1              pyhd3eb1b0_0  \n”,
+      “defusedxml                0.7.1              pyhd3eb1b0_0  \n”,
+      “diff-match-patch          20200713           pyhd3eb1b0_0  \n”,
+      “distributed               2022.2.1           pyhd3eb1b0_0  \n”,
+      “docutils                  0.17.1           py39hecd8cb5_1  \n”,
+      “entrypoints               0.4              py39hecd8cb5_0  \n”,
+      “et_xmlfile                1.1.0            py39hecd8cb5_0  \n”,
+      “executing                 0.8.3              pyhd3eb1b0_0  \n”,
+      “filelock                  3.6.0              pyhd3eb1b0_0  \n”,
+      “flake8                    3.9.2              pyhd3eb1b0_0  \n”,
+      “flask                     1.1.2              pyhd3eb1b0_0  \n”,
+      “fonttools                 4.25.0             pyhd3eb1b0_0  \n”,
+      “freetype                  2.11.0               hd8bbffd_0  \n”,
+      “frozenlist                1.2.0            py39hca72f7f_0  \n”,
+      “fsspec                    2022.2.0           pyhd3eb1b0_0  \n”,
+      “future                    0.18.2           py39hecd8cb5_1  \n”,
+      “gensim                    4.1.2            py39he9d5cce_0  \n”,
+      “giflib                    5.2.1                haf1e3a3_0  \n”,
+      “glob2                     0.7                pyhd3eb1b0_0  \n”,
+      “gmp                       6.2.1                h23ab428_2  \n”,
+      “gmpy2                     2.1.2            py39hd5de756_0  \n”,
+      “google-api-core           1.25.1             pyhd3eb1b0_0  \n”,
+      “google-auth               1.33.0             pyhd3eb1b0_0  \n”,
+      “google-cloud-core         1.7.1              pyhd3eb1b0_0  \n”,
+      “google-cloud-storage      1.31.0                     py_0  \n”,
+      “google-crc32c             1.1.2            py39h9ed2024_0  \n”,
+      “google-resumable-media    1.3.1              pyhd3eb1b0_1  \n”,
+      “googleapis-common-protos  1.53.0           py39hecd8cb5_0  \n”,
+      “greenlet                  1.1.1            py39h23ab428_0  \n”,
+      “grpcio                    1.42.0           py39ha29bfda_0  \n”,
+      “h5py                      3.6.0            py39h4a1dd59_0  \n”,
+      “hdf5                      1.10.6               hdbbcd12_0  \n”,
+      “heapdict                  1.0.1              pyhd3eb1b0_0  \n”,
+      “holoviews                 1.14.8             pyhd3eb1b0_0  \n”,
+      “hvplot                    0.7.3              pyhd3eb1b0_1  \n”,
+      “hyperlink                 21.0.0             pyhd3eb1b0_0  \n”,
+      “icu                       58.2                 h0a44026_3  \n”,
+      “idna                      3.3                pyhd3eb1b0_0  \n”,
+      “imagecodecs               2021.8.26        py39ha952a84_0  \n”,
+      “imageio                   2.9.0              pyhd3eb1b0_0  \n”,
+      “imagesize                 1.3.0              pyhd3eb1b0_0  \n”,
+      “importlib-metadata        4.11.3           py39hecd8cb5_0  \n”,
+      “importlib_metadata        4.11.3               hd3eb1b0_0  \n”,
+      “incremental               21.3.0             pyhd3eb1b0_0  \n”,
+      “inflection                0.5.1            py39hecd8cb5_0  \n”,
+      “iniconfig                 1.1.1              pyhd3eb1b0_0  \n”,
+      “intake                    0.6.5              pyhd3eb1b0_0  \n”,
+      “intel-openmp              2021.4.0          hecd8cb5_3538  \n”,
+      “intervaltree              3.1.0              pyhd3eb1b0_0  \n”,
+      “ipykernel                 6.9.1            py39hecd8cb5_0  \n”,
+      “ipython                   8.2.0            py39hecd8cb5_0  \n”,
+      “ipython_genutils          0.2.0              pyhd3eb1b0_1  \n”,
+      “ipywidgets                7.6.5              pyhd3eb1b0_1  \n”,
+      “isort                     5.9.3              pyhd3eb1b0_0  \n”,
+      “itemadapter               0.3.0              pyhd3eb1b0_0  \n”,
+      “itemloaders               1.0.4              pyhd3eb1b0_1  \n”,
+      “itsdangerous              2.0.1              pyhd3eb1b0_0  \n”,
+      “jdcal                     1.4.1              pyhd3eb1b0_0  \n”,
+      “jedi                      0.18.1           py39hecd8cb5_1  \n”,
+      “jinja2                    2.11.3             pyhd3eb1b0_0  \n”,
+      “jinja2-time               0.2.0              pyhd3eb1b0_3  \n”,
+      “jmespath                  0.10.0             pyhd3eb1b0_0  \n”,
+      “joblib                    1.1.0              pyhd3eb1b0_0  \n”,
+      “jpeg                      9e                   hca72f7f_0  \n”,
+      “jq                        1.6               h9ed2024_1000  \n”,
+      “json5                     0.9.6              pyhd3eb1b0_0  \n”,
+      “jsonschema                4.4.0            py39hecd8cb5_0  \n”,
+      “jupyter                   1.0.0            py39hecd8cb5_7  \n”,
+      “jupyter_client            6.1.12             pyhd3eb1b0_0  \n”,
+      “jupyter_console           6.4.0              pyhd3eb1b0_0  \n”,
+      “jupyter_core              4.9.2            py39hecd8cb5_0  \n”,
+      “jupyter_server            1.13.5             pyhd3eb1b0_0  \n”,
+      “jupyterlab                3.3.2              pyhd3eb1b0_0  \n”,
+      “jupyterlab_pygments       0.1.2                      py_0  \n”,
+      “jupyterlab_server         2.10.3             pyhd3eb1b0_1  \n”,
+      “jupyterlab_widgets        1.0.0              pyhd3eb1b0_1  \n”,
+      “jxrlib                    1.1                  haf1e3a3_2  \n”,
+      “keyring                   23.4.0           py39hecd8cb5_0  \n”,
+      “kiwisolver                1.3.2            py39he9d5cce_0  \n”,
+      “krb5                      1.19.2               hcd88c3b_0  \n”,
+      “lazy-object-proxy         1.6.0            py39h9ed2024_0  \n”,
+      “lcms2                     2.12                 hf1fd2bf_0  \n”,
+      “lerc                      3.0                  he9d5cce_0  \n”,
+      “libaec                    1.0.4                hb1e8313_1  \n”,
+      “libarchive                3.4.2                haa3ed63_0  \n”,
+      “libcrc32c                 1.1.1                hb1e8313_2  \n”,
+      “libcurl                   7.82.0               h6dfd666_0  \n”,
+      “libcxx                    12.0.0               h2f01273_0  \n”,
+      “libdeflate                1.8                  h9ed2024_5  \n”,
+      “libedit                   3.1.20210910         hca72f7f_0  \n”,
+      “libev                     4.33                 h9ed2024_1  \n”,
+      “libffi                    3.3                  hb1e8313_2  \n”,
+      “libgfortran               3.0.1                h93005f0_2  \n”,
+      “libiconv                  1.16                 hca72f7f_2  \n”,
+      “libidn2                   2.3.2                h9ed2024_0  \n”,
+      “liblief                   0.11.5               he9d5cce_1  \n”,
+      “libllvm11                 11.1.0               h46f1229_1  \n”,
+      “libnghttp2                1.46.0               ha29bfda_0  \n”,
+      “libpng                    1.6.37               ha441bb4_0  \n”,
+      “libprotobuf               3.19.1               h8346a28_0  \n”,
+      “libsodium                 1.0.18               h1de35cc_0  \n”,
+      “libspatialindex           1.9.3                h23ab428_0  \n”,
+      “libssh2                   1.10.0               h0a4fc7d_0  \n”,
+      “libtiff                   4.2.0                h87d7836_0  \n”,
+      “libunistring              0.9.10               h9ed2024_0  \n”,
+      “libwebp                   1.2.2                h56c3ce4_0  \n”,
+      “libwebp-base              1.2.2                hca72f7f_0  \n”,
+      “libxml2                   2.9.12               hcdb78fc_0  \n”,
+      “libxslt                   1.1.34               h83b36ba_0  \n”,
+      “libzopfli                 1.0.3                hb1e8313_0  \n”,
+      “llvm-openmp               12.0.0               h0dcd299_1  \n”,
+      “llvmlite                  0.38.0           py39h8346a28_0  \n”,
+      “locket                    0.2.1            py39hecd8cb5_2  \n”,
+      “lxml                      4.8.0            py39h65b224f_0  \n”,
+      “lz4-c                     1.9.3                h23ab428_1  \n”,
+      “lzo                       2.10                 haf1e3a3_2  \n”,
+      “markdown                  3.3.4            py39hecd8cb5_0  \n”,
+      “markupsafe                2.0.1            py39h9ed2024_0  \n”,
+      “matplotlib                3.5.1            py39hecd8cb5_1  \n”,
+      “matplotlib-base           3.5.1            py39hfb0c5b7_1  \n”,
+      “matplotlib-inline         0.1.2              pyhd3eb1b0_2  \n”,
+      “mccabe                    0.6.1            py39hecd8cb5_1  \n”,
+      “mistune                   0.8.4           py39h9ed2024_1000  \n”,
+      “mkl                       2021.4.0           hecd8cb5_637  \n”,
+      “mkl-service               2.4.0            py39h9ed2024_0  \n”,
+      “mkl_fft                   1.3.1            py39h4ab4a9b_0  \n”,
+      “mkl_random                1.2.2            py39hb2f4e1b_0  \n”,
+      “mock                      4.0.3              pyhd3eb1b0_0  \n”,
+      “mpc                       1.1.0                h6ef4df4_1  \n”,
+      “mpfr                      4.0.2                h9066e36_1  \n”,
+      “mpi                       1.0                       mpich  \n”,
+      “mpich                     3.3.2                hc856adb_0  \n”,
+      “mpmath                    1.2.1            py39hecd8cb5_0  \n”,
+      “msgpack-python            1.0.2            py39hf7b0b51_1  \n”,
+      “multidict                 5.2.0            py39hca72f7f_2  \n”,
+      “multipledispatch          0.6.0            py39hecd8cb5_0  \n”,
+      “munkres                   1.1.4                      py_0  \n”,
+      “mypy_extensions           0.4.3            py39hecd8cb5_1  \n”,
+      “navigator-updater         0.2.1                    py39_1  \n”,
+      “nbclassic                 0.3.5              pyhd3eb1b0_0  \n”,
+      “nbclient                  0.5.13           py39hecd8cb5_0  \n”,
+      “nbconvert                 6.4.4            py39hecd8cb5_0  \n”,
+      “nbformat                  5.3.0            py39hecd8cb5_0  \n”,
+      “ncurses                   6.3                  hca72f7f_2  \n”,
+      “nest-asyncio              1.5.5            py39hecd8cb5_0  \n”,
+      “networkx                  2.7.1              pyhd3eb1b0_0  \n”,
+      “nltk                      3.7                pyhd3eb1b0_0  \n”,
+      “nodejs                    10.13.0              h0a44026_0  \n”,
+      “nose                      1.3.7           pyhd3eb1b0_1008  \n”,
+      “notebook                  6.4.12                   pypi_0    pypi\n”,
+      “numba                     0.55.1           py39hae1ba45_0  \n”,
+      “numexpr                   2.8.1            py39h2e5f0a9_0  \n”,
+      “numpy                     1.21.5           py39h2e5f0a9_1  \n”,
+      “numpy-base                1.21.5           py39h3b1a694_1  \n”,
+      “numpydoc                  1.2                pyhd3eb1b0_0  \n”,
+      “olefile                   0.46               pyhd3eb1b0_0  \n”,
+      “oniguruma                 6.9.7.1              h9ed2024_0  \n”,
+      “openjpeg                  2.4.0                h66ea3da_0  \n”,
+      “openpyxl                  3.0.9              pyhd3eb1b0_0  \n”,
+      “openssl                   1.1.1n               hca72f7f_0  \n”,
+      “packaging                 21.3               pyhd3eb1b0_0  \n”,
+      “pandas                    1.4.2            py39he9d5cce_0  \n”,
+      “pandocfilters             1.5.0              pyhd3eb1b0_0  \n”,
+      “panel                     0.13.0           py39hecd8cb5_0  \n”,
+      “param                     1.12.0             pyhd3eb1b0_0  \n”,
+      “parsel                    1.6.0            py39hecd8cb5_0  \n”,
+      “parso                     0.8.3              pyhd3eb1b0_0  \n”,
+      “partd                     1.2.0              pyhd3eb1b0_1  \n”,
+      “pathspec                  0.7.0                      py_0  \n”,
+      “patsy                     0.5.2            py39hecd8cb5_1  \n”,
+      “pep8                      1.7.1            py39hecd8cb5_0  \n”,
+      “pexpect                   4.8.0              pyhd3eb1b0_3  \n”,
+      “pickleshare               0.7.5           pyhd3eb1b0_1003  \n”,
+      “pillow                    9.0.1            py39hde71d04_0  \n”,
+      “pip                       21.2.4           py39hecd8cb5_0  \n”,
+      “pkginfo                   1.8.2              pyhd3eb1b0_0  \n”,
+      “plotly                    5.6.0              pyhd3eb1b0_0  \n”,
+      “pluggy                    1.0.0            py39hecd8cb5_1  \n”,
+      “poyo                      0.5.0              pyhd3eb1b0_0  \n”,
+      “prometheus_client         0.13.1             pyhd3eb1b0_0  \n”,
+      “prompt-toolkit            3.0.20             pyhd3eb1b0_0  \n”,
+      “prompt_toolkit            3.0.20               hd3eb1b0_0  \n”,
+      “protego                   0.1.16                     py_0  \n”,
+      “protobuf                  3.19.1           py39he9d5cce_0  \n”,
+      “psutil                    5.8.0            py39h9ed2024_1  \n”,
+      “ptyprocess                0.7.0              pyhd3eb1b0_2  \n”,
+      “pure_eval                 0.2.2              pyhd3eb1b0_0  \n”,
+      “py                        1.11.0             pyhd3eb1b0_0  \n”,
+      “py-lief                   0.11.5           py39he9d5cce_1  \n”,
+      “pyasn1                    0.4.8              pyhd3eb1b0_0  \n”,
+      “pyasn1-modules            0.2.8                      py_0  \n”,
+      “pycodestyle               2.7.0              pyhd3eb1b0_0  \n”,
+      “pycosat                   0.6.3            py39h9ed2024_0  \n”,
+      “pycparser                 2.21               pyhd3eb1b0_0  \n”,
+      “pyct                      0.4.6            py39hecd8cb5_0  \n”,
+      “pycurl                    7.44.1           py39hbcfaee0_1  \n”,
+      “pydispatcher              2.0.5            py39hecd8cb5_2  \n”,
+      “pydocstyle                6.1.1              pyhd3eb1b0_0  \n”,
+      “pyerfa                    2.0.0            py39h9ed2024_0  \n”,
+      “pyflakes                  2.3.1              pyhd3eb1b0_0  \n”,
+      “pygments                  2.11.2             pyhd3eb1b0_0  \n”,
+      “pyhamcrest                2.0.2              pyhd3eb1b0_2  \n”,
+      “pyjwt                     2.1.0            py39hecd8cb5_0  \n”,
+      “pylint                    2.9.6            py39hecd8cb5_1  \n”,
+      “pyls-spyder               0.4.0              pyhd3eb1b0_0  \n”,
+      “pyodbc                    4.0.32           py39he9d5cce_1  \n”,
+      “pyopenssl                 21.0.0             pyhd3eb1b0_1  \n”,
+      “pyparsing                 3.0.4              pyhd3eb1b0_0  \n”,
+      “pyqt                      5.9.2            py39h23ab428_6  \n”,
+      “pyrsistent                0.18.0           py39hca72f7f_0  \n”,
+      “pysocks                   1.7.1            py39hecd8cb5_0  \n”,
+      “pytables                  3.6.1            py39h648f197_1  \n”,
+      “pytest                    7.1.1            py39hecd8cb5_0  \n”,
+      “python                    3.9.12               hdfd78df_0  \n”,
+      “python-dateutil           2.8.2              pyhd3eb1b0_0  \n”,
+      “python-fastjsonschema     2.15.1             pyhd3eb1b0_0  \n”,
+      “python-libarchive-c       2.9                pyhd3eb1b0_1  \n”,
+      “python-lsp-black          1.0.0              pyhd3eb1b0_0  \n”,
+      “python-lsp-jsonrpc        1.0.0              pyhd3eb1b0_0  \n”,
+      “python-lsp-server         1.2.4              pyhd3eb1b0_0  \n”,
+      “python-slugify            5.0.2              pyhd3eb1b0_0  \n”,
+      “python-snappy             0.6.0            py39h23ab428_3  \n”,
+      “python.app                3                py39hca72f7f_0  \n”,
+      “pytz                      2021.3             pyhd3eb1b0_0  \n”,
+      “pyviz_comms               2.0.2              pyhd3eb1b0_0  \n”,
+      “pywavelets                1.3.0            py39hca72f7f_0  \n”,
+      “pyyaml                    6.0              py39hca72f7f_1  \n”,
+      “pyzmq                     22.3.0           py39he9d5cce_2  \n”,
+      “qdarkstyle                3.0.2              pyhd3eb1b0_0  \n”,
+      “qstylizer                 0.1.10             pyhd3eb1b0_0  \n”,
+      “qt                        5.9.7                h468cd18_1  \n”,
+      “qtawesome                 1.0.3              pyhd3eb1b0_0  \n”,
+      “qtconsole                 5.3.0              pyhd3eb1b0_0  \n”,
+      “qtpy                      2.0.1              pyhd3eb1b0_0  \n”,
+      “queuelib                  1.5.0            py39hecd8cb5_0  \n”,
+      “readline                  8.1.2                hca72f7f_1  \n”,
+      “regex                     2022.3.15        py39hca72f7f_0  \n”,
+      “requests                  2.27.1             pyhd3eb1b0_0  \n”,
+      “requests-file             1.5.1              pyhd3eb1b0_0  \n”,
+      “ripgrep                   12.1.1                        0  \n”,
+      “rope                      0.22.0             pyhd3eb1b0_0  \n”,
+      “rsa                       4.7.2              pyhd3eb1b0_1  \n”,
+      “rtree                     0.9.7            py39hecd8cb5_1  \n”,
+      “ruamel_yaml               0.15.100         py39h9ed2024_0  \n”,
+      “s3transfer                0.5.0              pyhd3eb1b0_0  \n”,
+      “scikit-image              0.19.2           py39hae1ba45_0  \n”,
+      “scikit-learn              1.0.2            py39hae1ba45_1  \n”,
+      “scikit-learn-intelex      2021.5.0         py39hecd8cb5_0  \n”,
+      “scipy                     1.7.3            py39h8c7af03_0  \n”,
+      “scrapy                    2.6.1            py39hecd8cb5_0  \n”,
+      “seaborn                   0.11.2             pyhd3eb1b0_0  \n”,
+      “send2trash                1.8.0              pyhd3eb1b0_1  \n”,
+      “service_identity          18.1.0             pyhd3eb1b0_1  \n”,
+      “setuptools                61.2.0           py39hecd8cb5_0  \n”,
+      “sip                       4.19.13          py39h23ab428_0  \n”,
+      “six                       1.16.0             pyhd3eb1b0_1  \n”,
+      “smart_open                5.1.0              pyhd3eb1b0_0  \n”,
+      “snappy                    1.1.9                he9d5cce_0  \n”,
+      “sniffio                   1.2.0            py39hecd8cb5_1  \n”,
+      “snowballstemmer           2.2.0              pyhd3eb1b0_0  \n”,
+      “sortedcollections         2.1.0              pyhd3eb1b0_0  \n”,
+      “sortedcontainers          2.4.0              pyhd3eb1b0_0  \n”,
+      “soupsieve                 2.3.1              pyhd3eb1b0_0  \n”,
+      “sphinx                    4.4.0              pyhd3eb1b0_0  \n”,
+      “sphinxcontrib-applehelp   1.0.2              pyhd3eb1b0_0  \n”,
+      “sphinxcontrib-devhelp     1.0.2              pyhd3eb1b0_0  \n”,
+      “sphinxcontrib-htmlhelp    2.0.0              pyhd3eb1b0_0  \n”,
+      “sphinxcontrib-jsmath      1.0.1              pyhd3eb1b0_0  \n”,
+      “sphinxcontrib-qthelp      1.0.3              pyhd3eb1b0_0  \n”,
+      “sphinxcontrib-serializinghtml 1.1.5              pyhd3eb1b0_0  \n”,
+      “spyder                    5.1.5            py39hecd8cb5_1  \n”,
+      “spyder-kernels            2.1.3            py39hecd8cb5_0  \n”,
+      “sqlalchemy                1.4.32           py39hca72f7f_0  \n”,
+      “sqlite                    3.38.2               h707629a_0  \n”,
+      “stack_data                0.2.0              pyhd3eb1b0_0  \n”,
+      “statsmodels               0.13.2           py39hca72f7f_0  \n”,
+      “sympy                     1.10.1           py39hecd8cb5_0  \n”,
+      “tabulate                  0.8.9            py39hecd8cb5_0  \n”,
+      “tbb                       2021.5.0             haf03e11_0  \n”,
+      “tbb4py                    2021.5.0         py39haf03e11_0  \n”,
+      “tblib                     1.7.0              pyhd3eb1b0_0  \n”,
+      “tenacity                  8.0.1            py39hecd8cb5_0  \n”,
+      “terminado                 0.13.1           py39hecd8cb5_0  \n”,
+      “testpath                  0.5.0              pyhd3eb1b0_0  \n”,
+      “text-unidecode            1.3                pyhd3eb1b0_0  \n”,
+      “textdistance              4.2.1              pyhd3eb1b0_0  \n”,
+      “threadpoolctl             2.2.0              pyh0d69192_0  \n”,
+      “three-merge               0.1.1              pyhd3eb1b0_0  \n”,
+      “tifffile                  2021.7.2           pyhd3eb1b0_2  \n”,
+      “tinycss                   0.4             pyhd3eb1b0_1002  \n”,
+      “tk                        8.6.11               h7bc2e8c_0  \n”,
+      “tldextract                3.2.0              pyhd3eb1b0_0  \n”,
+      “toml                      0.10.2             pyhd3eb1b0_0  \n”,
+      “tomli                     1.2.2              pyhd3eb1b0_0  \n”,
+      “toolz                     0.11.2             pyhd3eb1b0_0  \n”,
+      “tornado                   6.1              py39h9ed2024_0  \n”,
+      “tqdm                      4.64.0           py39hecd8cb5_0  \n”,
+      “traitlets                 5.1.1              pyhd3eb1b0_0  \n”,
+      “twisted                   22.2.0           py39hca72f7f_0  \n”,
+      “typed-ast                 1.4.3            py39h9ed2024_1  \n”,
+      “typing-extensions         4.1.1                hd3eb1b0_0  \n”,
+      “typing_extensions         4.1.1              pyh06a4308_0  \n”,
+      “tzdata                    2022a                hda174b7_0  \n”,
+      “ujson                     5.1.0            py39he9d5cce_0  \n”,
+      “unidecode                 1.2.0              pyhd3eb1b0_0  \n”,
+      “unixodbc                  2.3.9                haf1e3a3_0  \n”,
+      “urllib3                   1.26.9           py39hecd8cb5_0  \n”,
+      “w3lib                     1.21.0             pyhd3eb1b0_0  \n”,
+      “watchdog                  2.1.6            py39h999c104_0  \n”,
+      “wcwidth                   0.2.5              pyhd3eb1b0_0  \n”,
+      “webencodings              0.5.1            py39hecd8cb5_1  \n”,
+      “websocket-client          0.58.0           py39hecd8cb5_4  \n”,
+      “werkzeug                  2.0.3              pyhd3eb1b0_0  \n”,
+      “wget                      1.21.3               h6dfd666_0  \n”,
+      “wheel                     0.37.1             pyhd3eb1b0_0  \n”,
+      “widgetsnbextension        3.5.2            py39hecd8cb5_0  \n”,
+      “wrapt                     1.12.1           py39h9ed2024_1  \n”,
+      “wurlitzer                 3.0.2            py39hecd8cb5_0  \n”,
+      “xarray                    0.20.1             pyhd3eb1b0_1  \n”,
+      “xlrd                      2.0.1              pyhd3eb1b0_0  \n”,
+      “xlsxwriter                3.0.3              pyhd3eb1b0_0  \n”,
+      “xlwings                   0.24.9           py39hecd8cb5_0  \n”,
+      “xz                        5.2.5                h1de35cc_0  \n”,
+      “yaml                      0.2.5                haf1e3a3_0  \n”,
+      “yapf                      0.31.0             pyhd3eb1b0_0  \n”,
+      “yarl                      1.6.3            py39h9ed2024_0  \n”,
+      “zeromq                    4.3.4                h23ab428_0  \n”,
+      “zfp                       0.5.5                he9d5cce_6  \n”,
+      “zict                      2.0.0              pyhd3eb1b0_0  \n”,
+      “zipp                      3.7.0              pyhd3eb1b0_0  \n”,
+      “zlib                      1.2.12               h4dc903c_2  \n”,
+      “zope                      1.0              py39hecd8cb5_1  \n”,
+      “zope.interface            5.4.0            py39h9ed2024_0  \n”,
+      “zstd                      1.4.9                h322a384_0  \n”
+     ]
+    }
+   ],
+   “source”: [
+    “echo "Lets check if Java is installed"\n”,
+    “java –version\n”,
+    “\n”,
+    “echo ""\n”,
+    “echo "Lets check if Annaconda is installed"\n”,
+    “conda list”
+   ]
+  },
+  {
+   “cell_type”: “markdown”,
+   “metadata”: {},
+   “source”: [
+    “# Updating a repository”
+   ]
+  },
+  {
+   “cell_type”: “code”,
+   “execution_count”: 2,
+   “metadata”: {
+    “vscode”: {
+     “languageId”: “shellscript”
+    }
+   },
+   “outputs”: [
+    {
+     “name”: “stdout”,
+     “output_type”: “stream”,
+     “text”: [
+      “remote: Enumerating objects: 168, done.        \n”,
+      “remote: Counting objects: 100% (168/168), done.        \n”,
+      “remote: Compressing objects: 100% (53/53), done.        \n”,
+      “remote: Total 168 (delta 70), reused 163 (delta 65), pack-reused 0        \n”,
+      “Receiving objects: 100% (168/168), 52.67 KiB | 1.10 MiB/s, done.\n”,
+      “Resolving deltas: 100% (70/70), completed with 11 local objects.\n”,
+      “From https://github.com/ProRichyMan/CSA-Fastpages\n”,
+      “   9f5e7f3..c0f83ef  gh-pages   -&gt; origin/gh-pages\n”,
+      “From https://github.com/ProRichyMan/CSA-Fastpages\n”,
+      “ * branch            master     -&gt; FETCH_HEAD\n”,
+      “Already up to date.\n”
+     ]
+    }
+   ],
+   “source”: [
+    “export repository=CSA-FASTPAGES\n”,
+    “export repo_main_folder=vscode\n”,
+    “cd $HOME/$repo_main_folder/CSA-FASTPAGES\n”,
+    “git fetch origin\n”,
+    “git pull origin master”
+   ]
+  },
+  {
+   “cell_type”: “markdown”,
+   “metadata”: {},
+   “source”: [
+    “# Doing some Installations\n”,
+    “Automizes some of the installations, specifically git, python, and java!”
+   ]
+  },
+  {
+   “cell_type”: “code”,
+   “execution_count”: 3,
+   “metadata”: {
+    “vscode”: {
+     “languageId”: “shellscript”
+    }
+   },
+   “outputs”: [
+    {
+     “name”: “stdout”,
+     “output_type”: “stream”,
+     “text”: [
+      “\u001b[34m==&gt;\u001b[0m \u001b[1mFormulae\u001b[0m\n”,
+      “ca-certificates\tgit\t\topenssl@1.1\treadline\txz\n”,
+      “gdbm\t\tmpdecimal\tpcre2\t\tspring-boot\n”,
+      “gettext\t\topenjdk\t\tpython@3.10\tsqlite\n”,
+      “Updated 1 tap (homebrew/core).\n”,
+      “\u001b[34m==&gt;\u001b[0m \u001b[1mNew Formulae\u001b[0m\n”,
+      “ghorg                      linux-headers@5.15         shaderc\n”,
+      “kalign                     pymol                      swiftdraw\n”,
+      “\u001b[34m==&gt;\u001b[0m \u001b[1mOutdated Formulae\u001b[0m\n”,
+      “openjdk\n”,
+      “\n”,
+      “You have \u001b[1m1\u001b[0m outdated formula installed.\n”,
+      “You can upgrade it with \u001b[1mbrew upgrade\u001b[0m\n”,
+      “or list it with \u001b[1mbrew outdated\u001b[0m.\n”,
+      “\u001b[32m==&gt;\u001b[0m \u001b[1mUpgrading 1 outdated package:\u001b[0m\n”,
+      “openjdk 18.0.2 -&gt; 18.0.2.1\n”,
+      “\u001b[34m==&gt;\u001b[0m \u001b[1mDownloading https://ghcr.io/v2/homebrew/core/openjdk/manifests/18.0.2.1\u001b[0m\n”,
+      “######################################################################## 100.0%\n”,
+      “\u001b[34m==&gt;\u001b[0m \u001b[1mDownloading https://ghcr.io/v2/homebrew/core/openjdk/blobs/sha256:373ac8b65d\u001b[0m\n”,
+      “\u001b[34m==&gt;\u001b[0m \u001b[1mDownloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sh\u001b[0m\n”,
+      “######################################################################## 100.0%\n”,
+      “\u001b[32m==&gt;\u001b[0m \u001b[1mUpgrading \u001b[32mopenjdk\u001b[39m\n”,
+      “  18.0.2 -&gt; 18.0.2.1 \n”,
+      “\u001b[0m\n”,
+      “\u001b[34m==&gt;\u001b[0m \u001b[1mPouring openjdk–18.0.2.1.arm64_monterey.bottle.tar.gz\u001b[0m\n”,
+      “\u001b[34m==&gt;\u001b[0m \u001b[1mCaveats\u001b[0m\n”,
+      “For the system Java wrappers to find this JDK, symlink it with\n”,
+      “  sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk\n”,
+      “\n”,
+      “openjdk is keg-only, which means it was not symlinked into /opt/homebrew,\n”,
+      “because macOS provides similar software and installing this software in\n”,
+      “parallel can cause all kinds of trouble.\n”,
+      “\n”,
+      “If you need to have openjdk first in your PATH, run:\n”,
+      “  echo ‘export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"’ » ~/.zshrc\n”,
+      “\n”,
+      “For compilers to find openjdk you may need to set:\n”,
+      “  export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"\n”,
+      “\n”,
+      “\u001b[34m==&gt;\u001b[0m \u001b[1mSummary\u001b[0m\n”,
+      “🍺  /opt/homebrew/Cellar/openjdk/18.0.2.1: 642 files, 309MB\n”,
+      “\u001b[34m==&gt;\u001b[0m \u001b[1mRunning <code class="language-plaintext highlighter-rouge">brew cleanup openjdk</code>…\u001b[0m\n”,
+      “Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.\n”,
+      “Hide these hints with HOMEBREW_NO_ENV_HINTS (see <code class="language-plaintext highlighter-rouge">man brew</code>).\n”,
+      “Removing: /opt/homebrew/Cellar/openjdk/18.0.2… (642 files, 309MB)\n”,
+      “Removing: /Users/nathanmanangan/Library/Caches/Homebrew/openjdk–18.0.2… (180.3MB)\n”,
+      “\u001b[33mWarning:\u001b[0m git 2.37.2 is already installed and up-to-date.\n”,
+      “To reinstall 2.37.2, run:\n”,
+      “  brew reinstall git\n”,
+      “\u001b[33mWarning:\u001b[0m python@3.10 3.10.6_1 is already installed and up-to-date.\n”,
+      “To reinstall 3.10.6_1, run:\n”,
+      “  brew reinstall python@3.10\n”,
+      “Python 3.9.12\n”,
+      “\u001b[33mWarning:\u001b[0m openjdk 18.0.2.1 is already installed and up-to-date.\n”,
+      “To reinstall 18.0.2.1, run:\n”,
+      “  brew reinstall openjdk\n”,
+      “java 18.0.2.1 2022-08-18\n”,
+      “Java(TM) SE Runtime Environment (build 18.0.2.1+1-1)\n”,
+      “Java HotSpot(TM) 64-Bit Server VM (build 18.0.2.1+1-1, mixed mode, sharing)\n”,
+      “javac 18.0.2.1\n”
+     ]
+    }
+   ],
+   “source”: [
+    “arch -arm64 brew list\n”,
+    “arch -arm64 brew update\n”,
+    “arch -arm64 brew upgrade\n”,
+    “arch -arm64 brew install git\n”,
+    “arch -arm64 brew install python\n”,
+    “python –version\n”,
+    “arch -arm64 brew install java\n”,
+    “java –version\n”,
+    “javac –version”
+   ]
+  },
+  {
+   “cell_type”: “code”,
+   “execution_count”: 4,
+   “metadata”: {
+    “vscode”: {
+     “languageId”: “shellscript”
+    }
+   },
+   “outputs”: [
+    {
+     “name”: “stdout”,
+     “output_type”: “stream”,
+     “text”: [
+      “java 18.0.2.1 2022-08-18\n”,
+      “Java(TM) SE Runtime Environment (build 18.0.2.1+1-1)\n”,
+      “Java HotSpot(TM) 64-Bit Server VM (build 18.0.2.1+1-1, mixed mode, sharing)\n”,
+      “Python 3.9.12\n”,
+      “javac 18.0.2.1\n”,
+      “v10.13.0\n”
+     ]
+    }
+   ],
+   “source”: [
+    “java –version\n”,
+    “python –version\n”,
+    “javac –version\n”,
+    “node –version”
+   ]
+  },
+  {
+   “cell_type”: “markdown”,
+   “metadata”: {},
+   “source”: [
+    “Shows all of the kernels installed for Jupyter”
+   ]
+  },
+  {
+   “cell_type”: “code”,
+   “execution_count”: 5,
+   “metadata”: {
+    “vscode”: {
+     “languageId”: “shellscript”
+    }
+   },
+   “outputs”: [
+    {
+     “name”: “stdout”,
+     “output_type”: “stream”,
+     “text”: [
+      “Available kernels:\n”,
+      “  python3106jvsc74a57bd0b0fa6594d8f4cbf19f97940f81e996739fb7646882a419484c72d19e05852a7e    /Users/nathanmanangan/.vscode/extensions/ms-toolsai.jupyter-2022.7.1102252217/temp/jupyter/kernels/python3106jvsc74a57bd0b0fa6594d8f4cbf19f97940f81e996739fb7646882a419484c72d19e05852a7e\n”,
+      “  python3912jvsc74a57bd063f284042fb87dad5a12beb55d64e6088ab71ccd3f72ccdf84694aa4fa281d07    /Users/nathanmanangan/.vscode/extensions/ms-toolsai.jupyter-2022.7.1102252217/temp/jupyter/kernels/python3912jvsc74a57bd063f284042fb87dad5a12beb55d64e6088ab71ccd3f72ccdf84694aa4fa281d07\n”,
+      “  bash                                                                                      /Users/nathanmanangan/Library/Jupyter/kernels/bash\n”,
+      “  java                                                                                      /Users/nathanmanangan/Library/Jupyter/kernels/java\n”,
+      “  javascript                                                                                /Users/nathanmanangan/Library/Jupyter/kernels/javascript\n”,
+      “  python3                                                                                   /Users/nathanmanangan/opt/anaconda3/share/jupyter/kernels/python3\n”
+     ]
+    }
+   ],
+   “source”: [
+    “jupyter kernelspec list”
+   ]
+  }
+ ],
+ “metadata”: {
+  “kernelspec”: {
+   “display_name”: “Bash”,
+   “language”: “bash”,
+   “name”: “bash”
+  },
+  “language_info”: {
+   “codemirror_mode”: “shell”,
+   “file_extension”: “.sh”,
+   “mimetype”: “text/x-sh”,
+   “name”: “bash”
+  },
+  “orig_nbformat”: 4
+ },
+ “nbformat”: 4,
+ “nbformat_minor”: 2
+}</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/VSCodings/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/VSCodings/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/VSCodings/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>A very cool blog platform</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" target="_blank" title="fastai"><svg class="svg-icon grey"><use xlink:href="/VSCodings/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" target="_blank" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/VSCodings/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
