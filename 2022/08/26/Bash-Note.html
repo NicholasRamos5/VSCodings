@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Title | Nicholas’ fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Title" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A very cool blog platform" />
+<meta property="og:description" content="A very cool blog platform" />
+<link rel="canonical" href="https://nicholasramos5.github.io/VSCodings/2022/08/26/Bash-Note.html" />
+<meta property="og:url" content="https://nicholasramos5.github.io/VSCodings/2022/08/26/Bash-Note.html" />
+<meta property="og:site_name" content="Nicholas’ fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-08-26T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Title" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-08-26T00:00:00-05:00","datePublished":"2022-08-26T00:00:00-05:00","description":"A very cool blog platform","headline":"Title","mainEntityOfPage":{"@type":"WebPage","@id":"https://nicholasramos5.github.io/VSCodings/2022/08/26/Bash-Note.html"},"url":"https://nicholasramos5.github.io/VSCodings/2022/08/26/Bash-Note.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/VSCodings/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://nicholasramos5.github.io/VSCodings/feed.xml" title="Nicholas' fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/VSCodings/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/VSCodings/">Nicholas&#39; fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/VSCodings/_pages/College-Board-Notes.html">College Board Notes</a><a class="page-link" href="/VSCodings/_pages/PBL.html">PBL</a><a class="page-link" href="/VSCodings/about/">About Me</a><a class="page-link" href="/VSCodings/notes/">Notes</a><a class="page-link" href="/VSCodings/search/">Search</a><a class="page-link" href="/VSCodings/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Title</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-08-26T00:00:00-05:00" itemprop="datePublished">
+        Aug 26, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      13 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/NicholasRamos5/VSCodings/tree/master/_notebooks/2022-08-26-Bash-Note.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/VSCodings/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/NicholasRamos5/VSCodings/master?filepath=_notebooks%2F2022-08-26-Bash-Note.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/VSCodings/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/NicholasRamos5/VSCodings/blob/master/_notebooks/2022-08-26-Bash-Note.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/VSCodings/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FNicholasRamos5%2FVSCodings%2Fblob%2Fmaster%2F_notebooks%2F2022-08-26-Bash-Note.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/VSCodings/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-08-26-Bash-Note.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-bash"><pre><span></span><span class="o">{</span>
+ <span class="s2">&quot;cells&quot;</span>: <span class="o">[</span>
+  <span class="o">{</span>
+   <span class="s2">&quot;cell_type&quot;</span>: <span class="s2">&quot;markdown&quot;</span>,
+   <span class="s2">&quot;metadata&quot;</span>: <span class="o">{}</span>,
+   <span class="s2">&quot;source&quot;</span>: <span class="o">[</span>
+    <span class="s2">&quot;# Bash Installation Checks \n&quot;</span>,
+    <span class="s2">&quot;\n&quot;</span>,
+    <span class="s2">&quot;- toc: true \n&quot;</span>,
+    <span class="s2">&quot;- badges: true\n&quot;</span>,
+    <span class="s2">&quot;- comments: true\n&quot;</span>,
+    <span class="s2">&quot;- categories: [jupyter]&quot;</span>
+   <span class="o">]</span>
+  <span class="o">}</span>,
+  <span class="o">{</span>
+   <span class="s2">&quot;cell_type&quot;</span>: <span class="s2">&quot;markdown&quot;</span>,
+   <span class="s2">&quot;metadata&quot;</span>: <span class="o">{}</span>,
+   <span class="s2">&quot;source&quot;</span>: <span class="o">[</span>
+    <span class="s2">&quot;### Checking if Java and Anaconda are installed &quot;</span>
+   <span class="o">]</span>
+  <span class="o">}</span>,
+  <span class="o">{</span>
+   <span class="s2">&quot;cell_type&quot;</span>: <span class="s2">&quot;code&quot;</span>,
+   <span class="s2">&quot;execution_count&quot;</span>: <span class="m">11</span>,
+   <span class="s2">&quot;metadata&quot;</span>: <span class="o">{</span>
+    <span class="s2">&quot;vscode&quot;</span>: <span class="o">{</span>
+     <span class="s2">&quot;languageId&quot;</span>: <span class="s2">&quot;shellscript&quot;</span>
+    <span class="o">}</span>
+   <span class="o">}</span>,
+   <span class="s2">&quot;outputs&quot;</span>: <span class="o">[</span>
+    <span class="o">{</span>
+     <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;stdout&quot;</span>,
+     <span class="s2">&quot;output_type&quot;</span>: <span class="s2">&quot;stream&quot;</span>,
+     <span class="s2">&quot;text&quot;</span>: <span class="o">[</span>
+      <span class="s2">&quot;Lets check if Java is installed\n&quot;</span>,
+      <span class="s2">&quot;java 17.0.4.1 2022-08-18 LTS\n&quot;</span>,
+      <span class="s2">&quot;Java(TM) SE Runtime Environment (build 17.0.4.1+1-LTS-2)\n&quot;</span>,
+      <span class="s2">&quot;Java HotSpot(TM) 64-Bit Server VM (build 17.0.4.1+1-LTS-2, mixed mode, sharing)\n&quot;</span>,
+      <span class="s2">&quot;\n&quot;</span>,
+      <span class="s2">&quot;Lets check if Annaconda is installed\n&quot;</span>,
+      <span class="s2">&quot;# packages in environment at /Users/krishpatil/opt/anaconda3:\n&quot;</span>,
+      <span class="s2">&quot;#\n&quot;</span>,
+      <span class="s2">&quot;# Name                    Version                   Build  Channel\n&quot;</span>,
+      <span class="s2">&quot;_ipyw_jlab_nb_ext_conf    0.1.0            py39hecd8cb5_1  \n&quot;</span>,
+      <span class="s2">&quot;aiohttp                   3.8.1            py39hca72f7f_1  \n&quot;</span>,
+      <span class="s2">&quot;aiosignal                 1.2.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;alabaster                 0.7.12             pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;anaconda                  2022.05                  py39_0  \n&quot;</span>,
+      <span class="s2">&quot;anaconda-client           1.9.0            py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;anaconda-navigator        2.1.4            py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;anaconda-project          0.10.2             pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;anyio                     3.5.0            py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;appdirs                   1.4.4              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;applaunchservices         0.2.1              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;appnope                   0.1.2           py39hecd8cb5_1001  \n&quot;</span>,
+      <span class="s2">&quot;appscript                 1.1.2            py39h9ed2024_0  \n&quot;</span>,
+      <span class="s2">&quot;argon2-cffi               21.3.0             pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;argon2-cffi-bindings      21.2.0           py39hca72f7f_0  \n&quot;</span>,
+      <span class="s2">&quot;arrow                     1.2.2              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;astroid                   2.6.6            py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;astropy                   5.0.4            py39h67323c0_0  \n&quot;</span>,
+      <span class="s2">&quot;asttokens                 2.0.5              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;async-timeout             4.0.1              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;atomicwrites              1.4.0                      py_0  \n&quot;</span>,
+      <span class="s2">&quot;attrs                     21.4.0             pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;automat                   20.2.0                     py_0  \n&quot;</span>,
+      <span class="s2">&quot;autopep8                  1.6.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;babel                     2.9.1              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;backcall                  0.2.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;backports                 1.1                pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;backports.functools_lru_cache 1.6.4              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;backports.tempfile        1.0                pyhd3eb1b0_1  \n&quot;</span>,
+      <span class="s2">&quot;backports.weakref         1.0.post1                  py_1  \n&quot;</span>,
+      <span class="s2">&quot;bash-kernel               0.7.2                    pypi_0    pypi\n&quot;</span>,
+      <span class="s2">&quot;bcrypt                    3.2.0            py39h9ed2024_0  \n&quot;</span>,
+      <span class="s2">&quot;beautifulsoup4            4.11.1           py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;binaryornot               0.4.4              pyhd3eb1b0_1  \n&quot;</span>,
+      <span class="s2">&quot;bitarray                  2.4.1            py39hca72f7f_0  \n&quot;</span>,
+      <span class="s2">&quot;bkcharts                  0.2              py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;black                     19.10b0                    py_0  \n&quot;</span>,
+      <span class="s2">&quot;blas                      1.0                         mkl  \n&quot;</span>,
+      <span class="s2">&quot;bleach                    4.1.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;blosc                     1.21.0               h2842e9f_0  \n&quot;</span>,
+      <span class="s2">&quot;bokeh                     2.4.2            py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;boto3                     1.21.32            pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;botocore                  1.24.32            pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;bottleneck                1.3.4            py39h67323c0_0  \n&quot;</span>,
+      <span class="s2">&quot;brotli                    1.0.9                hb1e8313_2  \n&quot;</span>,
+      <span class="s2">&quot;brotlipy                  0.7.0           py39h9ed2024_1003  \n&quot;</span>,
+      <span class="s2">&quot;brunsli                   0.1                  h23ab428_0  \n&quot;</span>,
+      <span class="s2">&quot;bzip2                     1.0.8                h1de35cc_0  \n&quot;</span>,
+      <span class="s2">&quot;c-ares                    1.18.1               hca72f7f_0  \n&quot;</span>,
+      <span class="s2">&quot;ca-certificates           2022.3.29            hecd8cb5_1  \n&quot;</span>,
+      <span class="s2">&quot;cachetools                4.2.2              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;certifi                   2021.10.8        py39hecd8cb5_2  \n&quot;</span>,
+      <span class="s2">&quot;cffi                      1.15.0           py39hc55c11b_1  \n&quot;</span>,
+      <span class="s2">&quot;cfitsio                   3.470                hee0f690_6  \n&quot;</span>,
+      <span class="s2">&quot;chardet                   4.0.0           py39hecd8cb5_1003  \n&quot;</span>,
+      <span class="s2">&quot;charls                    2.2.0                h23ab428_0  \n&quot;</span>,
+      <span class="s2">&quot;charset-normalizer        2.0.4              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;click                     8.0.4            py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;cloudpickle               2.0.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;clyent                    1.2.2            py39hecd8cb5_1  \n&quot;</span>,
+      <span class="s2">&quot;colorama                  0.4.4              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;colorcet                  2.0.6              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;conda                     4.13.0           py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;conda-build               3.21.8           py39hecd8cb5_2  \n&quot;</span>,
+      <span class="s2">&quot;conda-content-trust       0.1.1              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;conda-env                 2.6.0                         1  \n&quot;</span>,
+      <span class="s2">&quot;conda-pack                0.6.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;conda-package-handling    1.8.1            py39hca72f7f_0  \n&quot;</span>,
+      <span class="s2">&quot;conda-repo-cli            1.0.4              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;conda-token               0.3.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;conda-verify              3.4.2                      py_1  \n&quot;</span>,
+      <span class="s2">&quot;constantly                15.1.0             pyh2b92418_0  \n&quot;</span>,
+      <span class="s2">&quot;cookiecutter              1.7.3              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;cryptography              3.4.8            py39h2fd3fbb_0  \n&quot;</span>,
+      <span class="s2">&quot;cssselect                 1.1.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;curl                      7.82.0               hca72f7f_0  \n&quot;</span>,
+      <span class="s2">&quot;cycler                    0.11.0             pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;cython                    0.29.28          py39he9d5cce_0  \n&quot;</span>,
+      <span class="s2">&quot;cytoolz                   0.11.0           py39h9ed2024_0  \n&quot;</span>,
+      <span class="s2">&quot;daal4py                   2021.5.0         py39h24a4e90_0  \n&quot;</span>,
+      <span class="s2">&quot;dal                       2021.5.0           hecd8cb5_782  \n&quot;</span>,
+      <span class="s2">&quot;dask                      2022.2.1           pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;dask-core                 2022.2.1           pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;dataclasses               0.8                pyh6d0b6a4_7  \n&quot;</span>,
+      <span class="s2">&quot;datashader                0.13.0             pyhd3eb1b0_1  \n&quot;</span>,
+      <span class="s2">&quot;datashape                 0.5.4            py39hecd8cb5_1  \n&quot;</span>,
+      <span class="s2">&quot;debugpy                   1.5.1            py39he9d5cce_0  \n&quot;</span>,
+      <span class="s2">&quot;decorator                 5.1.1              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;defusedxml                0.7.1              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;diff-match-patch          20200713           pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;distributed               2022.2.1           pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;docutils                  0.17.1           py39hecd8cb5_1  \n&quot;</span>,
+      <span class="s2">&quot;entrypoints               0.4              py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;et_xmlfile                1.1.0            py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;executing                 0.8.3              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;filelock                  3.6.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;flake8                    3.9.2              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;flask                     1.1.2              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;fonttools                 4.25.0             pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;freetype                  2.11.0               hd8bbffd_0  \n&quot;</span>,
+      <span class="s2">&quot;frozenlist                1.2.0            py39hca72f7f_0  \n&quot;</span>,
+      <span class="s2">&quot;fsspec                    2022.2.0           pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;future                    0.18.2           py39hecd8cb5_1  \n&quot;</span>,
+      <span class="s2">&quot;gensim                    4.1.2            py39he9d5cce_0  \n&quot;</span>,
+      <span class="s2">&quot;giflib                    5.2.1                haf1e3a3_0  \n&quot;</span>,
+      <span class="s2">&quot;glob2                     0.7                pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;gmp                       6.2.1                h23ab428_2  \n&quot;</span>,
+      <span class="s2">&quot;gmpy2                     2.1.2            py39hd5de756_0  \n&quot;</span>,
+      <span class="s2">&quot;google-api-core           1.25.1             pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;google-auth               1.33.0             pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;google-cloud-core         1.7.1              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;google-cloud-storage      1.31.0                     py_0  \n&quot;</span>,
+      <span class="s2">&quot;google-crc32c             1.1.2            py39h9ed2024_0  \n&quot;</span>,
+      <span class="s2">&quot;google-resumable-media    1.3.1              pyhd3eb1b0_1  \n&quot;</span>,
+      <span class="s2">&quot;googleapis-common-protos  1.53.0           py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;greenlet                  1.1.1            py39h23ab428_0  \n&quot;</span>,
+      <span class="s2">&quot;grpcio                    1.42.0           py39ha29bfda_0  \n&quot;</span>,
+      <span class="s2">&quot;h5py                      3.6.0            py39h4a1dd59_0  \n&quot;</span>,
+      <span class="s2">&quot;hdf5                      1.10.6               hdbbcd12_0  \n&quot;</span>,
+      <span class="s2">&quot;heapdict                  1.0.1              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;holoviews                 1.14.8             pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;hvplot                    0.7.3              pyhd3eb1b0_1  \n&quot;</span>,
+      <span class="s2">&quot;hyperlink                 21.0.0             pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;icu                       58.2                 h0a44026_3  \n&quot;</span>,
+      <span class="s2">&quot;idna                      3.3                pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;imagecodecs               2021.8.26        py39ha952a84_0  \n&quot;</span>,
+      <span class="s2">&quot;imageio                   2.9.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;imagesize                 1.3.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;importlib-metadata        4.11.3           py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;importlib_metadata        4.11.3               hd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;incremental               21.3.0             pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;inflection                0.5.1            py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;iniconfig                 1.1.1              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;intake                    0.6.5              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;intel-openmp              2021.4.0          hecd8cb5_3538  \n&quot;</span>,
+      <span class="s2">&quot;intervaltree              3.1.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;ipykernel                 6.9.1            py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;ipython                   8.2.0            py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;ipython_genutils          0.2.0              pyhd3eb1b0_1  \n&quot;</span>,
+      <span class="s2">&quot;ipywidgets                7.6.5              pyhd3eb1b0_1  \n&quot;</span>,
+      <span class="s2">&quot;isort                     5.9.3              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;itemadapter               0.3.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;itemloaders               1.0.4              pyhd3eb1b0_1  \n&quot;</span>,
+      <span class="s2">&quot;itsdangerous              2.0.1              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;jdcal                     1.4.1              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;jedi                      0.18.1           py39hecd8cb5_1  \n&quot;</span>,
+      <span class="s2">&quot;jinja2                    2.11.3             pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;jinja2-time               0.2.0              pyhd3eb1b0_3  \n&quot;</span>,
+      <span class="s2">&quot;jmespath                  0.10.0             pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;joblib                    1.1.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;jpeg                      9e                   hca72f7f_0  \n&quot;</span>,
+      <span class="s2">&quot;jq                        1.6               h9ed2024_1000  \n&quot;</span>,
+      <span class="s2">&quot;json5                     0.9.6              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;jsonschema                4.4.0            py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;jupyter                   1.0.0            py39hecd8cb5_7  \n&quot;</span>,
+      <span class="s2">&quot;jupyter_client            6.1.12             pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;jupyter_console           6.4.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;jupyter_core              4.9.2            py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;jupyter_server            1.13.5             pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;jupyterlab                3.3.2              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;jupyterlab_pygments       0.1.2                      py_0  \n&quot;</span>,
+      <span class="s2">&quot;jupyterlab_server         2.10.3             pyhd3eb1b0_1  \n&quot;</span>,
+      <span class="s2">&quot;jupyterlab_widgets        1.0.0              pyhd3eb1b0_1  \n&quot;</span>,
+      <span class="s2">&quot;jxrlib                    1.1                  haf1e3a3_2  \n&quot;</span>,
+      <span class="s2">&quot;keyring                   23.4.0           py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;kiwisolver                1.3.2            py39he9d5cce_0  \n&quot;</span>,
+      <span class="s2">&quot;krb5                      1.19.2               hcd88c3b_0  \n&quot;</span>,
+      <span class="s2">&quot;lazy-object-proxy         1.6.0            py39h9ed2024_0  \n&quot;</span>,
+      <span class="s2">&quot;lcms2                     2.12                 hf1fd2bf_0  \n&quot;</span>,
+      <span class="s2">&quot;lerc                      3.0                  he9d5cce_0  \n&quot;</span>,
+      <span class="s2">&quot;libaec                    1.0.4                hb1e8313_1  \n&quot;</span>,
+      <span class="s2">&quot;libarchive                3.4.2                haa3ed63_0  \n&quot;</span>,
+      <span class="s2">&quot;libcrc32c                 1.1.1                hb1e8313_2  \n&quot;</span>,
+      <span class="s2">&quot;libcurl                   7.82.0               h6dfd666_0  \n&quot;</span>,
+      <span class="s2">&quot;libcxx                    12.0.0               h2f01273_0  \n&quot;</span>,
+      <span class="s2">&quot;libdeflate                1.8                  h9ed2024_5  \n&quot;</span>,
+      <span class="s2">&quot;libedit                   3.1.20210910         hca72f7f_0  \n&quot;</span>,
+      <span class="s2">&quot;libev                     4.33                 h9ed2024_1  \n&quot;</span>,
+      <span class="s2">&quot;libffi                    3.3                  hb1e8313_2  \n&quot;</span>,
+      <span class="s2">&quot;libgfortran               3.0.1                h93005f0_2  \n&quot;</span>,
+      <span class="s2">&quot;libiconv                  1.16                 hca72f7f_2  \n&quot;</span>,
+      <span class="s2">&quot;libidn2                   2.3.2                h9ed2024_0  \n&quot;</span>,
+      <span class="s2">&quot;liblief                   0.11.5               he9d5cce_1  \n&quot;</span>,
+      <span class="s2">&quot;libllvm11                 11.1.0               h46f1229_1  \n&quot;</span>,
+      <span class="s2">&quot;libnghttp2                1.46.0               ha29bfda_0  \n&quot;</span>,
+      <span class="s2">&quot;libpng                    1.6.37               ha441bb4_0  \n&quot;</span>,
+      <span class="s2">&quot;libprotobuf               3.19.1               h8346a28_0  \n&quot;</span>,
+      <span class="s2">&quot;libsodium                 1.0.18               h1de35cc_0  \n&quot;</span>,
+      <span class="s2">&quot;libspatialindex           1.9.3                h23ab428_0  \n&quot;</span>,
+      <span class="s2">&quot;libssh2                   1.10.0               h0a4fc7d_0  \n&quot;</span>,
+      <span class="s2">&quot;libtiff                   4.2.0                h87d7836_0  \n&quot;</span>,
+      <span class="s2">&quot;libunistring              0.9.10               h9ed2024_0  \n&quot;</span>,
+      <span class="s2">&quot;libwebp                   1.2.2                h56c3ce4_0  \n&quot;</span>,
+      <span class="s2">&quot;libwebp-base              1.2.2                hca72f7f_0  \n&quot;</span>,
+      <span class="s2">&quot;libxml2                   2.9.12               hcdb78fc_0  \n&quot;</span>,
+      <span class="s2">&quot;libxslt                   1.1.34               h83b36ba_0  \n&quot;</span>,
+      <span class="s2">&quot;libzopfli                 1.0.3                hb1e8313_0  \n&quot;</span>,
+      <span class="s2">&quot;llvm-openmp               12.0.0               h0dcd299_1  \n&quot;</span>,
+      <span class="s2">&quot;llvmlite                  0.38.0           py39h8346a28_0  \n&quot;</span>,
+      <span class="s2">&quot;locket                    0.2.1            py39hecd8cb5_2  \n&quot;</span>,
+      <span class="s2">&quot;lxml                      4.8.0            py39h65b224f_0  \n&quot;</span>,
+      <span class="s2">&quot;lz4-c                     1.9.3                h23ab428_1  \n&quot;</span>,
+      <span class="s2">&quot;lzo                       2.10                 haf1e3a3_2  \n&quot;</span>,
+      <span class="s2">&quot;markdown                  3.3.4            py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;markupsafe                2.0.1            py39h9ed2024_0  \n&quot;</span>,
+      <span class="s2">&quot;matplotlib                3.5.1            py39hecd8cb5_1  \n&quot;</span>,
+      <span class="s2">&quot;matplotlib-base           3.5.1            py39hfb0c5b7_1  \n&quot;</span>,
+      <span class="s2">&quot;matplotlib-inline         0.1.2              pyhd3eb1b0_2  \n&quot;</span>,
+      <span class="s2">&quot;mccabe                    0.6.1            py39hecd8cb5_1  \n&quot;</span>,
+      <span class="s2">&quot;mistune                   0.8.4           py39h9ed2024_1000  \n&quot;</span>,
+      <span class="s2">&quot;mkl                       2021.4.0           hecd8cb5_637  \n&quot;</span>,
+      <span class="s2">&quot;mkl-service               2.4.0            py39h9ed2024_0  \n&quot;</span>,
+      <span class="s2">&quot;mkl_fft                   1.3.1            py39h4ab4a9b_0  \n&quot;</span>,
+      <span class="s2">&quot;mkl_random                1.2.2            py39hb2f4e1b_0  \n&quot;</span>,
+      <span class="s2">&quot;mock                      4.0.3              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;mpc                       1.1.0                h6ef4df4_1  \n&quot;</span>,
+      <span class="s2">&quot;mpfr                      4.0.2                h9066e36_1  \n&quot;</span>,
+      <span class="s2">&quot;mpi                       1.0                       mpich  \n&quot;</span>,
+      <span class="s2">&quot;mpich                     3.3.2                hc856adb_0  \n&quot;</span>,
+      <span class="s2">&quot;mpmath                    1.2.1            py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;msgpack-python            1.0.2            py39hf7b0b51_1  \n&quot;</span>,
+      <span class="s2">&quot;multidict                 5.2.0            py39hca72f7f_2  \n&quot;</span>,
+      <span class="s2">&quot;multipledispatch          0.6.0            py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;munkres                   1.1.4                      py_0  \n&quot;</span>,
+      <span class="s2">&quot;mypy_extensions           0.4.3            py39hecd8cb5_1  \n&quot;</span>,
+      <span class="s2">&quot;navigator-updater         0.2.1                    py39_1  \n&quot;</span>,
+      <span class="s2">&quot;nbclassic                 0.3.5              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;nbclient                  0.5.13           py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;nbconvert                 6.4.4            py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;nbformat                  5.3.0            py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;ncurses                   6.3                  hca72f7f_2  \n&quot;</span>,
+      <span class="s2">&quot;nest-asyncio              1.5.5            py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;networkx                  2.7.1              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;nltk                      3.7                pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;nodejs                    10.13.0              h0a44026_0  \n&quot;</span>,
+      <span class="s2">&quot;nose                      1.3.7           pyhd3eb1b0_1008  \n&quot;</span>,
+      <span class="s2">&quot;notebook                  6.4.8            py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;numba                     0.55.1           py39hae1ba45_0  \n&quot;</span>,
+      <span class="s2">&quot;numexpr                   2.8.1            py39h2e5f0a9_0  \n&quot;</span>,
+      <span class="s2">&quot;numpy                     1.21.5           py39h2e5f0a9_1  \n&quot;</span>,
+      <span class="s2">&quot;numpy-base                1.21.5           py39h3b1a694_1  \n&quot;</span>,
+      <span class="s2">&quot;numpydoc                  1.2                pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;olefile                   0.46               pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;oniguruma                 6.9.7.1              h9ed2024_0  \n&quot;</span>,
+      <span class="s2">&quot;openjpeg                  2.4.0                h66ea3da_0  \n&quot;</span>,
+      <span class="s2">&quot;openpyxl                  3.0.9              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;openssl                   1.1.1n               hca72f7f_0  \n&quot;</span>,
+      <span class="s2">&quot;packaging                 21.3               pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;pandas                    1.4.2            py39he9d5cce_0  \n&quot;</span>,
+      <span class="s2">&quot;pandocfilters             1.5.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;panel                     0.13.0           py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;param                     1.12.0             pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;parsel                    1.6.0            py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;parso                     0.8.3              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;partd                     1.2.0              pyhd3eb1b0_1  \n&quot;</span>,
+      <span class="s2">&quot;pathspec                  0.7.0                      py_0  \n&quot;</span>,
+      <span class="s2">&quot;patsy                     0.5.2            py39hecd8cb5_1  \n&quot;</span>,
+      <span class="s2">&quot;pep8                      1.7.1            py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;pexpect                   4.8.0              pyhd3eb1b0_3  \n&quot;</span>,
+      <span class="s2">&quot;pickleshare               0.7.5           pyhd3eb1b0_1003  \n&quot;</span>,
+      <span class="s2">&quot;pillow                    9.0.1            py39hde71d04_0  \n&quot;</span>,
+      <span class="s2">&quot;pip                       21.2.4           py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;pkginfo                   1.8.2              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;plotly                    5.6.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;pluggy                    1.0.0            py39hecd8cb5_1  \n&quot;</span>,
+      <span class="s2">&quot;poyo                      0.5.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;prometheus_client         0.13.1             pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;prompt-toolkit            3.0.20             pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;prompt_toolkit            3.0.20               hd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;protego                   0.1.16                     py_0  \n&quot;</span>,
+      <span class="s2">&quot;protobuf                  3.19.1           py39he9d5cce_0  \n&quot;</span>,
+      <span class="s2">&quot;psutil                    5.8.0            py39h9ed2024_1  \n&quot;</span>,
+      <span class="s2">&quot;ptyprocess                0.7.0              pyhd3eb1b0_2  \n&quot;</span>,
+      <span class="s2">&quot;pure_eval                 0.2.2              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;py                        1.11.0             pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;py-lief                   0.11.5           py39he9d5cce_1  \n&quot;</span>,
+      <span class="s2">&quot;pyasn1                    0.4.8              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;pyasn1-modules            0.2.8                      py_0  \n&quot;</span>,
+      <span class="s2">&quot;pycodestyle               2.7.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;pycosat                   0.6.3            py39h9ed2024_0  \n&quot;</span>,
+      <span class="s2">&quot;pycparser                 2.21               pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;pyct                      0.4.6            py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;pycurl                    7.44.1           py39hbcfaee0_1  \n&quot;</span>,
+      <span class="s2">&quot;pydispatcher              2.0.5            py39hecd8cb5_2  \n&quot;</span>,
+      <span class="s2">&quot;pydocstyle                6.1.1              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;pyerfa                    2.0.0            py39h9ed2024_0  \n&quot;</span>,
+      <span class="s2">&quot;pyflakes                  2.3.1              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;pygments                  2.11.2             pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;pyhamcrest                2.0.2              pyhd3eb1b0_2  \n&quot;</span>,
+      <span class="s2">&quot;pyjwt                     2.1.0            py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;pylint                    2.9.6            py39hecd8cb5_1  \n&quot;</span>,
+      <span class="s2">&quot;pyls-spyder               0.4.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;pyodbc                    4.0.32           py39he9d5cce_1  \n&quot;</span>,
+      <span class="s2">&quot;pyopenssl                 21.0.0             pyhd3eb1b0_1  \n&quot;</span>,
+      <span class="s2">&quot;pyparsing                 3.0.4              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;pyqt                      5.9.2            py39h23ab428_6  \n&quot;</span>,
+      <span class="s2">&quot;pyrsistent                0.18.0           py39hca72f7f_0  \n&quot;</span>,
+      <span class="s2">&quot;pysocks                   1.7.1            py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;pytables                  3.6.1            py39h648f197_1  \n&quot;</span>,
+      <span class="s2">&quot;pytest                    7.1.1            py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;python                    3.9.12               hdfd78df_0  \n&quot;</span>,
+      <span class="s2">&quot;python-dateutil           2.8.2              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;python-fastjsonschema     2.15.1             pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;python-libarchive-c       2.9                pyhd3eb1b0_1  \n&quot;</span>,
+      <span class="s2">&quot;python-lsp-black          1.0.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;python-lsp-jsonrpc        1.0.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;python-lsp-server         1.2.4              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;python-slugify            5.0.2              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;python-snappy             0.6.0            py39h23ab428_3  \n&quot;</span>,
+      <span class="s2">&quot;python.app                3                py39hca72f7f_0  \n&quot;</span>,
+      <span class="s2">&quot;pytz                      2021.3             pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;pyviz_comms               2.0.2              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;pywavelets                1.3.0            py39hca72f7f_0  \n&quot;</span>,
+      <span class="s2">&quot;pyyaml                    6.0              py39hca72f7f_1  \n&quot;</span>,
+      <span class="s2">&quot;pyzmq                     22.3.0           py39he9d5cce_2  \n&quot;</span>,
+      <span class="s2">&quot;qdarkstyle                3.0.2              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;qstylizer                 0.1.10             pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;qt                        5.9.7                h468cd18_1  \n&quot;</span>,
+      <span class="s2">&quot;qtawesome                 1.0.3              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;qtconsole                 5.3.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;qtpy                      2.0.1              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;queuelib                  1.5.0            py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;readline                  8.1.2                hca72f7f_1  \n&quot;</span>,
+      <span class="s2">&quot;regex                     2022.3.15        py39hca72f7f_0  \n&quot;</span>,
+      <span class="s2">&quot;requests                  2.27.1             pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;requests-file             1.5.1              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;ripgrep                   12.1.1                        0  \n&quot;</span>,
+      <span class="s2">&quot;rope                      0.22.0             pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;rsa                       4.7.2              pyhd3eb1b0_1  \n&quot;</span>,
+      <span class="s2">&quot;rtree                     0.9.7            py39hecd8cb5_1  \n&quot;</span>,
+      <span class="s2">&quot;ruamel_yaml               0.15.100         py39h9ed2024_0  \n&quot;</span>,
+      <span class="s2">&quot;s3transfer                0.5.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;scikit-image              0.19.2           py39hae1ba45_0  \n&quot;</span>,
+      <span class="s2">&quot;scikit-learn              1.0.2            py39hae1ba45_1  \n&quot;</span>,
+      <span class="s2">&quot;scikit-learn-intelex      2021.5.0         py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;scipy                     1.7.3            py39h8c7af03_0  \n&quot;</span>,
+      <span class="s2">&quot;scrapy                    2.6.1            py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;seaborn                   0.11.2             pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;send2trash                1.8.0              pyhd3eb1b0_1  \n&quot;</span>,
+      <span class="s2">&quot;service_identity          18.1.0             pyhd3eb1b0_1  \n&quot;</span>,
+      <span class="s2">&quot;setuptools                61.2.0           py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;sip                       4.19.13          py39h23ab428_0  \n&quot;</span>,
+      <span class="s2">&quot;six                       1.16.0             pyhd3eb1b0_1  \n&quot;</span>,
+      <span class="s2">&quot;smart_open                5.1.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;snappy                    1.1.9                he9d5cce_0  \n&quot;</span>,
+      <span class="s2">&quot;sniffio                   1.2.0            py39hecd8cb5_1  \n&quot;</span>,
+      <span class="s2">&quot;snowballstemmer           2.2.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;sortedcollections         2.1.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;sortedcontainers          2.4.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;soupsieve                 2.3.1              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;sphinx                    4.4.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;sphinxcontrib-applehelp   1.0.2              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;sphinxcontrib-devhelp     1.0.2              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;sphinxcontrib-htmlhelp    2.0.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;sphinxcontrib-jsmath      1.0.1              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;sphinxcontrib-qthelp      1.0.3              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;sphinxcontrib-serializinghtml 1.1.5              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;spyder                    5.1.5            py39hecd8cb5_1  \n&quot;</span>,
+      <span class="s2">&quot;spyder-kernels            2.1.3            py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;sqlalchemy                1.4.32           py39hca72f7f_0  \n&quot;</span>,
+      <span class="s2">&quot;sqlite                    3.38.2               h707629a_0  \n&quot;</span>,
+      <span class="s2">&quot;stack_data                0.2.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;statsmodels               0.13.2           py39hca72f7f_0  \n&quot;</span>,
+      <span class="s2">&quot;sympy                     1.10.1           py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;tabulate                  0.8.9            py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;tbb                       2021.5.0             haf03e11_0  \n&quot;</span>,
+      <span class="s2">&quot;tbb4py                    2021.5.0         py39haf03e11_0  \n&quot;</span>,
+      <span class="s2">&quot;tblib                     1.7.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;tenacity                  8.0.1            py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;terminado                 0.13.1           py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;testpath                  0.5.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;text-unidecode            1.3                pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;textdistance              4.2.1              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;threadpoolctl             2.2.0              pyh0d69192_0  \n&quot;</span>,
+      <span class="s2">&quot;three-merge               0.1.1              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;tifffile                  2021.7.2           pyhd3eb1b0_2  \n&quot;</span>,
+      <span class="s2">&quot;tinycss                   0.4             pyhd3eb1b0_1002  \n&quot;</span>,
+      <span class="s2">&quot;tk                        8.6.11               h7bc2e8c_0  \n&quot;</span>,
+      <span class="s2">&quot;tldextract                3.2.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;toml                      0.10.2             pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;tomli                     1.2.2              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;toolz                     0.11.2             pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;tornado                   6.1              py39h9ed2024_0  \n&quot;</span>,
+      <span class="s2">&quot;tqdm                      4.64.0           py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;traitlets                 5.1.1              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;twisted                   22.2.0           py39hca72f7f_0  \n&quot;</span>,
+      <span class="s2">&quot;typed-ast                 1.4.3            py39h9ed2024_1  \n&quot;</span>,
+      <span class="s2">&quot;typing-extensions         4.1.1                hd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;typing_extensions         4.1.1              pyh06a4308_0  \n&quot;</span>,
+      <span class="s2">&quot;tzdata                    2022a                hda174b7_0  \n&quot;</span>,
+      <span class="s2">&quot;ujson                     5.1.0            py39he9d5cce_0  \n&quot;</span>,
+      <span class="s2">&quot;unidecode                 1.2.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;unixodbc                  2.3.9                haf1e3a3_0  \n&quot;</span>,
+      <span class="s2">&quot;urllib3                   1.26.9           py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;w3lib                     1.21.0             pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;watchdog                  2.1.6            py39h999c104_0  \n&quot;</span>,
+      <span class="s2">&quot;wcwidth                   0.2.5              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;webencodings              0.5.1            py39hecd8cb5_1  \n&quot;</span>,
+      <span class="s2">&quot;websocket-client          0.58.0           py39hecd8cb5_4  \n&quot;</span>,
+      <span class="s2">&quot;werkzeug                  2.0.3              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;wget                      1.21.3               h6dfd666_0  \n&quot;</span>,
+      <span class="s2">&quot;wheel                     0.37.1             pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;widgetsnbextension        3.5.2            py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;wrapt                     1.12.1           py39h9ed2024_1  \n&quot;</span>,
+      <span class="s2">&quot;wurlitzer                 3.0.2            py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;xarray                    0.20.1             pyhd3eb1b0_1  \n&quot;</span>,
+      <span class="s2">&quot;xlrd                      2.0.1              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;xlsxwriter                3.0.3              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;xlwings                   0.24.9           py39hecd8cb5_0  \n&quot;</span>,
+      <span class="s2">&quot;xz                        5.2.5                h1de35cc_0  \n&quot;</span>,
+      <span class="s2">&quot;yaml                      0.2.5                haf1e3a3_0  \n&quot;</span>,
+      <span class="s2">&quot;yapf                      0.31.0             pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;yarl                      1.6.3            py39h9ed2024_0  \n&quot;</span>,
+      <span class="s2">&quot;zeromq                    4.3.4                h23ab428_0  \n&quot;</span>,
+      <span class="s2">&quot;zfp                       0.5.5                he9d5cce_6  \n&quot;</span>,
+      <span class="s2">&quot;zict                      2.0.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;zipp                      3.7.0              pyhd3eb1b0_0  \n&quot;</span>,
+      <span class="s2">&quot;zlib                      1.2.12               h4dc903c_2  \n&quot;</span>,
+      <span class="s2">&quot;zope                      1.0              py39hecd8cb5_1  \n&quot;</span>,
+      <span class="s2">&quot;zope.interface            5.4.0            py39h9ed2024_0  \n&quot;</span>,
+      <span class="s2">&quot;zstd                      1.4.9                h322a384_0  \n&quot;</span>
+     <span class="o">]</span>
+    <span class="o">}</span>
+   <span class="o">]</span>,
+   <span class="s2">&quot;source&quot;</span>: <span class="o">[</span>
+    <span class="s2">&quot;echo \&quot;Lets check if Java is installed\&quot;\n&quot;</span>,
+    <span class="s2">&quot;java --version\n&quot;</span>,
+    <span class="s2">&quot;\n&quot;</span>,
+    <span class="s2">&quot;echo \&quot;\&quot;\n&quot;</span>,
+    <span class="s2">&quot;echo \&quot;Lets check if Annaconda is installed\&quot;\n&quot;</span>,
+    <span class="s2">&quot;conda list\n&quot;</span>
+   <span class="o">]</span>
+  <span class="o">}</span>,
+  <span class="o">{</span>
+   <span class="s2">&quot;cell_type&quot;</span>: <span class="s2">&quot;markdown&quot;</span>,
+   <span class="s2">&quot;metadata&quot;</span>: <span class="o">{}</span>,
+   <span class="s2">&quot;source&quot;</span>: <span class="o">[</span>
+    <span class="s2">&quot;### Updating a repository&quot;</span>
+   <span class="o">]</span>
+  <span class="o">}</span>,
+  <span class="o">{</span>
+   <span class="s2">&quot;cell_type&quot;</span>: <span class="s2">&quot;code&quot;</span>,
+   <span class="s2">&quot;execution_count&quot;</span>: <span class="m">16</span>,
+   <span class="s2">&quot;metadata&quot;</span>: <span class="o">{</span>
+    <span class="s2">&quot;vscode&quot;</span>: <span class="o">{</span>
+     <span class="s2">&quot;languageId&quot;</span>: <span class="s2">&quot;shellscript&quot;</span>
+    <span class="o">}</span>
+   <span class="o">}</span>,
+   <span class="s2">&quot;outputs&quot;</span>: <span class="o">[</span>
+    <span class="o">{</span>
+     <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;stdout&quot;</span>,
+     <span class="s2">&quot;output_type&quot;</span>: <span class="s2">&quot;stream&quot;</span>,
+     <span class="s2">&quot;text&quot;</span>: <span class="o">[</span>
+      <span class="s2">&quot;From https://github.com/icyGS/Krish-CSA\n&quot;</span>,
+      <span class="s2">&quot; * branch            master     -&gt; FETCH_HEAD\n&quot;</span>,
+      <span class="s2">&quot;Already up to date.\n&quot;</span>
+     <span class="o">]</span>
+    <span class="o">}</span>
+   <span class="o">]</span>,
+   <span class="s2">&quot;source&quot;</span>: <span class="o">[</span>
+    <span class="s2">&quot;export repository=Krish-CSA\n&quot;</span>,
+    <span class="s2">&quot;export repo_main_folder=vscode\n&quot;</span>,
+    <span class="s2">&quot;cd </span><span class="nv">$HOME</span><span class="s2">/</span><span class="nv">$repo_main_folder</span><span class="s2">/Krish-CSA\n&quot;</span>,
+    <span class="s2">&quot;git fetch origin\n&quot;</span>,
+    <span class="s2">&quot;git pull origin master &quot;</span>
+   <span class="o">]</span>
+  <span class="o">}</span>,
+  <span class="o">{</span>
+   <span class="s2">&quot;cell_type&quot;</span>: <span class="s2">&quot;markdown&quot;</span>,
+   <span class="s2">&quot;metadata&quot;</span>: <span class="o">{}</span>,
+   <span class="s2">&quot;source&quot;</span>: <span class="o">[</span>
+    <span class="s2">&quot;### Doing some Installations\n&quot;</span>,
+    <span class="s2">&quot;\n&quot;</span>,
+    <span class="s2">&quot;Automizes some of the installations, specifically git, python, and java!&quot;</span>
+   <span class="o">]</span>
+  <span class="o">}</span>,
+  <span class="o">{</span>
+   <span class="s2">&quot;cell_type&quot;</span>: <span class="s2">&quot;code&quot;</span>,
+   <span class="s2">&quot;execution_count&quot;</span>: <span class="m">22</span>,
+   <span class="s2">&quot;metadata&quot;</span>: <span class="o">{</span>
+    <span class="s2">&quot;vscode&quot;</span>: <span class="o">{</span>
+     <span class="s2">&quot;languageId&quot;</span>: <span class="s2">&quot;shellscript&quot;</span>
+    <span class="o">}</span>
+   <span class="o">}</span>,
+   <span class="s2">&quot;outputs&quot;</span>: <span class="o">[</span>
+    <span class="o">{</span>
+     <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;stdout&quot;</span>,
+     <span class="s2">&quot;output_type&quot;</span>: <span class="s2">&quot;stream&quot;</span>,
+     <span class="s2">&quot;text&quot;</span>: <span class="o">[</span>
+      <span class="s2">&quot;\u001b[34m==&gt;\u001b[0m \u001b[1mFormulae\u001b[0m\n&quot;</span>,
+      <span class="s2">&quot;ca-certificates\tlibidn2\t\topenjdk\t\tpython@3.10\twget\n&quot;</span>,
+      <span class="s2">&quot;gdbm\t\tlibunistring\topenjdk@11\treadline\txz\n&quot;</span>,
+      <span class="s2">&quot;gettext\t\tmaven\t\topenssl@1.1\tspring-boot\n&quot;</span>,
+      <span class="s2">&quot;git\t\tmpdecimal\tpcre2\t\tsqlite\n&quot;</span>,
+      <span class="s2">&quot;\n&quot;</span>,
+      <span class="s2">&quot;Already up-to-date.\n&quot;</span>,
+      <span class="s2">&quot;\u001b[32m==&gt;\u001b[0m \u001b[1mUpgrading 1 outdated package:\u001b[0m\n&quot;</span>,
+      <span class="s2">&quot;openjdk 18.0.2 -&gt; 18.0.2.1\n&quot;</span>,
+      <span class="s2">&quot;\u001b[34m==&gt;\u001b[0m \u001b[1mDownloading https://ghcr.io/v2/homebrew/core/openjdk/manifests/18.0.2.1\u001b[0m\n&quot;</span>,
+      <span class="s2">&quot;######################################################################## 100.0%\n&quot;</span>,
+      <span class="s2">&quot;\u001b[34m==&gt;\u001b[0m \u001b[1mDownloading https://ghcr.io/v2/homebrew/core/openjdk/blobs/sha256:373ac8b65d\u001b[0m\n&quot;</span>,
+      <span class="s2">&quot;\u001b[34m==&gt;\u001b[0m \u001b[1mDownloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sh\u001b[0m\n&quot;</span>,
+      <span class="s2">&quot;######################################################################## 100.0%\n&quot;</span>,
+      <span class="s2">&quot;\u001b[32m==&gt;\u001b[0m \u001b[1mUpgrading \u001b[32mopenjdk\u001b[39m\n&quot;</span>,
+      <span class="s2">&quot;  18.0.2 -&gt; 18.0.2.1 \n&quot;</span>,
+      <span class="s2">&quot;\u001b[0m\n&quot;</span>,
+      <span class="s2">&quot;\u001b[34m==&gt;\u001b[0m \u001b[1mPouring openjdk--18.0.2.1.arm64_monterey.bottle.tar.gz\u001b[0m\n&quot;</span>,
+      <span class="s2">&quot;\u001b[34m==&gt;\u001b[0m \u001b[1mCaveats\u001b[0m\n&quot;</span>,
+      <span class="s2">&quot;For the system Java wrappers to find this JDK, symlink it with\n&quot;</span>,
+      <span class="s2">&quot;  sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk\n&quot;</span>,
+      <span class="s2">&quot;\n&quot;</span>,
+      <span class="s2">&quot;openjdk is keg-only, which means it was not symlinked into /opt/homebrew,\n&quot;</span>,
+      <span class="s2">&quot;because macOS provides similar software and installing this software in\n&quot;</span>,
+      <span class="s2">&quot;parallel can cause all kinds of trouble.\n&quot;</span>,
+      <span class="s2">&quot;\n&quot;</span>,
+      <span class="s2">&quot;If you need to have openjdk first in your PATH, run:\n&quot;</span>,
+      <span class="s2">&quot;  echo &#39;export PATH=\&quot;/opt/homebrew/opt/openjdk/bin:</span><span class="nv">$PATH</span><span class="s2">\&quot;&#39; &gt;&gt; ~/.zshrc\n&quot;</span>,
+      <span class="s2">&quot;\n&quot;</span>,
+      <span class="s2">&quot;For compilers to find openjdk you may need to set:\n&quot;</span>,
+      <span class="s2">&quot;  export CPPFLAGS=\&quot;-I/opt/homebrew/opt/openjdk/include\&quot;\n&quot;</span>,
+      <span class="s2">&quot;\n&quot;</span>,
+      <span class="s2">&quot;\u001b[34m==&gt;\u001b[0m \u001b[1mSummary\u001b[0m\n&quot;</span>,
+      <span class="s2">&quot;🍺  /opt/homebrew/Cellar/openjdk/18.0.2.1: 642 files, 309MB\n&quot;</span>,
+      <span class="s2">&quot;\u001b[34m==&gt;\u001b[0m \u001b[1mRunning `brew cleanup openjdk`...\u001b[0m\n&quot;</span>,
+      <span class="s2">&quot;Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.\n&quot;</span>,
+      <span class="s2">&quot;Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).\n&quot;</span>,
+      <span class="s2">&quot;Removing: /opt/homebrew/Cellar/openjdk/18.0.2... (642 files, 309MB)\n&quot;</span>,
+      <span class="s2">&quot;Removing: /Users/krishpatil/Library/Caches/Homebrew/openjdk--18.0.2... (180.3MB)\n&quot;</span>,
+      <span class="s2">&quot;\u001b[33mWarning:\u001b[0m git 2.37.2 is already installed and up-to-date.\n&quot;</span>,
+      <span class="s2">&quot;To reinstall 2.37.2, run:\n&quot;</span>,
+      <span class="s2">&quot;  brew reinstall git\n&quot;</span>,
+      <span class="s2">&quot;\u001b[33mWarning:\u001b[0m python@3.10 3.10.6_1 is already installed and up-to-date.\n&quot;</span>,
+      <span class="s2">&quot;To reinstall 3.10.6_1, run:\n&quot;</span>,
+      <span class="s2">&quot;  brew reinstall python@3.10\n&quot;</span>,
+      <span class="s2">&quot;Python 3.9.12\n&quot;</span>,
+      <span class="s2">&quot;\u001b[33mWarning:\u001b[0m openjdk 18.0.2.1 is already installed and up-to-date.\n&quot;</span>,
+      <span class="s2">&quot;To reinstall 18.0.2.1, run:\n&quot;</span>,
+      <span class="s2">&quot;  brew reinstall openjdk\n&quot;</span>,
+      <span class="s2">&quot;java 17.0.4.1 2022-08-18 LTS\n&quot;</span>,
+      <span class="s2">&quot;Java(TM) SE Runtime Environment (build 17.0.4.1+1-LTS-2)\n&quot;</span>,
+      <span class="s2">&quot;Java HotSpot(TM) 64-Bit Server VM (build 17.0.4.1+1-LTS-2, mixed mode, sharing)\n&quot;</span>,
+      <span class="s2">&quot;javac 17.0.4.1\n&quot;</span>
+     <span class="o">]</span>
+    <span class="o">}</span>
+   <span class="o">]</span>,
+   <span class="s2">&quot;source&quot;</span>: <span class="o">[</span>
+    <span class="s2">&quot;arch -arm64 brew list\n&quot;</span>,
+    <span class="s2">&quot;arch -arm64 brew update\n&quot;</span>,
+    <span class="s2">&quot;arch -arm64 brew upgrade\n&quot;</span>,
+    <span class="s2">&quot;arch -arm64 brew install git\n&quot;</span>,
+    <span class="s2">&quot;arch -arm64 brew install python\n&quot;</span>,
+    <span class="s2">&quot;python --version\n&quot;</span>,
+    <span class="s2">&quot;arch -arm64 brew install java\n&quot;</span>,
+    <span class="s2">&quot;java --version\n&quot;</span>,
+    <span class="s2">&quot;javac --version&quot;</span>
+   <span class="o">]</span>
+  <span class="o">}</span>,
+  <span class="o">{</span>
+   <span class="s2">&quot;cell_type&quot;</span>: <span class="s2">&quot;code&quot;</span>,
+   <span class="s2">&quot;execution_count&quot;</span>: <span class="m">7</span>,
+   <span class="s2">&quot;metadata&quot;</span>: <span class="o">{</span>
+    <span class="s2">&quot;vscode&quot;</span>: <span class="o">{</span>
+     <span class="s2">&quot;languageId&quot;</span>: <span class="s2">&quot;shellscript&quot;</span>
+    <span class="o">}</span>
+   <span class="o">}</span>,
+   <span class="s2">&quot;outputs&quot;</span>: <span class="o">[</span>
+    <span class="o">{</span>
+     <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;stdout&quot;</span>,
+     <span class="s2">&quot;output_type&quot;</span>: <span class="s2">&quot;stream&quot;</span>,
+     <span class="s2">&quot;text&quot;</span>: <span class="o">[</span>
+      <span class="s2">&quot;java 17.0.4.1 2022-08-18 LTS\n&quot;</span>,
+      <span class="s2">&quot;Java(TM) SE Runtime Environment (build 17.0.4.1+1-LTS-2)\n&quot;</span>,
+      <span class="s2">&quot;Java HotSpot(TM) 64-Bit Server VM (build 17.0.4.1+1-LTS-2, mixed mode, sharing)\n&quot;</span>,
+      <span class="s2">&quot;Python 3.9.12\n&quot;</span>,
+      <span class="s2">&quot;javac 17.0.4.1\n&quot;</span>,
+      <span class="s2">&quot;v10.13.0\n&quot;</span>
+     <span class="o">]</span>
+    <span class="o">}</span>
+   <span class="o">]</span>,
+   <span class="s2">&quot;source&quot;</span>: <span class="o">[</span>
+    <span class="s2">&quot;java --version\n&quot;</span>,
+    <span class="s2">&quot;python --version\n&quot;</span>,
+    <span class="s2">&quot;javac --version\n&quot;</span>,
+    <span class="s2">&quot;node --version&quot;</span>
+   <span class="o">]</span>
+  <span class="o">}</span>,
+  <span class="o">{</span>
+   <span class="s2">&quot;cell_type&quot;</span>: <span class="s2">&quot;markdown&quot;</span>,
+   <span class="s2">&quot;metadata&quot;</span>: <span class="o">{}</span>,
+   <span class="s2">&quot;source&quot;</span>: <span class="o">[</span>
+    <span class="s2">&quot;Shows all of the kernels installed for Jupyter&quot;</span>
+   <span class="o">]</span>
+  <span class="o">}</span>,
+  <span class="o">{</span>
+   <span class="s2">&quot;cell_type&quot;</span>: <span class="s2">&quot;code&quot;</span>,
+   <span class="s2">&quot;execution_count&quot;</span>: <span class="m">8</span>,
+   <span class="s2">&quot;metadata&quot;</span>: <span class="o">{</span>
+    <span class="s2">&quot;vscode&quot;</span>: <span class="o">{</span>
+     <span class="s2">&quot;languageId&quot;</span>: <span class="s2">&quot;shellscript&quot;</span>
+    <span class="o">}</span>
+   <span class="o">}</span>,
+   <span class="s2">&quot;outputs&quot;</span>: <span class="o">[</span>
+    <span class="o">{</span>
+     <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;stdout&quot;</span>,
+     <span class="s2">&quot;output_type&quot;</span>: <span class="s2">&quot;stream&quot;</span>,
+     <span class="s2">&quot;text&quot;</span>: <span class="o">[</span>
+      <span class="s2">&quot;Available kernels:\n&quot;</span>,
+      <span class="s2">&quot;  python395jvsc74a57bd0aee8b7b246df8f9039afb4144a1f6fd8d2ca17a180786b69acc140d282b71a49    /Users/krishpatil/.vscode/extensions/ms-toolsai.jupyter-2022.7.1102252217/temp/jupyter/kernels/python395jvsc74a57bd0aee8b7b246df8f9039afb4144a1f6fd8d2ca17a180786b69acc140d282b71a49\n&quot;</span>,
+      <span class="s2">&quot;  bash                                                                                     /Users/krishpatil/Library/Jupyter/kernels/bash\n&quot;</span>,
+      <span class="s2">&quot;  java                                                                                     /Users/krishpatil/Library/Jupyter/kernels/java\n&quot;</span>,
+      <span class="s2">&quot;  javascript                                                                               /Users/krishpatil/Library/Jupyter/kernels/javascript\n&quot;</span>,
+      <span class="s2">&quot;  python3                                                                                  /Users/krishpatil/opt/anaconda3/share/jupyter/kernels/python3\n&quot;</span>
+     <span class="o">]</span>
+    <span class="o">}</span>
+   <span class="o">]</span>,
+   <span class="s2">&quot;source&quot;</span>: <span class="o">[</span>
+    <span class="s2">&quot;jupyter kernelspec list&quot;</span>
+   <span class="o">]</span>
+  <span class="o">}</span>
+ <span class="o">]</span>,
+ <span class="s2">&quot;metadata&quot;</span>: <span class="o">{</span>
+  <span class="s2">&quot;kernelspec&quot;</span>: <span class="o">{</span>
+   <span class="s2">&quot;display_name&quot;</span>: <span class="s2">&quot;Bash&quot;</span>,
+   <span class="s2">&quot;language&quot;</span>: <span class="s2">&quot;bash&quot;</span>,
+   <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;bash&quot;</span>
+  <span class="o">}</span>,
+  <span class="s2">&quot;language_info&quot;</span>: <span class="o">{</span>
+   <span class="s2">&quot;codemirror_mode&quot;</span>: <span class="s2">&quot;shell&quot;</span>,
+   <span class="s2">&quot;file_extension&quot;</span>: <span class="s2">&quot;.sh&quot;</span>,
+   <span class="s2">&quot;mimetype&quot;</span>: <span class="s2">&quot;text/x-sh&quot;</span>,
+   <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;bash&quot;</span>
+  <span class="o">}</span>,
+  <span class="s2">&quot;orig_nbformat&quot;</span>: <span class="m">4</span>,
+  <span class="s2">&quot;vscode&quot;</span>: <span class="o">{</span>
+   <span class="s2">&quot;interpreter&quot;</span>: <span class="o">{</span>
+    <span class="s2">&quot;hash&quot;</span>: <span class="s2">&quot;aee8b7b246df8f9039afb4144a1f6fd8d2ca17a180786b69acc140d282b71a49&quot;</span>
+   <span class="o">}</span>
+  <span class="o">}</span>
+ <span class="o">}</span>,
+ <span class="s2">&quot;nbformat&quot;</span>: <span class="m">4</span>,
+ <span class="s2">&quot;nbformat_minor&quot;</span>: <span class="m">2</span>
+<span class="o">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/VSCodings/2022/08/26/Bash-Note.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/VSCodings/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/VSCodings/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/VSCodings/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>A very cool blog platform</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" target="_blank" title="fastai"><svg class="svg-icon grey"><use xlink:href="/VSCodings/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" target="_blank" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/VSCodings/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
