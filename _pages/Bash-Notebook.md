@@ -1,36 +1,27 @@
----
-layout: page
-title: Bash Notebook
-toc: true
-search_exclude: true
----
-
 {
  "cells": [
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# \"Bash Notebook\"\n",
-    "> \"Key Tools for Bash proof\"\n",
+    "# Bash Installation Checks \n",
     "\n",
-    "- toc: true\n",
-    "- branch: master\n",
+    "- toc: true \n",
     "- badges: true\n",
     "- comments: true\n",
-    "- categories: [KeyLearnings]"
+    "- categories: [jupyter]"
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# Checking if Java and Anaconda are installed"
+    "### Checking if Java and Anaconda are installed "
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 1,
+   "execution_count": 11,
    "metadata": {
     "vscode": {
      "languageId": "shellscript"
@@ -42,12 +33,12 @@ search_exclude: true
      "output_type": "stream",
      "text": [
       "Lets check if Java is installed\n",
-      "java 18.0.2.1 2022-08-18\n",
-      "Java(TM) SE Runtime Environment (build 18.0.2.1+1-1)\n",
-      "Java HotSpot(TM) 64-Bit Server VM (build 18.0.2.1+1-1, mixed mode, sharing)\n",
+      "java 17.0.4.1 2022-08-18 LTS\n",
+      "Java(TM) SE Runtime Environment (build 17.0.4.1+1-LTS-2)\n",
+      "Java HotSpot(TM) 64-Bit Server VM (build 17.0.4.1+1-LTS-2, mixed mode, sharing)\n",
       "\n",
       "Lets check if Annaconda is installed\n",
-      "# packages in environment at /Users/nathanmanangan/opt/anaconda3:\n",
+      "# packages in environment at /Users/krishpatil/opt/anaconda3:\n",
       "#\n",
       "# Name                    Version                   Build  Channel\n",
       "_ipyw_jlab_nb_ext_conf    0.1.0            py39hecd8cb5_1  \n",
@@ -286,7 +277,7 @@ search_exclude: true
       "nltk                      3.7                pyhd3eb1b0_0  \n",
       "nodejs                    10.13.0              h0a44026_0  \n",
       "nose                      1.3.7           pyhd3eb1b0_1008  \n",
-      "notebook                  6.4.12                   pypi_0    pypi\n",
+      "notebook                  6.4.8            py39hecd8cb5_0  \n",
       "numba                     0.55.1           py39hae1ba45_0  \n",
       "numexpr                   2.8.1            py39h2e5f0a9_0  \n",
       "numpy                     1.21.5           py39h2e5f0a9_1  \n",
@@ -480,19 +471,19 @@ search_exclude: true
     "\n",
     "echo \"\"\n",
     "echo \"Lets check if Annaconda is installed\"\n",
-    "conda list"
+    "conda list\n"
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# Updating a repository"
+    "### Updating a repository"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 2,
+   "execution_count": 16,
    "metadata": {
     "vscode": {
      "languageId": "shellscript"
@@ -503,39 +494,32 @@ search_exclude: true
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "remote: Enumerating objects: 168, done.        \n",
-      "remote: Counting objects: 100% (168/168), done.        \n",
-      "remote: Compressing objects: 100% (53/53), done.        \n",
-      "remote: Total 168 (delta 70), reused 163 (delta 65), pack-reused 0        \n",
-      "Receiving objects: 100% (168/168), 52.67 KiB | 1.10 MiB/s, done.\n",
-      "Resolving deltas: 100% (70/70), completed with 11 local objects.\n",
-      "From https://github.com/ProRichyMan/CSA-Fastpages\n",
-      "   9f5e7f3..c0f83ef  gh-pages   -> origin/gh-pages\n",
-      "From https://github.com/ProRichyMan/CSA-Fastpages\n",
+      "From https://github.com/icyGS/Krish-CSA\n",
       " * branch            master     -> FETCH_HEAD\n",
       "Already up to date.\n"
      ]
     }
    ],
    "source": [
-    "export repository=CSA-FASTPAGES\n",
+    "export repository=Krish-CSA\n",
     "export repo_main_folder=vscode\n",
-    "cd $HOME/$repo_main_folder/CSA-FASTPAGES\n",
+    "cd $HOME/$repo_main_folder/Krish-CSA\n",
     "git fetch origin\n",
-    "git pull origin master"
+    "git pull origin master "
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# Doing some Installations\n",
+    "### Doing some Installations\n",
+    "\n",
     "Automizes some of the installations, specifically git, python, and java!"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 3,
+   "execution_count": 22,
    "metadata": {
     "vscode": {
      "languageId": "shellscript"
@@ -547,19 +531,12 @@ search_exclude: true
      "output_type": "stream",
      "text": [
       "\u001b[34m==>\u001b[0m \u001b[1mFormulae\u001b[0m\n",
-      "ca-certificates\tgit\t\topenssl@1.1\treadline\txz\n",
-      "gdbm\t\tmpdecimal\tpcre2\t\tspring-boot\n",
-      "gettext\t\topenjdk\t\tpython@3.10\tsqlite\n",
-      "Updated 1 tap (homebrew/core).\n",
-      "\u001b[34m==>\u001b[0m \u001b[1mNew Formulae\u001b[0m\n",
-      "ghorg                      linux-headers@5.15         shaderc\n",
-      "kalign                     pymol                      swiftdraw\n",
-      "\u001b[34m==>\u001b[0m \u001b[1mOutdated Formulae\u001b[0m\n",
-      "openjdk\n",
+      "ca-certificates\tlibidn2\t\topenjdk\t\tpython@3.10\twget\n",
+      "gdbm\t\tlibunistring\topenjdk@11\treadline\txz\n",
+      "gettext\t\tmaven\t\topenssl@1.1\tspring-boot\n",
+      "git\t\tmpdecimal\tpcre2\t\tsqlite\n",
       "\n",
-      "You have \u001b[1m1\u001b[0m outdated formula installed.\n",
-      "You can upgrade it with \u001b[1mbrew upgrade\u001b[0m\n",
-      "or list it with \u001b[1mbrew outdated\u001b[0m.\n",
+      "Already up-to-date.\n",
       "\u001b[32m==>\u001b[0m \u001b[1mUpgrading 1 outdated package:\u001b[0m\n",
       "openjdk 18.0.2 -> 18.0.2.1\n",
       "\u001b[34m==>\u001b[0m \u001b[1mDownloading https://ghcr.io/v2/homebrew/core/openjdk/manifests/18.0.2.1\u001b[0m\n",
@@ -591,7 +568,7 @@ search_exclude: true
       "Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.\n",
       "Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).\n",
       "Removing: /opt/homebrew/Cellar/openjdk/18.0.2... (642 files, 309MB)\n",
-      "Removing: /Users/nathanmanangan/Library/Caches/Homebrew/openjdk--18.0.2... (180.3MB)\n",
+      "Removing: /Users/krishpatil/Library/Caches/Homebrew/openjdk--18.0.2... (180.3MB)\n",
       "\u001b[33mWarning:\u001b[0m git 2.37.2 is already installed and up-to-date.\n",
       "To reinstall 2.37.2, run:\n",
       "  brew reinstall git\n",
@@ -602,10 +579,10 @@ search_exclude: true
       "\u001b[33mWarning:\u001b[0m openjdk 18.0.2.1 is already installed and up-to-date.\n",
       "To reinstall 18.0.2.1, run:\n",
       "  brew reinstall openjdk\n",
-      "java 18.0.2.1 2022-08-18\n",
-      "Java(TM) SE Runtime Environment (build 18.0.2.1+1-1)\n",
-      "Java HotSpot(TM) 64-Bit Server VM (build 18.0.2.1+1-1, mixed mode, sharing)\n",
-      "javac 18.0.2.1\n"
+      "java 17.0.4.1 2022-08-18 LTS\n",
+      "Java(TM) SE Runtime Environment (build 17.0.4.1+1-LTS-2)\n",
+      "Java HotSpot(TM) 64-Bit Server VM (build 17.0.4.1+1-LTS-2, mixed mode, sharing)\n",
+      "javac 17.0.4.1\n"
      ]
     }
    ],
@@ -623,7 +600,7 @@ search_exclude: true
   },
   {
    "cell_type": "code",
-   "execution_count": 4,
+   "execution_count": 7,
    "metadata": {
     "vscode": {
      "languageId": "shellscript"
@@ -634,11 +611,11 @@ search_exclude: true
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "java 18.0.2.1 2022-08-18\n",
-      "Java(TM) SE Runtime Environment (build 18.0.2.1+1-1)\n",
-      "Java HotSpot(TM) 64-Bit Server VM (build 18.0.2.1+1-1, mixed mode, sharing)\n",
+      "java 17.0.4.1 2022-08-18 LTS\n",
+      "Java(TM) SE Runtime Environment (build 17.0.4.1+1-LTS-2)\n",
+      "Java HotSpot(TM) 64-Bit Server VM (build 17.0.4.1+1-LTS-2, mixed mode, sharing)\n",
       "Python 3.9.12\n",
-      "javac 18.0.2.1\n",
+      "javac 17.0.4.1\n",
       "v10.13.0\n"
      ]
     }
@@ -659,7 +636,7 @@ search_exclude: true
   },
   {
    "cell_type": "code",
-   "execution_count": 5,
+   "execution_count": 8,
    "metadata": {
     "vscode": {
      "languageId": "shellscript"
@@ -671,12 +648,11 @@ search_exclude: true
      "output_type": "stream",
      "text": [
       "Available kernels:\n",
-      "  python3106jvsc74a57bd0b0fa6594d8f4cbf19f97940f81e996739fb7646882a419484c72d19e05852a7e    /Users/nathanmanangan/.vscode/extensions/ms-toolsai.jupyter-2022.7.1102252217/temp/jupyter/kernels/python3106jvsc74a57bd0b0fa6594d8f4cbf19f97940f81e996739fb7646882a419484c72d19e05852a7e\n",
-      "  python3912jvsc74a57bd063f284042fb87dad5a12beb55d64e6088ab71ccd3f72ccdf84694aa4fa281d07    /Users/nathanmanangan/.vscode/extensions/ms-toolsai.jupyter-2022.7.1102252217/temp/jupyter/kernels/python3912jvsc74a57bd063f284042fb87dad5a12beb55d64e6088ab71ccd3f72ccdf84694aa4fa281d07\n",
-      "  bash                                                                                      /Users/nathanmanangan/Library/Jupyter/kernels/bash\n",
-      "  java                                                                                      /Users/nathanmanangan/Library/Jupyter/kernels/java\n",
-      "  javascript                                                                                /Users/nathanmanangan/Library/Jupyter/kernels/javascript\n",
-      "  python3                                                                                   /Users/nathanmanangan/opt/anaconda3/share/jupyter/kernels/python3\n"
+      "  python395jvsc74a57bd0aee8b7b246df8f9039afb4144a1f6fd8d2ca17a180786b69acc140d282b71a49    /Users/krishpatil/.vscode/extensions/ms-toolsai.jupyter-2022.7.1102252217/temp/jupyter/kernels/python395jvsc74a57bd0aee8b7b246df8f9039afb4144a1f6fd8d2ca17a180786b69acc140d282b71a49\n",
+      "  bash                                                                                     /Users/krishpatil/Library/Jupyter/kernels/bash\n",
+      "  java                                                                                     /Users/krishpatil/Library/Jupyter/kernels/java\n",
+      "  javascript                                                                               /Users/krishpatil/Library/Jupyter/kernels/javascript\n",
+      "  python3                                                                                  /Users/krishpatil/opt/anaconda3/share/jupyter/kernels/python3\n"
      ]
     }
    ],
@@ -697,7 +673,12 @@ search_exclude: true
    "mimetype": "text/x-sh",
    "name": "bash"
   },
-  "orig_nbformat": 4
+  "orig_nbformat": 4,
+  "vscode": {
+   "interpreter": {
+    "hash": "aee8b7b246df8f9039afb4144a1f6fd8d2ca17a180786b69acc140d282b71a49"
+   }
+  }
  },
  "nbformat": 4,
  "nbformat_minor": 2
