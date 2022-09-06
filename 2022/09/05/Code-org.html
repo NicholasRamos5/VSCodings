@@ -127,7 +127,59 @@ window.onload = wrap_img;
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>title: Code.org</li>
+<li>toc: true</li>
+<li>categories: [pbl, college board, java]</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>I have completed Code.org unit 1! Here I will share some of what I have learned.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">PainterPlus</span> <span class="kd">extends</span> <span class="n">Painter</span><span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">PainterPlus</span><span class="p">()</span> <span class="p">{</span>
+      <span class="kd">super</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">turnRight</span><span class="p">()</span> <span class="p">{</span>
+      <span class="n">turnLeft</span><span class="p">();</span>
+      <span class="n">turnLeft</span><span class="p">();</span>
+      <span class="n">turnLeft</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">move</span><span class="p">(</span><span class="kt">int</span> <span class="n">blocks</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">blocks</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">move</span><span class="p">();</span>
+        <span class="n">paint</span><span class="p">(</span><span class="s">&quot;white&quot;</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In this example, 'PainterPlus' is a subclass of the superclass 'Painter'. PainterPlus extends Painter, meaning PainterPlus inherits the characteristics of the preset class Painter. With this subclass, I can create constructors and methods to alternate the actions of the Painter.</p>
+<p>Lines 2 and 3 represent the constructor signature. Constructors are a special type of method invoked to create objects from a class.</p>
+<p>'turnRight' and 'move' represent methods, or blocks of codes that only run when called upon.</p>
 
 </div>
 </div>
@@ -142,18 +194,19 @@ window.onload = wrap_img;
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyNeighborhood</span> <span class="p">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
   
+      <span class="c1">// Lesson 6 Level 3</span>
+      <span class="c1">// TO DO #1: Instantiate a PainterPlus object.</span>
       <span class="n">PainterPlus</span> <span class="n">myPainterPlus</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PainterPlus</span><span class="p">();</span>
+      
+      <span class="n">myPainterPlus</span><span class="p">.</span><span class="na">move</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+      <span class="n">myPainterPlus</span><span class="p">.</span><span class="na">turnRight</span><span class="p">();</span>
+      <span class="n">myPainterPlus</span><span class="p">.</span><span class="na">move</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+      
   
-      <span class="n">myPainterPlus</span><span class="p">.</span><span class="na">move</span><span class="p">();</span>
-  
-      <span class="c1">// Level 3</span>
-      <span class="c1">// TO DO #1: Test your takeAllPaint() method.</span>
-      <span class="n">myPainterPlus</span><span class="p">.</span><span class="na">takeAllPaint</span><span class="p">();</span>
-    
-  
-      <span class="c1">// Level 4</span>
-      <span class="c1">// TO DO #1: Test your paintLine() method.</span>
-      <span class="n">myPainterPlus</span><span class="p">.</span><span class="na">paintLine</span><span class="p">();</span>
+      <span class="c1">// Lesson 7 Level 2</span>
+      <span class="c1">// TO DO #1: Navigate the PainterPlus object</span>
+      <span class="c1">// to the traffic cone.</span>
+      
       
     <span class="p">}</span>
   <span class="p">}</span>
@@ -166,6 +219,13 @@ window.onload = wrap_img;
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Here, I have instantiated an object called "myPainterPlus", which has a behavior displayed upon by the objects. The object follows the given commands written below it.</p>
+
+</div>
+</div>
+</div>
 </div>
 
 
