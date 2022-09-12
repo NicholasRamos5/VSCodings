@@ -4,21 +4,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Title | Nicholas’ fastpages</title>
+<title>If and Else Statements (Booleans) | Nicholas’ fastpages</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Title" />
+<meta property="og:title" content="If and Else Statements (Booleans)" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="A very cool blog platform" />
 <meta property="og:description" content="A very cool blog platform" />
-<link rel="canonical" href="https://nicholasramos5.github.io/VSCodings/2020/09/12/Boolean.html" />
-<meta property="og:url" content="https://nicholasramos5.github.io/VSCodings/2020/09/12/Boolean.html" />
+<link rel="canonical" href="https://nicholasramos5.github.io/VSCodings/pbl/college%20board/java/2020/09/12/Boolean.html" />
+<meta property="og:url" content="https://nicholasramos5.github.io/VSCodings/pbl/college%20board/java/2020/09/12/Boolean.html" />
 <meta property="og:site_name" content="Nicholas’ fastpages" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-09-12T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Title" />
+<meta property="twitter:title" content="If and Else Statements (Booleans)" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2020-09-12T00:00:00-05:00","datePublished":"2020-09-12T00:00:00-05:00","description":"A very cool blog platform","headline":"Title","mainEntityOfPage":{"@type":"WebPage","@id":"https://nicholasramos5.github.io/VSCodings/2020/09/12/Boolean.html"},"url":"https://nicholasramos5.github.io/VSCodings/2020/09/12/Boolean.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2020-09-12T00:00:00-05:00","datePublished":"2020-09-12T00:00:00-05:00","description":"A very cool blog platform","headline":"If and Else Statements (Booleans)","mainEntityOfPage":{"@type":"WebPage","@id":"https://nicholasramos5.github.io/VSCodings/pbl/college%20board/java/2020/09/12/Boolean.html"},"url":"https://nicholasramos5.github.io/VSCodings/pbl/college%20board/java/2020/09/12/Boolean.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/VSCodings/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://nicholasramos5.github.io/VSCodings/feed.xml" title="Nicholas' fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/VSCodings/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -73,7 +73,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Title</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-09-12T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">If and Else Statements (Booleans)</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-09-12T00:00:00-05:00" itemprop="datePublished">
         Sep 12, 2020
       </time>
        • <span class="read-time" title="Estimated read time">
@@ -83,6 +83,19 @@ window.onload = wrap_img;
     
 </span></p>
 
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/VSCodings/categories/#pbl">pbl</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/VSCodings/categories/#college board">college board</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/VSCodings/categories/#java">java</a>
+        
+      
+      </p>
     
 
     
@@ -116,7 +129,13 @@ window.onload = wrap_img;
       </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <!--
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Booleans">Booleans </a></li>
+<li class="toc-entry toc-h2"><a href="#Boolean-Operators">Boolean Operators </a></li>
+<li class="toc-entry toc-h2"><a href="#If-and-Else-Statements">If and Else Statements </a></li>
+<li class="toc-entry toc-h2"><a href="#Switch-Case-Statements">Switch Case Statements </a></li>
+<li class="toc-entry toc-h2"><a href="#De-Morgan's-Law">De Morgan&#39;s Law </a></li>
+</ul><!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
@@ -125,9 +144,13 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Booleans">Booleans<a class="anchor-link" href="#Booleans"> </a></h2><p>A Boolean expression is a logical statement that can be evaluated to True or False. A Boolean expression may be composed of a combination of the Boolean constants true or false.</p>
+<h2 id="Booleans">
+<a class="anchor" href="#Booleans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Booleans<a class="anchor-link" href="#Booleans"> </a>
+</h2>
+<p>A Boolean expression is a logical statement that can be evaluated to True or False. A Boolean expression may be composed of a combination of the Boolean constants true or false.</p>
 <p>Assigned as variables:</p>
 
 </div>
@@ -143,7 +166,7 @@ window.onload = wrap_img;
 <div class=" highlight hl-java"><pre><span></span><span class="kt">boolean</span> <span class="n">a</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
 <span class="kt">boolean</span> <span class="n">b</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
 
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;variable a: &quot;</span> <span class="o">+</span> <span class="n">a</span> <span class="o">+</span> <span class="s">&quot;\nvariable b: &quot;</span> <span class="o">+</span> <span class="n">b</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"variable a: "</span> <span class="o">+</span> <span class="n">a</span> <span class="o">+</span> <span class="s">"\nvariable b: "</span> <span class="o">+</span> <span class="n">b</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -168,9 +191,13 @@ variable b: false
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Boolean-Operators">Boolean Operators<a class="anchor-link" href="#Boolean-Operators"> </a></h2><p>There are three basic boolean operators. They are AND (&amp;&amp;), OR (||), and NOT (!).</p>
+<h2 id="Boolean-Operators">
+<a class="anchor" href="#Boolean-Operators" aria-hidden="true"><span class="octicon octicon-link"></span></a>Boolean Operators<a class="anchor-link" href="#Boolean-Operators"> </a>
+</h2>
+<p>There are three basic boolean operators. They are AND (&amp;&amp;), OR (||), and NOT (!).</p>
 <p>With AND, both (all) statements must be true to produce and output of true.</p>
 <p>With OR, only one of the statements must be true to produce and output of true.</p>
 <p>With NOT, boolean outputs are reversed (true is false, false is true).</p>
@@ -194,7 +221,7 @@ These operators compare the numerical value of two numbers (integers or doubles)
 <span class="kt">boolean</span> <span class="n">d</span> <span class="o">=</span> <span class="kc">false</span> <span class="o">||</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">//neither are true</span>
 <span class="kt">boolean</span> <span class="n">e</span> <span class="o">=</span> <span class="o">!</span><span class="kc">true</span><span class="p">;</span> <span class="c1">// opposite of true </span>
 
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;variable a: &quot;</span> <span class="o">+</span> <span class="n">a</span> <span class="o">+</span> <span class="s">&quot;\nvariable b: &quot;</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="s">&quot;\nvariable c: &quot;</span> <span class="o">+</span> <span class="n">c</span> <span class="o">+</span> <span class="s">&quot;\nvariable d: &quot;</span> <span class="o">+</span> <span class="n">d</span> <span class="o">+</span> <span class="s">&quot;\nvariable e: &quot;</span> <span class="o">+</span> <span class="n">e</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"variable a: "</span> <span class="o">+</span> <span class="n">a</span> <span class="o">+</span> <span class="s">"\nvariable b: "</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="s">"\nvariable c: "</span> <span class="o">+</span> <span class="n">c</span> <span class="o">+</span> <span class="s">"\nvariable d: "</span> <span class="o">+</span> <span class="n">d</span> <span class="o">+</span> <span class="s">"\nvariable e: "</span> <span class="o">+</span> <span class="n">e</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -233,7 +260,7 @@ variable e: false
 <span class="kt">boolean</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="c1">//false statement</span>
 <span class="kt">boolean</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">7</span> <span class="o">&gt;=</span> <span class="mi">7</span><span class="p">;</span> <span class="c1">//true statement</span>
 
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;variable a: &quot;</span> <span class="o">+</span> <span class="n">a</span> <span class="o">+</span> <span class="s">&quot;\nvariable b: &quot;</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="s">&quot;\nvariable c: &quot;</span> <span class="o">+</span> <span class="n">c</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"variable a: "</span> <span class="o">+</span> <span class="n">a</span> <span class="o">+</span> <span class="s">"\nvariable b: "</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="s">"\nvariable c: "</span> <span class="o">+</span> <span class="n">c</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -259,9 +286,13 @@ variable c: true
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="If-and-Else-Statements">If and Else Statements<a class="anchor-link" href="#If-and-Else-Statements"> </a></h2><p>If statements are statements that check if a condition is true or false. If a condition is true, it will perform an action/line of code it contains, if it is false, it will skip over the action/code block under the if statement.</p>
+<h2 id="If-and-Else-Statements">
+<a class="anchor" href="#If-and-Else-Statements" aria-hidden="true"><span class="octicon octicon-link"></span></a>If and Else Statements<a class="anchor-link" href="#If-and-Else-Statements"> </a>
+</h2>
+<p>If statements are statements that check if a condition is true or false. If a condition is true, it will perform an action/line of code it contains, if it is false, it will skip over the action/code block under the if statement.</p>
 <p>An Else statements is an action/code block that performs if and only if the condition for the if statement is not true (false).</p>
 <p>An Else If statement is a combination of If and Else statements where if a condition is not true, it will move into the else statement which has another if statement.</p>
 
@@ -281,18 +312,18 @@ variable c: true
 
 <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//this is false, so this code is ignored, else statement is followed</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">c</span><span class="p">){</span> 
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a is the greatest number&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"a is the greatest number"</span><span class="p">);</span>
     <span class="p">}</span>
     <span class="k">else</span> <span class="p">{</span> 
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;c is the greatesst number&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"c is the greatesst number"</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
-<span class="k">else</span> <span class="p">{</span> <span class="c1">//since if was false, &quot;else&quot; is true</span>
+<span class="k">else</span> <span class="p">{</span> <span class="c1">//since if was false, "else" is true</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">b</span> <span class="o">&gt;</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span><span class="c1">//this is false, so this code is ignored, else statement is followed</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;b is the greatest number&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"b is the greatest number"</span><span class="p">);</span>
     <span class="p">}</span>
     <span class="k">else</span> <span class="p">{</span> <span class="c1">//if was false, this code is followed</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;c is the greatest number&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"c is the greatest number"</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -318,9 +349,13 @@ variable c: true
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Switch-Case-Statements">Switch Case Statements<a class="anchor-link" href="#Switch-Case-Statements"> </a></h2><p>Switch Case Statements help simplify/manage the complexity of if else statements. Unlike if-then and if-then-else statements, the switch statement can have a number of possible execution paths.</p>
+<h2 id="Switch-Case-Statements">
+<a class="anchor" href="#Switch-Case-Statements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Switch Case Statements<a class="anchor-link" href="#Switch-Case-Statements"> </a>
+</h2>
+<p>Switch Case Statements help simplify/manage the complexity of if else statements. Unlike if-then and if-then-else statements, the switch statement can have a number of possible execution paths.</p>
 <p>It works by stating a variety of Case statements which all have conditions. The code blocks under each case are then run if the condition to one of the cases is met. Just like if else statements, Switch Case statements will go down each case to see if a condition is met. If it is met, the case's block of code will run and ignore the rest of the Switch Case statements (assuming each case is ended with a break statement).</p>
 
 </div>
@@ -338,16 +373,16 @@ variable c: true
 
 <span class="k">switch</span> <span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//variable passed in</span>
     <span class="k">case</span> <span class="mi">1</span><span class="p">:</span> <span class="c1">//condition checked if equals</span>
-        <span class="n">output</span> <span class="o">=</span> <span class="s">&quot;the number is 1&quot;</span><span class="p">;</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="s">"the number is 1"</span><span class="p">;</span>
         <span class="k">break</span><span class="p">;</span>
     <span class="k">case</span> <span class="mi">2</span><span class="p">:</span> 
-        <span class="n">output</span> <span class="o">=</span> <span class="s">&quot;the number is 2&quot;</span><span class="p">;</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="s">"the number is 2"</span><span class="p">;</span>
         <span class="k">break</span><span class="p">;</span>
     <span class="k">case</span> <span class="mi">3</span><span class="p">:</span> 
-        <span class="n">output</span> <span class="o">=</span> <span class="s">&quot;the number is 3&quot;</span><span class="p">;</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="s">"the number is 3"</span><span class="p">;</span>
         <span class="k">break</span><span class="p">;</span>
     <span class="k">case</span> <span class="mi">4</span><span class="p">:</span> 
-        <span class="n">output</span> <span class="o">=</span> <span class="s">&quot;the number is 4&quot;</span><span class="p">;</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="s">"the number is 4"</span><span class="p">;</span>
         <span class="k">break</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">output</span><span class="p">);</span>
@@ -374,7 +409,8 @@ variable c: true
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The break statement is crucial, as it terminates the enclosing switch statement. The break statements are necessary because without them, statements in switch blocks fall through: All statements after the matching case label are executed in sequence, regardless of the expression of subsequent case labels, until a break statement is encountered</p>
 <p>This is an example without break statements.</p>
@@ -394,16 +430,16 @@ variable c: true
 
 <span class="k">switch</span> <span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">case</span> <span class="mi">1</span><span class="p">:</span> 
-        <span class="n">output</span> <span class="o">=</span> <span class="s">&quot;the number is 1&quot;</span><span class="p">;</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="s">"the number is 1"</span><span class="p">;</span>
         
     <span class="k">case</span> <span class="mi">2</span><span class="p">:</span> 
-        <span class="n">output</span> <span class="o">=</span> <span class="s">&quot;the number is 2&quot;</span><span class="p">;</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="s">"the number is 2"</span><span class="p">;</span>
         
     <span class="k">case</span> <span class="mi">3</span><span class="p">:</span> 
-        <span class="n">output</span> <span class="o">=</span> <span class="s">&quot;the number is 3&quot;</span><span class="p">;</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="s">"the number is 3"</span><span class="p">;</span>
         
     <span class="k">case</span> <span class="mi">4</span><span class="p">:</span>
-        <span class="n">output</span> <span class="o">=</span> <span class="s">&quot;the number is 4&quot;</span><span class="p">;</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="s">"the number is 4"</span><span class="p">;</span>
         
 <span class="p">}</span>
 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">output</span><span class="p">);</span>
@@ -430,9 +466,13 @@ variable c: true
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="De-Morgan's-Law">De Morgan's Law<a class="anchor-link" href="#De-Morgan's-Law"> </a></h2><p>De Morgan's Law states that in a boolean statement, the not operator ! will reverse all the operators in that statement. For instance, true becomes false, false becomes true, and becomes or, or becomes and, &gt; becomes &lt;=, &lt;= becomes &gt;, etc.</p>
+<h2 id="De-Morgan's-Law">
+<a class="anchor" href="#De-Morgan's-Law" aria-hidden="true"><span class="octicon octicon-link"></span></a>De Morgan's Law<a class="anchor-link" href="#De-Morgan's-Law"> </a>
+</h2>
+<p>De Morgan's Law states that in a boolean statement, the not operator ! will reverse all the operators in that statement. For instance, true becomes false, false becomes true, and becomes or, or becomes and, &gt; becomes &lt;=, &lt;= becomes &gt;, etc.</p>
 <p>De Morgan's Law defines how we can negate an AND statement and how we can negate an OR statement.</p>
 <p>!(a &amp;&amp; b) is equivalent to !a || !b
 !(a || b) is equivalent to !a &amp;&amp; !b</p>
@@ -454,10 +494,10 @@ variable c: true
 <span class="kt">boolean</span> <span class="n">b</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
 
 <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">a</span> <span class="o">||</span> <span class="n">b</span><span class="p">)){</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;A and B both are false&quot;</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"A and B both are false"</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="k">else</span><span class="p">{</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;A and B are true&quot;</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"A and B are true"</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -493,10 +533,10 @@ variable c: true
 <span class="kt">boolean</span> <span class="n">b</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
 
 <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">a</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">b</span><span class="p">){</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;A and B both are false&quot;</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"A and B both are false"</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="k">else</span><span class="p">{</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;A and B are true&quot;</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"A and B are true"</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -521,7 +561,8 @@ variable c: true
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As shown above, both statements are equal given De Morgan's Law. It's important because of how they can break inversions as a complement of a complex boolean expression.</p>
 
@@ -532,7 +573,15 @@ variable c: true
 
 
 
-  </div><a class="u-url" href="/VSCodings/2020/09/12/Boolean.html" hidden></a>
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="NicholasRamos5/VSCodings"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/VSCodings/pbl/college%20board/java/2020/09/12/Boolean.html" hidden></a>
 </article>
 
       </div>
