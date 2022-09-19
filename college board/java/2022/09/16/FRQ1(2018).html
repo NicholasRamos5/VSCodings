@@ -127,6 +127,7 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Part-A">Part A </a></li>
 <li class="toc-entry toc-h2"><a href="#Part-B">Part B </a></li>
 </ul><!--
 #################################################
@@ -187,33 +188,11 @@ window.onload = wrap_img;
 <span class="cm">            * Precondition: num &gt; 0 </span>
 <span class="cm">            */</span>
             <span class="kd">public</span> <span class="kt">double</span> <span class="nf">runSimulations</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span>
-            <span class="p">{</span> <span class="cm">/* to be implemented in part (b) */</span> <span class="p">}</span>
+         <span class="p">{</span> <span class="cm">/* to be implemented in part (b) */</span> <span class="p">}</span>
         <span class="p">}</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">{ /* implementation not shown */ }</span>
-<span class="ansi-red-intense-fg ansi-bold">missing return statement</span>
-
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">{ /* to be implemented in part (a) */ }</span>
-<span class="ansi-red-intense-fg ansi-bold">missing return statement</span>
-
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">{ /* to be implemented in part (b) */ }</span>
-<span class="ansi-red-intense-fg ansi-bold">missing return statement</span>
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -223,6 +202,9 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Part-A">
+<a class="anchor" href="#Part-A" aria-hidden="true"><span class="octicon octicon-link"></span></a>Part A<a class="anchor-link" href="#Part-A"> </a>
+</h2>
 <p>Write the simulate method, which simulates the frog attempting to hop in a straight line to a goal from the frog's starting position of 0 within a maximum number of hops. The method returns true if the frog successfully reached the goal within the maximum number of hops; otherwise, the method returns false.</p>
 <p>The FrogSimulation class provides a method called hopDistance that returns an integer representing the distance (positive or negative) to be moved when the frog hops. A positive distance represents a move toward the goal. A negative distance represents a move away from the goal. The returned distance may vary from call to call. Each time the frog hops, its position is adjusted by the value returned by a call to the hopDistance method.</p>
 <p>The frog hops until one of the following conditions becomes true:</p>
