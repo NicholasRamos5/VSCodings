@@ -137,6 +137,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#Question-24">Question 24 </a></li>
 <li class="toc-entry toc-h3"><a href="#Question-28">Question 28 </a></li>
 <li class="toc-entry toc-h3"><a href="#Question-39">Question 39 </a></li>
+<li class="toc-entry toc-h3"><a href="#Other-Takeaways">Other Takeaways </a></li>
 </ul>
 </li>
 </ul><!--
@@ -238,6 +239,10 @@ window.onload = wrap_img;
 <p>The value of recur(9) is 18. However, this call was made within another recursive call and is not the final return value.</p>
 <p>The call recur(27) returns the value of recur(recur(9)) since 27 is greater than 10. The call recur(9) returns 18, since 9 is less than or equal to 10. Therefore, recur(recur(9)) is recur(18). The call recur(18) returns recur(recur(6)) since 18 is greater than 10. The call recur(6) returns 12, since 6 is less than or equal to 10. Therefore, recur(recur(6)) is recur(12). The call recur(12) returns recur(recur(4)) since 12 is greater than 10. The call recur(4) returns 8, since 4 is less than or equal to 10. Therefore, recur(recur(4)) is recur(8). The call recur(8) returns 16, since 8 is less than or equal to 10.  Therefore, recur(27)returns the value of 16.</p>
 <p>My error here was that I failed to recognize the double recur, which takes the output of 18 and then recurs it once again, making 18 not the final output. I failed to realize that 'recur recur (n/3)' takes the output of 'recur (n/3)' and plugs it back into the recur value.</p>
+<h3 id="Other-Takeaways">
+<a class="anchor" href="#Other-Takeaways" aria-hidden="true"><span class="octicon octicon-link"></span></a>Other Takeaways<a class="anchor-link" href="#Other-Takeaways"> </a>
+</h3>
+<p>While taking the college board mcq, I found myself wondering what the difference between .length and .size were. I learned that .length provides the length of an array or array object, which is the total space allocated in memory during the initialization of the array. .size, on the other hand, provides the total number of objects in the collection of an arraylist, which has no length property to provide. I also learned that both .length and .size start counting at 1, rather than the zero.</p>
 
 </div>
 </div>
