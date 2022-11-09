@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -143,24 +143,27 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Primitive or Referenced?</p>
 <p>Primitive = single variable type (int, char, float)
-Reference = several varaible type ()</p>
+Reference = several variable type ()</p>
 <p>array syntax</p>
 <ul>
-<li>decalre an array variable, it's not initialized
--- by default, each elemetn in the array is value 0</li>
+<li>declare an array variable, it's not initialized
+-- by default, each element in the array is value 0</li>
 </ul>
 <p>Common errors:
 --bound errors: when you access an array value that does not exist</p>
-<p>--unitialized and unfilled arrays</p>
+<p>--uninitialized and unfilled arrays</p>
 <p>traverse an array:
 --accessing the values inside of it
 --can use any sort of iteration or loop 
--recommend for loops, but while loops and recurssion also work</p>
+-recommend for loops, but while loops and recursion also work</p>
 <p>Enhanced for loops</p>
 <p>Developing algorithms using arrays
 --minium, maximums, sums, manipulating each element</p>
 <p>array.length
 array[i]</p>
+<h2 id="Declaring-Arrays">Declaring Arrays<a class="anchor-link" href="#Declaring-Arrays"> </a></h2><p>Two types, arrays and ArrayLists Primitive data types contain a single var type (int, charm float) Referenced (string array classes)</p>
+<h2 id="Array-Syntax">Array Syntax<a class="anchor-link" href="#Array-Syntax"> </a></h2><p>int[] array = new int[10];</p>
+<h2 id="Traverse-and-Array">Traverse and Array<a class="anchor-link" href="#Traverse-and-Array"> </a></h2><p>Main way is For loops where you go through each element of the array (enhanced or basic) Basic For loop is For when you know number of elements</p>
 
 </div>
 </div>
@@ -214,31 +217,95 @@ array[i]</p>
 </div>
 </div>
 
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Homework">Homework<a class="anchor-link" href="#Homework"> </a></h2><p>Write a class called ArrayMethods that contains two methods that utilize/manipulate an array. You may choose 2 of the 4 options below to complete. Extra credit for doing all 4 options. Make sure to show test cases for all of the options you choose.</p>
+<p>Options for hacks (Pick two):</p>
+<ul>
+<li>Swap the first and last element in the array</li>
+<li>Replace all even elements with 0</li>
+<li>Return true if the array is currently sorted in increasing order</li>
+<li>Return true if the array contains duplicate elements</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ArrayMethods</span>
+ <span class="p">{</span>
+    <span class="kd">private</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">values</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">};</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">printElements</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">values</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">values</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">swapElements</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">last</span> <span class="o">=</span> <span class="n">values</span><span class="o">[</span><span class="n">values</span><span class="p">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span><span class="p">;</span>
+        <span class="n">values</span><span class="o">[</span><span class="n">values</span><span class="p">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">values</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span>
+        <span class="n">values</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="n">last</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">evenToZero</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">values</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">values</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+                <span class="n">values</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;First and Last Element Swap: &quot;</span><span class="p">);</span>
+        <span class="n">ArrayMethods</span> <span class="n">swapElements</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayMethods</span><span class="p">();</span>
+        <span class="n">swapElements</span><span class="p">.</span><span class="na">swapElements</span><span class="p">();</span>
+        <span class="n">swapElements</span><span class="p">.</span><span class="na">printElements</span><span class="p">();</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Replacing All Elements w/ Zero: &quot;</span><span class="p">);</span>
+        <span class="n">ArrayMethods</span> <span class="n">evenToZero</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayMethods</span><span class="p">();</span>
+        <span class="n">swapElements</span><span class="p">.</span><span class="na">evenToZero</span><span class="p">();</span>
+        <span class="n">swapElements</span><span class="p">.</span><span class="na">printElements</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">ArrayMethods</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 <div class="output_wrapper">
 <div class="output">
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">return true;</span>
-<span class="ansi-red-intense-fg ansi-bold">return outside method</span>
-
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">return false;</span><span class="ansi-black-intense-fg ansi-bold">   </span>
-<span class="ansi-red-intense-fg ansi-bold">return outside method</span>
-
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">{</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">        int i;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">    for(i = 0; i &lt; values.length; i ++);{</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">        if (values[i] &lt; values[i+1]) {</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">            return true;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">        } else {</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">            return false;   </span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">        }</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">    }</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">    }</span>
-<span class="ansi-red-intense-fg ansi-bold">initializer must be able to complete normally</span>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>First and Last Element Swap: 
+3
+1
+2
+0
+Replacing All Elements w/ Zero: 
+3
+1
+0
+0
 </pre>
 </div>
 </div>
@@ -256,25 +323,20 @@ array[i]</p>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ArrayMethods</span> <span class="p">{</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">isSorted</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">a</span><span class="p">)</span> 
-<span class="p">{</span>
-    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
-    <span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">a</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span><span class="p">);{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&lt;</span> <span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>   
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Hello</span> <span class="p">{</span>
+
+<span class="kt">boolean</span> <span class="nf">isSorted</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+    
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">a</span><span class="p">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&gt;</span> <span class="n">a</span><span class="o">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="kc">false</span><span class="p">;</span> 
+            <span class="p">}</span>
         <span class="p">}</span>
+    
+        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span> 
     <span class="p">}</span>
 <span class="p">}</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="kt">int</span> <span class="n">ar</span><span class="o">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">};</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">isSorted</span><span class="p">(</span><span class="n">ar</span><span class="p">));</span>   
-<span class="p">}</span>
-<span class="p">}</span>
-<span class="n">ArrayMethods</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<span class="n">Hello</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -288,11 +350,10 @@ array[i]</p>
 
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">java.lang.ArrayIndexOutOfBoundsException: Index 4 out of bounds for length 4</span>
-<span class="ansi-red-intense-fg ansi-bold">	at ArrayMethods.isSorted(#17:6)</span>
-<span class="ansi-red-intense-fg ansi-bold">	at ArrayMethods.main(#17:16)</span>
-<span class="ansi-red-intense-fg ansi-bold">	at .(#21:1)</span></pre>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">Hello.main</span><span class="ansi-black-intense-fg ansi-bold">(null);</span>
+<span class="ansi-red-intense-fg ansi-bold">cannot find symbol</span>
+<span class="ansi-red-intense-fg ansi-bold">  symbol:   method main(&lt;nulltype&gt;)</span>
+</pre>
 </div>
 </div>
 
