@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      5 min read
     
 </span></p>
 
@@ -137,6 +137,14 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#While-Loop-Example">While Loop Example </a></li>
 <li class="toc-entry toc-h2"><a href="#Recursion-Loop-Example">Recursion Loop Example </a></li>
 <li class="toc-entry toc-h2"><a href="#Nested-Loop-Example">Nested Loop Example </a></li>
+<li class="toc-entry toc-h2"><a href="#Vocab">Vocab </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#For-Loop">For Loop </a></li>
+<li class="toc-entry toc-h3"><a href="#While-Loop">While Loop </a></li>
+<li class="toc-entry toc-h3"><a href="#Do-While-Loop">Do While Loop </a></li>
+<li class="toc-entry toc-h3"><a href="#Nested-Loops">Nested Loops </a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h2"><a href="#Homework">Homework </a></li>
 </ul><!--
 #################################################
@@ -548,6 +556,241 @@ count is 1
 count is 2
 count is 3
 count is 4
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Vocab">
+<a class="anchor" href="#Vocab" aria-hidden="true"><span class="octicon octicon-link"></span></a>Vocab<a class="anchor-link" href="#Vocab"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="For-Loop">
+<a class="anchor" href="#For-Loop" aria-hidden="true"><span class="octicon octicon-link"></span></a>For Loop<a class="anchor-link" href="#For-Loop"> </a>
+</h3>
+<ul>
+<li>
+<p>A block of code that runs as long as a condition is met (or for a set number of iterations)</p>
+</li>
+<li>
+<p>Enhanced for loop: iterates in a sequence (increased counter by 1)</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// Enhanced For Loop</span>
+
+<span class="kt">int</span> <span class="n">scores</span><span class="o">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">23</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">89</span><span class="p">};</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">scores</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">scores</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+    <span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>23
+34
+45
+56
+67
+78
+89
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="While-Loop">
+<a class="anchor" href="#While-Loop" aria-hidden="true"><span class="octicon octicon-link"></span></a>While Loop<a class="anchor-link" href="#While-Loop"> </a>
+</h3>
+<ul>
+<li>Block of code that checks if a conditions is met, and only runs if so </li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"a is "</span> <span class="o">+</span> <span class="n">a</span><span class="p">);</span>
+    <span class="n">a</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>a is 5
+a is 6
+a is 7
+a is 8
+a is 9
+a is 10
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Do-While-Loop">
+<a class="anchor" href="#Do-While-Loop" aria-hidden="true"><span class="octicon octicon-link"></span></a>Do While Loop<a class="anchor-link" href="#Do-While-Loop"> </a>
+</h3>
+<ul>
+<li>Similar to a while loop, but the code runs once guaranteed, and then only runs again if condition is met</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+<span class="k">do</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"i is "</span> <span class="o">+</span> <span class="n">i</span><span class="p">);</span>
+    <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span><span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>i is 5
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Nested-Loops">
+<a class="anchor" href="#Nested-Loops" aria-hidden="true"><span class="octicon octicon-link"></span></a>Nested Loops<a class="anchor-link" href="#Nested-Loops"> </a>
+</h3>
+<ul>
+<li>To simply put it, nested loops are loops contained within other loops</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="s">" is less than 10"</span><span class="p">);</span>
+        <span class="n">a</span><span class="o">++</span><span class="p">;</span>
+
+        <span class="k">while</span> <span class="p">(</span><span class="n">b</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">)</span> <span class="p">{</span>
+         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"and "</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="s">" is less than 18"</span><span class="p">);</span>
+         <span class="n">b</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>5 is less than 10
+and 15 is less than 18
+and 16 is less than 18
+and 17 is less than 18
+6 is less than 10
+7 is less than 10
+8 is less than 10
+9 is less than 10
 </pre>
 </div>
 </div>

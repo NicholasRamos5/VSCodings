@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      8 min read
     
 </span></p>
 
@@ -128,6 +128,14 @@ window.onload = wrap_img;
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h2"><a href="#Importance-of-Unit-3">Importance of Unit 3 </a></li>
+<li class="toc-entry toc-h2"><a href="#Vocab">Vocab </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Compound-Boolean-Expression">Compound Boolean Expression </a></li>
+<li class="toc-entry toc-h3"><a href="#Truth-Tables">Truth Tables </a></li>
+<li class="toc-entry toc-h3"><a href="#De-Morgan’s-Law">De Morgan’s Law </a></li>
+<li class="toc-entry toc-h3"><a href="#Comparing-Methods">Comparing Methods </a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h2"><a href="#Homework">Homework </a></li>
 <li class="toc-entry toc-h2"><a href="#2009-FRQ-3b">2009 FRQ 3b </a></li>
 <li class="toc-entry toc-h2"><a href="#2017-FRQ-1b">2017 FRQ 1b </a></li>
@@ -192,6 +200,238 @@ Boolean allows a programmer to implement choice into their code</p>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Vocab">
+<a class="anchor" href="#Vocab" aria-hidden="true"><span class="octicon octicon-link"></span></a>Vocab<a class="anchor-link" href="#Vocab"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Compound-Boolean-Expression">
+<a class="anchor" href="#Compound-Boolean-Expression" aria-hidden="true"><span class="octicon octicon-link"></span></a>Compound Boolean Expression<a class="anchor-link" href="#Compound-Boolean-Expression"> </a>
+</h3>
+<p>Compound boolean expressions can include &amp;&amp; (and) or || (or) to execute code</p>
+<ul>
+<li>&amp;&amp;: code will execute if and only if both conditions are true</li>
+<li>||: code will execute if either or both conditions are true</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">y</span> <span class="o">&lt;=</span> <span class="mi">13</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Both conditions are true"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span> <span class="o">||</span> <span class="n">y</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"At least one of the conditions are true"</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Both conditions are true
+At least one of the conditions are true
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Truth-Tables">
+<a class="anchor" href="#Truth-Tables" aria-hidden="true"><span class="octicon octicon-link"></span></a>Truth Tables<a class="anchor-link" href="#Truth-Tables"> </a>
+</h3>
+<p>A truth table is a breakdown of a logic function by listing all possible values the function can attain. Such a table typically contains several rows and columns, with the top row representing the logical variables and combinations, in increasing complexity leading up to the final function.</p>
+<p><img src="/VSCodings/images/copied_from_nb/images/TruthTable.png" alt="Truth Table"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="De-Morgan’s-Law">
+<a class="anchor" href="#De-Morgan%E2%80%99s-Law" aria-hidden="true"><span class="octicon octicon-link"></span></a>De Morgan’s Law<a class="anchor-link" href="#De-Morgan%E2%80%99s-Law"> </a>
+</h3>
+<p>De Morgan’s Law basically transforms logical expressions using the NOT operator (!)</p>
+<p>Examples:</p>
+<p><img src="/VSCodings/images/copied_from_nb/images/DeMorgansLaw.png" alt="De Morgan’s Law"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Comparing-Methods">
+<a class="anchor" href="#Comparing-Methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Comparing Methods<a class="anchor-link" href="#Comparing-Methods"> </a>
+</h3>
+<p>The compare() method in Java compares two class specific objects (x, y) given as parameters. It returns the value:</p>
+
+<pre><code>0, if x==y
+
+1, if x &lt; y
+
+1, if x &gt; y
+
+</code></pre>
+<ul>
+<li>Numbers:</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Integer</span><span class="p">.</span><span class="na">compare</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">));</span>
+
+<span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Integer</span><span class="p">.</span><span class="na">compare</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">));</span>
+
+<span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Integer</span><span class="p">.</span><span class="na">compare</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">));</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0
+-1
+1
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Strings:</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">String</span> <span class="n">x</span> <span class="o">=</span> <span class="s">"Hello"</span><span class="p">;</span>
+<span class="n">String</span> <span class="n">y</span> <span class="o">=</span> <span class="s">"Goodbye"</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="na">compareTo</span><span class="p">(</span><span class="n">y</span><span class="p">));</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Objects:</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">Object</span> <span class="n">circle</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Circle</span><span class="p">();</span>
+<span class="n">Object</span> <span class="n">circle2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Circle</span><span class="p">();</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">circlel</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">circle2</span><span class="p">));</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">

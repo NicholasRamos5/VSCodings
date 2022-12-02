@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      4 min read
     
 </span></p>
 
@@ -129,6 +129,13 @@ window.onload = wrap_img;
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h2"><a href="#Object-Oriented-Programming">Object Oriented Programming </a></li>
 <li class="toc-entry toc-h2"><a href="#Calling-Methods">Calling Methods </a></li>
+<li class="toc-entry toc-h2"><a href="#Vocab">Vocab </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Wrapper-Classes">Wrapper Classes </a></li>
+<li class="toc-entry toc-h3"><a href="#Concatenation">Concatenation </a></li>
+<li class="toc-entry toc-h3"><a href="#Math-Class-(Random-Usage)">Math Class (Random Usage) </a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h2"><a href="#Homework">Homework </a></li>
 </ul><!--
 #################################################
@@ -227,6 +234,209 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Vocab">
+<a class="anchor" href="#Vocab" aria-hidden="true"><span class="octicon octicon-link"></span></a>Vocab<a class="anchor-link" href="#Vocab"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Wrapper-Classes">
+<a class="anchor" href="#Wrapper-Classes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Wrapper Classes<a class="anchor-link" href="#Wrapper-Classes"> </a>
+</h3>
+<p>Wrapper classes provide a way to use primitive data types as objects.</p>
+<p>You need to wrap (int, double, etc.) when object references are required</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">Integer</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="n">Double</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">3.7</span><span class="p">;</span>
+<span class="n">Boolean</span> <span class="n">c</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2
+3.7
+true
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Concatenation">
+<a class="anchor" href="#Concatenation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Concatenation<a class="anchor-link" href="#Concatenation"> </a>
+</h3>
+<p>String concatenation forms a new String that is the combination of multiple strings. There are two ways to concatenate strings in Java:</p>
+<ul>
+<li>By + (String concatenation) operator</li>
+<li>By concat() method</li>
+</ul>
+<p>The operator "+" normally acts as an arithmetic operator unless one of its operands is a String. If so, it converts the other operand to a String before joining the second operand to the end of the first operand.</p>
+<p>Difference between the two methods:</p>
+<p>concat() can only concatenation String objects, whereas "+" silently converts non-Strings to Strings</p>
+<p>concat() can only combine two strings, whereas "+" can combine any amount of strings.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">String</span> <span class="n">s</span> <span class="o">=</span> <span class="s">"Nicholas"</span> <span class="o">+</span> <span class="s">"Ramos"</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+
+<span class="n">String</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">+</span> <span class="s">"Nicholas"</span> <span class="o">+</span> <span class="s">"Ramos"</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>NicholasRamos
+4NicholasRamos23
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">String</span> <span class="n">s</span> <span class="o">=</span> <span class="s">"Nicholas "</span><span class="p">;</span> 
+<span class="n">String</span> <span class="n">b</span> <span class="o">=</span> <span class="s">"Ramos"</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="na">concat</span><span class="p">(</span><span class="n">b</span><span class="p">));</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Nicholas Ramos
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Math-Class-(Random-Usage)">
+<a class="anchor" href="#Math-Class-(Random-Usage)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Math Class (Random Usage)<a class="anchor-link" href="#Math-Class-(Random-Usage)"> </a>
+</h3>
+<ul>
+<li>Math class contains methods that can be found within java.lang package</li>
+<li>call Math class methods by "ClassName.methodName()"</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">());</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">floor</span><span class="p">(</span><span class="mf">4.5</span><span class="p">));</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">abs</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">));</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">));</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="mi">36</span><span class="p">,</span> <span class="mf">.5</span><span class="p">));</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">sqrt</span><span class="p">(</span><span class="mi">36</span><span class="p">));</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0.2898890672676253
+4.0
+3
+49.0
+6.0
+6.0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">

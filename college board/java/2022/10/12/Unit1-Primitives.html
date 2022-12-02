@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      3 min read
     
 </span></p>
 
@@ -127,6 +127,12 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Vocab">Vocab </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Casting-(division)">Casting (division) </a></li>
+<li class="toc-entry toc-h3"><a href="#Casting-(Truncating-or-Rounding)">Casting (Truncating or Rounding) </a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h1"><a href="#2006-FRQ">2006 FRQ </a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#Problem-2a">Problem 2a </a></li>
@@ -142,6 +148,147 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Vocab">
+<a class="anchor" href="#Vocab" aria-hidden="true"><span class="octicon octicon-link"></span></a>Vocab<a class="anchor-link" href="#Vocab"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Casting-(division)">
+<a class="anchor" href="#Casting-(division)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Casting (division)<a class="anchor-link" href="#Casting-(division)"> </a>
+</h3>
+<p>When you divide a double by a double (known as real division), the output (result) is a double. When both expressions are an integer, the result is an integer, which can cause complications. For example, 5/2 realistically does not produce and integer result.</p>
+<p>Without casting, the result will be the nearest lower integer, and the remainder is disregarded.</p>
+<p>With casting, you can cast the denominator to a double. When one value is a double and the other is an int, java casts the int into a double, which allows it to perform real division.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">double</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">7</span><span class="o">/</span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="mi">3</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">y</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2.3333333333333335
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Casting-(Truncating-or-Rounding)">
+<a class="anchor" href="#Casting-(Truncating-or-Rounding)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Casting (Truncating or Rounding)<a class="anchor-link" href="#Casting-(Truncating-or-Rounding)"> </a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>When rounding, double values can be rounded by adding .5 (subtracting for negative numbers) and casting with (int). When you cast as an integer, java always rounds down, so by adding .5, it ensures that doubles that end in .5 or higher are casted as the integer greater than their value</p>
+<p>When truncating, you can just cast as an int, which will always result in the integer just less than the double value, which is exactly what truncating is.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">double</span> <span class="n">x</span> <span class="o">=</span> <span class="mf">8.0</span><span class="o">/</span><span class="mi">3</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">rounded</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)(</span><span class="n">x</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"8.0/3 = "</span> <span class="o">+</span> <span class="n">x</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"8.0/3 rounded = "</span> <span class="o">+</span> <span class="n">rounded</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"8.0/3 truncated = "</span> <span class="o">+</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">x</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>8.0/3 = 2.6666666666666665
+8.0/3 rounded = 3
+8.0/3 truncated = 2
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
