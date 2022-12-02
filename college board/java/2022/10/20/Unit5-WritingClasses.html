@@ -4,21 +4,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Title | Nicholas’ fastpages</title>
+<title>Unit 5 - Writing Classes | Nicholas’ fastpages</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Title" />
+<meta property="og:title" content="Unit 5 - Writing Classes" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="A very cool blog platform" />
 <meta property="og:description" content="A very cool blog platform" />
-<link rel="canonical" href="https://nicholasramos5.github.io/VSCodings/2022/10/20/Unit5-WritingClasses.html" />
-<meta property="og:url" content="https://nicholasramos5.github.io/VSCodings/2022/10/20/Unit5-WritingClasses.html" />
+<link rel="canonical" href="https://nicholasramos5.github.io/VSCodings/college%20board/java/2022/10/20/Unit5-WritingClasses.html" />
+<meta property="og:url" content="https://nicholasramos5.github.io/VSCodings/college%20board/java/2022/10/20/Unit5-WritingClasses.html" />
 <meta property="og:site_name" content="Nicholas’ fastpages" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-10-20T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Title" />
+<meta property="twitter:title" content="Unit 5 - Writing Classes" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-10-20T00:00:00-05:00","datePublished":"2022-10-20T00:00:00-05:00","description":"A very cool blog platform","headline":"Title","mainEntityOfPage":{"@type":"WebPage","@id":"https://nicholasramos5.github.io/VSCodings/2022/10/20/Unit5-WritingClasses.html"},"url":"https://nicholasramos5.github.io/VSCodings/2022/10/20/Unit5-WritingClasses.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-10-20T00:00:00-05:00","datePublished":"2022-10-20T00:00:00-05:00","description":"A very cool blog platform","headline":"Unit 5 - Writing Classes","mainEntityOfPage":{"@type":"WebPage","@id":"https://nicholasramos5.github.io/VSCodings/college%20board/java/2022/10/20/Unit5-WritingClasses.html"},"url":"https://nicholasramos5.github.io/VSCodings/college%20board/java/2022/10/20/Unit5-WritingClasses.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/VSCodings/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://nicholasramos5.github.io/VSCodings/feed.xml" title="Nicholas' fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/VSCodings/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -73,7 +73,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Title</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-10-20T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Unit 5 - Writing Classes</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-10-20T00:00:00-05:00" itemprop="datePublished">
         Oct 20, 2022
       </time>
        • <span class="read-time" title="Estimated read time">
@@ -83,6 +83,16 @@ window.onload = wrap_img;
     
 </span></p>
 
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/VSCodings/categories/#college board">college board</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/VSCodings/categories/#java">java</a>
+        
+      
+      </p>
     
 
     
@@ -116,7 +126,30 @@ window.onload = wrap_img;
       </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <!--
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Vocab">Vocab </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Creating-a-Class">Creating a Class </a></li>
+<li class="toc-entry toc-h3"><a href="#Constructor">Constructor </a></li>
+<li class="toc-entry toc-h3"><a href="#Accessor-Methods">Accessor Methods </a></li>
+<li class="toc-entry toc-h3"><a href="#Mutator-Methods">Mutator Methods </a></li>
+<li class="toc-entry toc-h3"><a href="#Static-Variables">Static Variables </a></li>
+<li class="toc-entry toc-h3"><a href="#Access-Modifiers-(Public,-Private,-Protected)">Access Modifiers (Public, Private, Protected) </a></li>
+<li class="toc-entry toc-h3"><a href="#Static-Methods-&-Class-Methods">Static Methods &amp; Class Methods </a></li>
+<li class="toc-entry toc-h3"><a href="#this-Keyword">this Keyword </a></li>
+<li class="toc-entry toc-h3"><a href="#Main-Method-&-Tester-Method">Main Method &amp; Tester Method </a></li>
+<li class="toc-entry toc-h3"><a href="#Inheritance-&-Extends">Inheritance &amp; Extends </a></li>
+<li class="toc-entry toc-h3"><a href="#Subclass-Constructor,-Super-Keyword">Subclass Constructor, Super Keyword </a></li>
+<li class="toc-entry toc-h3"><a href="#Overloading-a-method">Overloading a method </a></li>
+<li class="toc-entry toc-h3"><a href="#Overriding-a-method">Overriding a method </a></li>
+<li class="toc-entry toc-h3"><a href="#Abstract-Class-&-Abstract-Method">Abstract Class &amp; Abstract Method </a></li>
+<li class="toc-entry toc-h3"><a href="#Standard-Methods">Standard Methods </a></li>
+<li class="toc-entry toc-h3"><a href="#Late-Binding-of-an-Object">Late Binding of an Object </a></li>
+<li class="toc-entry toc-h3"><a href="#Polymorphism">Polymorphism </a></li>
+<li class="toc-entry toc-h3"><a href="#Big-O-notation">Big O notation </a></li>
+</ul>
+</li>
+</ul><!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
@@ -125,36 +158,22 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="o">-</span> <span class="n">toc</span><span class="p">:</span> <span class="kc">true</span>
-<span class="o">-</span> <span class="n">branch</span><span class="p">:</span> <span class="n">master</span>
-<span class="o">-</span> <span class="n">badges</span><span class="p">:</span> <span class="kc">true</span>
-<span class="o">-</span> <span class="n">comments</span><span class="p">:</span> <span class="kc">true</span>
-<span class="o">-</span> <span class="n">categories</span><span class="p">:</span> <span class="o">[</span><span class="n">college</span> <span class="n">board</span><span class="p">,</span> <span class="n">java</span><span class="o">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Vocab">Vocab<a class="anchor-link" href="#Vocab"> </a></h2>
+<h2 id="Vocab">
+<a class="anchor" href="#Vocab" aria-hidden="true"><span class="octicon octicon-link"></span></a>Vocab<a class="anchor-link" href="#Vocab"> </a>
+</h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Creating-a-Class">Creating a Class<a class="anchor-link" href="#Creating-a-Class"> </a></h3><p>Classes can be created by using the keyword "class",followed by defining the class name starting with a single uppercase letter (known as CamelCase).</p>
+<h3 id="Creating-a-Class">
+<a class="anchor" href="#Creating-a-Class" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating a Class<a class="anchor-link" href="#Creating-a-Class"> </a>
+</h3>
+<p>Classes can be created by using the keyword "class",followed by defining the class name starting with a single uppercase letter (known as CamelCase).</p>
 <p>Format:</p>
 
 </div>
@@ -179,12 +198,18 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Constructor">Constructor<a class="anchor-link" href="#Constructor"> </a></h3><ul>
-<li><p>Special method used to initialize objects</p>
+<h3 id="Constructor">
+<a class="anchor" href="#Constructor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Constructor<a class="anchor-link" href="#Constructor"> </a>
+</h3>
+<ul>
+<li>
+<p>Special method used to initialize objects</p>
 </li>
-<li><p>Constructor does not return anything because it's not called directly by the code, it's called by the memory allocation and object initialization code in the runtime. Its return value (if it actually has one when compiled down to machine code) is opaque to the user - therefore, you can't specify it.</p>
+<li>
+<p>Constructor does not return anything because it's not called directly by the code, it's called by the memory allocation and object initialization code in the runtime. Its return value (if it actually has one when compiled down to machine code) is opaque to the user - therefore, you can't specify it.</p>
 </li>
 </ul>
 
@@ -239,42 +264,62 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Accessor-Methods">Accessor Methods<a class="anchor-link" href="#Accessor-Methods"> </a></h3><ul>
-<li><p>return the value of a private variable</p>
+<h3 id="Accessor-Methods">
+<a class="anchor" href="#Accessor-Methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Accessor Methods<a class="anchor-link" href="#Accessor-Methods"> </a>
+</h3>
+<ul>
+<li>
+<p>return the value of a private variable</p>
 </li>
-<li><p>gives other classes access to that value stored in that variable, without having direct access to  the variable itself</p>
+<li>
+<p>gives other classes access to that value stored in that variable, without having direct access to  the variable itself</p>
 </li>
-<li><p>Accessor methods take no parameters and have a return type that matches the type of the variable they are accessing.</p>
+<li>
+<p>Accessor methods take no parameters and have a return type that matches the type of the variable they are accessing.</p>
 </li>
 </ul>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Mutator-Methods">Mutator Methods<a class="anchor-link" href="#Mutator-Methods"> </a></h3><ul>
-<li><p>reset the value of a private variable</p>
+<h3 id="Mutator-Methods">
+<a class="anchor" href="#Mutator-Methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mutator Methods<a class="anchor-link" href="#Mutator-Methods"> </a>
+</h3>
+<ul>
+<li>
+<p>reset the value of a private variable</p>
 </li>
-<li><p>gives other classes the ability to modify the value stored in that variable without having direct access to the variable itself</p>
+<li>
+<p>gives other classes the ability to modify the value stored in that variable without having direct access to the variable itself</p>
 </li>
-<li><p>take one parameter whose type matches the type of the variable it is modifying</p>
+<li>
+<p>take one parameter whose type matches the type of the variable it is modifying</p>
 </li>
-<li><p>always have a return type of whatever data field is being retrieved</p>
+<li>
+<p>always have a return type of whatever data field is being retrieved</p>
 </li>
 </ul>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Static-Variables">Static Variables<a class="anchor-link" href="#Static-Variables"> </a></h3><ul>
-<li><p>also called class variables, as they belong to the class and not a particular instance</p>
+<h3 id="Static-Variables">
+<a class="anchor" href="#Static-Variables" aria-hidden="true"><span class="octicon octicon-link"></span></a>Static Variables<a class="anchor-link" href="#Static-Variables"> </a>
+</h3>
+<ul>
+<li>
+<p>also called class variables, as they belong to the class and not a particular instance</p>
 </li>
-<li></li>
+<li>
 </ul>
 
 </div>
@@ -308,8 +353,8 @@ window.onload = wrap_img;
    <span class="p">}</span>
  
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">showData</span><span class="p">(){</span>
-       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Value of a = &quot;</span><span class="o">+</span><span class="n">a</span><span class="p">);</span>
-       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Value of b = &quot;</span><span class="o">+</span><span class="n">b</span><span class="p">);</span>
+       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Value of a = "</span><span class="o">+</span><span class="n">a</span><span class="p">);</span>
+       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Value of b = "</span><span class="o">+</span><span class="n">b</span><span class="p">);</span>
     <span class="p">}</span>
  <span class="c1">//public static void increment(){</span>
  <span class="c1">//a++;</span>
@@ -344,14 +389,21 @@ Value of b = 2
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Access-Modifiers-(Public,-Private,-Protected)">Access Modifiers (Public, Private, Protected)<a class="anchor-link" href="#Access-Modifiers-(Public,-Private,-Protected)"> </a></h3><ul>
-<li><p>Public - can be accessed within and outside of class</p>
+<h3 id="Access-Modifiers-(Public,-Private,-Protected)">
+<a class="anchor" href="#Access-Modifiers-(Public,-Private,-Protected)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Access Modifiers (Public, Private, Protected)<a class="anchor-link" href="#Access-Modifiers-(Public,-Private,-Protected)"> </a>
+</h3>
+<ul>
+<li>
+<p>Public - can be accessed within and outside of class</p>
 </li>
-<li><p>Private - can only be accessed within the class</p>
+<li>
+<p>Private - can only be accessed within the class</p>
 </li>
-<li><p>Protected - can be accessed by all classes in the package and all subclass outside of the package</p>
+<li>
+<p>Protected - can be accessed by all classes in the package and all subclass outside of the package</p>
 </li>
 </ul>
 
@@ -432,23 +484,34 @@ Value of b = 2
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Static-Methods-&amp;-Class-Methods">Static Methods &amp; Class Methods<a class="anchor-link" href="#Static-Methods-&amp;-Class-Methods"> </a></h3><ul>
-<li><p>part of the class, rather than each object (static properties and methods)</p>
+<h3 id="Static-Methods-&amp;-Class-Methods">
+<a class="anchor" href="#Static-Methods-&amp;-Class-Methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Static Methods &amp; Class Methods<a class="anchor-link" href="#Static-Methods-&amp;-Class-Methods"> </a>
+</h3>
+<ul>
+<li>
+<p>part of the class, rather than each object (static properties and methods)</p>
 </li>
-<li><p>static methods do not require an object</p>
+<li>
+<p>static methods do not require an object</p>
 </li>
-<li><p>static properties only have one instance, which is the same for all objects</p>
+<li>
+<p>static properties only have one instance, which is the same for all objects</p>
 </li>
 </ul>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="this-Keyword">this Keyword<a class="anchor-link" href="#this-Keyword"> </a></h3><ul>
+<h3 id="this-Keyword">
+<a class="anchor" href="#this-Keyword" aria-hidden="true"><span class="octicon octicon-link"></span></a>this Keyword<a class="anchor-link" href="#this-Keyword"> </a>
+</h3>
+<ul>
 <li>allows you to access properties of the class</li>
 </ul>
 
@@ -473,7 +536,7 @@ Value of b = 2
     <span class="c1">// Call the constructor</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
       <span class="n">Main</span> <span class="n">myObj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Main</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
-      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Value of x = &quot;</span> <span class="o">+</span> <span class="n">myObj</span><span class="p">.</span><span class="na">x</span><span class="p">);</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Value of x = "</span> <span class="o">+</span> <span class="n">myObj</span><span class="p">.</span><span class="na">x</span><span class="p">);</span>
     <span class="p">}</span>
   <span class="p">}</span>
 
@@ -501,37 +564,55 @@ Value of b = 2
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Main-Method-&amp;-Tester-Method">Main Method &amp; Tester Method<a class="anchor-link" href="#Main-Method-&amp;-Tester-Method"> </a></h3><ul>
-<li><p>used to test a class, is automatically called when class ran</p>
+<h3 id="Main-Method-&amp;-Tester-Method">
+<a class="anchor" href="#Main-Method-&amp;-Tester-Method" aria-hidden="true"><span class="octicon octicon-link"></span></a>Main Method &amp; Tester Method<a class="anchor-link" href="#Main-Method-&amp;-Tester-Method"> </a>
+</h3>
+<ul>
+<li>
+<p>used to test a class, is automatically called when class ran</p>
 </li>
-<li><p>usually creates an object and can test methods</p>
+<li>
+<p>usually creates an object and can test methods</p>
 </li>
-<li><p>mostly used as a tester method for classes</p>
+<li>
+<p>mostly used as a tester method for classes</p>
 </li>
-<li><p>To execute the main portion of the code, a Main class with a main method is normally reserved which handles most of the executions of the code.</p>
+<li>
+<p>To execute the main portion of the code, a Main class with a main method is normally reserved which handles most of the executions of the code.</p>
 </li>
 </ul>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Inheritance-&amp;-Extends">Inheritance &amp; Extends<a class="anchor-link" href="#Inheritance-&amp;-Extends"> </a></h3><ul>
-<li><p>Inheritance: a way for attributes and methods to be inherited from one class to another</p>
+<h3 id="Inheritance-&amp;-Extends">
+<a class="anchor" href="#Inheritance-&amp;-Extends" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inheritance &amp; Extends<a class="anchor-link" href="#Inheritance-&amp;-Extends"> </a>
+</h3>
+<ul>
+<li>
+<p>Inheritance: a way for attributes and methods to be inherited from one class to another</p>
 </li>
-<li><p>Extends: allows you to bring those attributes over from one class to another</p>
+<li>
+<p>Extends: allows you to bring those attributes over from one class to another</p>
 </li>
 </ul>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Subclass-Constructor,-Super-Keyword">Subclass Constructor, Super Keyword<a class="anchor-link" href="#Subclass-Constructor,-Super-Keyword"> </a></h3><ul>
+<h3 id="Subclass-Constructor,-Super-Keyword">
+<a class="anchor" href="#Subclass-Constructor,-Super-Keyword" aria-hidden="true"><span class="octicon octicon-link"></span></a>Subclass Constructor, Super Keyword<a class="anchor-link" href="#Subclass-Constructor,-Super-Keyword"> </a>
+</h3>
+<ul>
 <li>subclass inherits all the members from the superclass <ul>
 <li>the constructor of the superclass can be invoked from the subclass</li>
 </ul>
@@ -617,7 +698,7 @@ Value of b = 2
 
 	<span class="kd">public</span> <span class="nf">Cat</span><span class="p">(</span><span class="kt">boolean</span> <span class="n">veg</span><span class="p">,</span> <span class="n">String</span> <span class="n">food</span><span class="p">,</span> <span class="kt">int</span> <span class="n">legs</span><span class="p">)</span> <span class="p">{</span>
 		<span class="kd">super</span><span class="p">(</span><span class="n">veg</span><span class="p">,</span> <span class="n">food</span><span class="p">,</span> <span class="n">legs</span><span class="p">);</span>
-		<span class="k">this</span><span class="p">.</span><span class="na">color</span><span class="o">=</span><span class="s">&quot;White&quot;</span><span class="p">;</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">color</span><span class="o">=</span><span class="s">"White"</span><span class="p">;</span>
 	<span class="p">}</span>
 
 	<span class="kd">public</span> <span class="nf">Cat</span><span class="p">(</span><span class="kt">boolean</span> <span class="n">veg</span><span class="p">,</span> <span class="n">String</span> <span class="n">food</span><span class="p">,</span> <span class="kt">int</span> <span class="n">legs</span><span class="p">,</span> <span class="n">String</span> <span class="n">color</span><span class="p">){</span>
@@ -643,14 +724,21 @@ Value of b = 2
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Overloading-a-method">Overloading a method<a class="anchor-link" href="#Overloading-a-method"> </a></h3><ul>
-<li><p>same name, different parameters</p>
+<h3 id="Overloading-a-method">
+<a class="anchor" href="#Overloading-a-method" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overloading a method<a class="anchor-link" href="#Overloading-a-method"> </a>
+</h3>
+<ul>
+<li>
+<p>same name, different parameters</p>
 </li>
-<li><p>a feature in java, which allows a class to have more than one method with the same name</p>
+<li>
+<p>a feature in java, which allows a class to have more than one method with the same name</p>
 </li>
-<li><p>ideal when you want to have two methods that essentially do the same thing</p>
+<li>
+<p>ideal when you want to have two methods that essentially do the same thing</p>
 </li>
 </ul>
 
@@ -668,17 +756,17 @@ Value of b = 2
  <span class="p">{</span> 
 <span class="kd">public</span> <span class="kt">void</span> <span class="nf">square</span><span class="p">()</span>
  <span class="p">{</span> 
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;No Parameter Method Called&quot;</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"No Parameter Method Called"</span><span class="p">);</span>
  <span class="p">}</span> 
 <span class="kd">public</span> <span class="kt">int</span> <span class="nf">square</span><span class="p">(</span> <span class="kt">int</span> <span class="n">number</span> <span class="p">)</span>
  <span class="p">{</span>
 <span class="kt">int</span> <span class="n">square</span> <span class="o">=</span> <span class="n">number</span> <span class="o">*</span> <span class="n">number</span><span class="p">;</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Method with Integer Argument Called:&quot;</span><span class="o">+</span><span class="n">square</span><span class="p">);</span> 
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Method with Integer Argument Called:"</span><span class="o">+</span><span class="n">square</span><span class="p">);</span> 
 <span class="p">}</span>
 <span class="kd">public</span> <span class="kt">float</span> <span class="nf">square</span><span class="p">(</span> <span class="kt">float</span> <span class="n">number</span> <span class="p">)</span> 
 <span class="p">{</span>
  <span class="kt">float</span> <span class="n">square</span> <span class="o">=</span> <span class="n">number</span> <span class="o">*</span> <span class="n">number</span><span class="p">;</span>
- <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Method with float Argument Called:&quot;</span><span class="o">+</span><span class="n">square</span><span class="p">);</span> 
+ <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Method with float Argument Called:"</span><span class="o">+</span><span class="n">square</span><span class="p">);</span> 
 <span class="p">}</span>
 <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
   <span class="p">{</span>
@@ -697,14 +785,21 @@ Value of b = 2
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Overriding-a-method">Overriding a method<a class="anchor-link" href="#Overriding-a-method"> </a></h3><ul>
-<li><p>same signature of a method</p>
+<h3 id="Overriding-a-method">
+<a class="anchor" href="#Overriding-a-method" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overriding a method<a class="anchor-link" href="#Overriding-a-method"> </a>
+</h3>
+<ul>
+<li>
+<p>same signature of a method</p>
 </li>
-<li><p>occurs when a subclass has the same method as the parent class</p>
+<li>
+<p>occurs when a subclass has the same method as the parent class</p>
 </li>
-<li><p>subclass provides a particular implementation of a method declared by one of its parent classes</p>
+<li>
+<p>subclass provides a particular implementation of a method declared by one of its parent classes</p>
 </li>
 </ul>
 
@@ -725,12 +820,12 @@ Value of b = 2
     <span class="c1">// private methods are not overridden</span>
     <span class="kd">private</span> <span class="kt">void</span> <span class="nf">m1</span><span class="p">()</span>
     <span class="p">{</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;From parent m1()&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"From parent m1()"</span><span class="p">);</span>
     <span class="p">}</span>
   
     <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">m2</span><span class="p">()</span>
     <span class="p">{</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;From parent m2()&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"From parent m2()"</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
   
@@ -739,7 +834,7 @@ Value of b = 2
     <span class="c1">// unique to Child class</span>
     <span class="kd">private</span> <span class="kt">void</span> <span class="nf">m1</span><span class="p">()</span>
     <span class="p">{</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;From child m1()&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"From child m1()"</span><span class="p">);</span>
     <span class="p">}</span>
   
     <span class="c1">// overriding method</span>
@@ -747,7 +842,7 @@ Value of b = 2
     <span class="nd">@Override</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">m2</span><span class="p">()</span>
     <span class="p">{</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;From child m2()&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"From child m2()"</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
   
@@ -770,9 +865,13 @@ Value of b = 2
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Abstract-Class-&amp;-Abstract-Method">Abstract Class &amp; Abstract Method<a class="anchor-link" href="#Abstract-Class-&amp;-Abstract-Method"> </a></h3><ul>
+<h3 id="Abstract-Class-&amp;-Abstract-Method">
+<a class="anchor" href="#Abstract-Class-&amp;-Abstract-Method" aria-hidden="true"><span class="octicon octicon-link"></span></a>Abstract Class &amp; Abstract Method<a class="anchor-link" href="#Abstract-Class-&amp;-Abstract-Method"> </a>
+</h3>
+<ul>
 <li>abstract class: cannot be instantiated, but can be subclassed</li>
 <li>abstract method: a method that has just the method definition, but does not contain implementation</li>
 </ul>
@@ -790,7 +889,7 @@ Value of b = 2
 <div class=" highlight hl-java"><pre><span></span><span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">Animal</span> <span class="p">{</span>
     <span class="kd">public</span> <span class="kd">abstract</span> <span class="kt">void</span> <span class="nf">animalSound</span><span class="p">();</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sleep</span><span class="p">()</span> <span class="p">{</span>
-      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Zzz&quot;</span><span class="p">);</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Zzz"</span><span class="p">);</span>
     <span class="p">}</span>
   <span class="p">}</span>
 </pre></div>
@@ -802,25 +901,37 @@ Value of b = 2
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Standard-Methods">Standard Methods<a class="anchor-link" href="#Standard-Methods"> </a></h3><ul>
-<li><p>blocks of code that can be called from another location in the program or class</p>
+<h3 id="Standard-Methods">
+<a class="anchor" href="#Standard-Methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Standard Methods<a class="anchor-link" href="#Standard-Methods"> </a>
+</h3>
+<ul>
+<li>
+<p>blocks of code that can be called from another location in the program or class</p>
 </li>
-<li><p>toString(): returns the given value in string format</p>
+<li>
+<p>toString(): returns the given value in string format</p>
 </li>
-<li><p>equals(): compares two strings, true if equal</p>
+<li>
+<p>equals(): compares two strings, true if equal</p>
 </li>
-<li><p>hashCode(): returns an integer value generated by a hashing algorithm</p>
+<li>
+<p>hashCode(): returns an integer value generated by a hashing algorithm</p>
 </li>
 </ul>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Late-Binding-of-an-Object">Late Binding of an Object<a class="anchor-link" href="#Late-Binding-of-an-Object"> </a></h3><ul>
+<h3 id="Late-Binding-of-an-Object">
+<a class="anchor" href="#Late-Binding-of-an-Object" aria-hidden="true"><span class="octicon octicon-link"></span></a>Late Binding of an Object<a class="anchor-link" href="#Late-Binding-of-an-Object"> </a>
+</h3>
+<ul>
 <li>referencing superclass object<ul>
 <li>ie Animal a = new Chicken(); Animal b = new Goat();</li>
 </ul>
@@ -844,11 +955,11 @@ Value of b = 2
 <div class=" highlight hl-java"><pre><span></span><span class="c1">// dynamic binding</span>
 
 <span class="kd">class</span> <span class="nc">Animal</span><span class="p">{</span>  
-    <span class="kt">void</span> <span class="nf">eat</span><span class="p">(){</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;animal is eating...&quot;</span><span class="p">);}</span>  
+    <span class="kt">void</span> <span class="nf">eat</span><span class="p">(){</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"animal is eating..."</span><span class="p">);}</span>  
    <span class="p">}</span>  
      
    <span class="kd">class</span> <span class="nc">Dog</span> <span class="kd">extends</span> <span class="n">Animal</span><span class="p">{</span>  
-    <span class="kt">void</span> <span class="nf">eat</span><span class="p">(){</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;dog is eating...&quot;</span><span class="p">);}</span>  
+    <span class="kt">void</span> <span class="nf">eat</span><span class="p">(){</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"dog is eating..."</span><span class="p">);}</span>  
      
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[]</span><span class="p">){</span>  
      <span class="n">Animal</span> <span class="n">a</span><span class="o">=</span><span class="k">new</span> <span class="n">Dog</span><span class="p">();</span>  
@@ -864,14 +975,21 @@ Value of b = 2
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Polymorphism">Polymorphism<a class="anchor-link" href="#Polymorphism"> </a></h3><ul>
-<li><p>any of overloading, overriding, late binding</p>
+<h3 id="Polymorphism">
+<a class="anchor" href="#Polymorphism" aria-hidden="true"><span class="octicon octicon-link"></span></a>Polymorphism<a class="anchor-link" href="#Polymorphism"> </a>
+</h3>
+<ul>
+<li>
+<p>any of overloading, overriding, late binding</p>
 </li>
-<li><p>the ability of a class to provide different implementations of a method</p>
+<li>
+<p>the ability of a class to provide different implementations of a method</p>
 </li>
-<li><p>allows the ability to perform one thing in a variety of formats</p>
+<li>
+<p>allows the ability to perform one thing in a variety of formats</p>
 </li>
 </ul>
 
@@ -887,19 +1005,19 @@ Value of b = 2
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">class</span> <span class="nc">Animal</span> <span class="p">{</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">animalSound</span><span class="p">()</span> <span class="p">{</span>
-      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;The animal makes a sound&quot;</span><span class="p">);</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The animal makes a sound"</span><span class="p">);</span>
     <span class="p">}</span>
   <span class="p">}</span>
   
   <span class="kd">class</span> <span class="nc">Pig</span> <span class="kd">extends</span> <span class="n">Animal</span> <span class="p">{</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">animalSound</span><span class="p">()</span> <span class="p">{</span>
-      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;The pig says: wee wee&quot;</span><span class="p">);</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The pig says: wee wee"</span><span class="p">);</span>
     <span class="p">}</span>
   <span class="p">}</span>
   
   <span class="kd">class</span> <span class="nc">Dog</span> <span class="kd">extends</span> <span class="n">Animal</span> <span class="p">{</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">animalSound</span><span class="p">()</span> <span class="p">{</span>
-      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;The dog says: bow wow&quot;</span><span class="p">);</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The dog says: bow wow"</span><span class="p">);</span>
     <span class="p">}</span>
   <span class="p">}</span>
 </pre></div>
@@ -911,14 +1029,21 @@ Value of b = 2
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Big-O-notation">Big O notation<a class="anchor-link" href="#Big-O-notation"> </a></h3><ul>
-<li><p>for Hash map, Binary Search, Single loop, Nested Loop</p>
+<h3 id="Big-O-notation">
+<a class="anchor" href="#Big-O-notation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Big O notation<a class="anchor-link" href="#Big-O-notation"> </a>
+</h3>
+<ul>
+<li>
+<p>for Hash map, Binary Search, Single loop, Nested Loop</p>
 </li>
-<li><p>describes the set of algorithms that run worse, better, or at a certain given speed</p>
+<li>
+<p>describes the set of algorithms that run worse, better, or at a certain given speed</p>
 </li>
-<li><p>represents the number of operations performed</p>
+<li>
+<p>represents the number of operations performed</p>
 </li>
 </ul>
 
@@ -929,7 +1054,15 @@ Value of b = 2
 
 
 
-  </div><a class="u-url" href="/VSCodings/2022/10/20/Unit5-WritingClasses.html" hidden></a>
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="NicholasRamos5/VSCodings"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/VSCodings/college%20board/java/2022/10/20/Unit5-WritingClasses.html" hidden></a>
 </article>
 
       </div>
