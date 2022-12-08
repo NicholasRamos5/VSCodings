@@ -212,17 +212,91 @@ window.onload = wrap_img;
 <h1 id="Homework">
 <a class="anchor" href="#Homework" aria-hidden="true"><span class="octicon octicon-link"></span></a>Homework<a class="anchor-link" href="#Homework"> </a>
 </h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>what you've learned, what you're using to help you understand this material.</p>
+<p><img src="/VSCodings/images/copied_from_nb/images/Unit7-ArrayLists-Homework.png" alt="Unit 7 Homework"></p>
 
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Collections</span><span class="p">;</span>
+
+<span class="c1">// Initializing an ArrayList filled with strings</span>
+<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">strings</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="n">strings</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"A"</span><span class="p">);</span>
+<span class="n">strings</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"B"</span><span class="p">);</span>
+<span class="n">strings</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"C"</span><span class="p">);</span>
+<span class="n">strings</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"D"</span><span class="p">);</span>
+<span class="n">strings</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"E"</span><span class="p">);</span>
+<span class="n">strings</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"F"</span><span class="p">);</span>
+<span class="n">strings</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"G"</span><span class="p">);</span>
+
+<span class="c1">// function to iterate and print out items</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">print</span><span class="p">(</span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">strings</span><span class="p">){</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">String</span> <span class="n">str</span> <span class="p">:</span> <span class="n">strings</span><span class="p">){</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// 1st bullet (Sort an ArrayList in descending order and swap the first and last elements)</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"------------------"</span><span class="p">);</span>
+<span class="n">Collections</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">strings</span><span class="p">,</span> <span class="n">Collections</span><span class="p">.</span><span class="na">reverseOrder</span><span class="p">());</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Reverse Order: "</span><span class="p">);</span>
+<span class="n">print</span><span class="p">(</span><span class="n">strings</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Swap 1st &amp; Last Element: "</span><span class="p">);</span>
+<span class="n">String</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">strings</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="n">strings</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="n">strings</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">strings</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">strings</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">));</span>
+<span class="n">strings</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">strings</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">strings</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">strings</span><span class="p">.</span><span class="na">size</span><span class="p">(),</span> <span class="n">temp</span><span class="p">);</span>
+
+<span class="n">print</span><span class="p">(</span><span class="n">strings</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>------------------
+Reverse Order: 
+G
+F
+E
+D
+C
+B
+A
+Swap 1st &amp; Last Element: 
+A
+F
+E
+D
+C
+B
+G
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
