@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      7 min read
     
 </span></p>
 
@@ -135,6 +135,16 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#Super-Class">Super Class </a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h2"><a href="#Notes">Notes </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Inheritance-&-Extends">Inheritance &amp; Extends </a></li>
+<li class="toc-entry toc-h3"><a href="#Subclass-Constructor,-Super-Keyword">Subclass Constructor, Super Keyword </a></li>
+<li class="toc-entry toc-h3"><a href="#Overloading-a-method">Overloading a method </a></li>
+<li class="toc-entry toc-h3"><a href="#Overriding-a-method">Overriding a method </a></li>
+<li class="toc-entry toc-h3"><a href="#Abstract-Class-&-Abstract-Method">Abstract Class &amp; Abstract Method </a></li>
+<li class="toc-entry toc-h3"><a href="#Polymorphism">Polymorphism </a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h2"><a href="#Homework">Homework </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#Part-I">Part I </a></li>
@@ -176,6 +186,369 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Notes">
+<a class="anchor" href="#Notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notes<a class="anchor-link" href="#Notes"> </a>
+</h2>
+<h3 id="Inheritance-&amp;-Extends">
+<a class="anchor" href="#Inheritance-&amp;-Extends" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inheritance &amp; Extends<a class="anchor-link" href="#Inheritance-&amp;-Extends"> </a>
+</h3>
+<ul>
+<li>
+<p>Inheritance: a way for attributes and methods to be inherited from one class to another</p>
+</li>
+<li>
+<p>Extends: allows you to bring those attributes over from one class to another</p>
+</li>
+</ul>
+<h3 id="Subclass-Constructor,-Super-Keyword">
+<a class="anchor" href="#Subclass-Constructor,-Super-Keyword" aria-hidden="true"><span class="octicon octicon-link"></span></a>Subclass Constructor, Super Keyword<a class="anchor-link" href="#Subclass-Constructor,-Super-Keyword"> </a>
+</h3>
+<ul>
+<li>subclass inherits all the members from the superclass <ul>
+<li>the constructor of the superclass can be invoked from the subclass</li>
+</ul>
+</li>
+<li>super keyword: refers to superclass objects <ul>
+<li>used to call superclass methods and to access the superclass constructor</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// Super Class</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Animal</span> <span class="p">{</span>
+
+	<span class="kd">private</span> <span class="kt">boolean</span> <span class="n">vegetarian</span><span class="p">;</span>
+
+	<span class="kd">private</span> <span class="n">String</span> <span class="n">eats</span><span class="p">;</span>
+
+	<span class="kd">private</span> <span class="kt">int</span> <span class="n">noOfLegs</span><span class="p">;</span>
+
+	<span class="kd">public</span> <span class="nf">Animal</span><span class="p">(){}</span>
+
+	<span class="kd">public</span> <span class="nf">Animal</span><span class="p">(</span><span class="kt">boolean</span> <span class="n">veg</span><span class="p">,</span> <span class="n">String</span> <span class="n">food</span><span class="p">,</span> <span class="kt">int</span> <span class="n">legs</span><span class="p">){</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">vegetarian</span> <span class="o">=</span> <span class="n">veg</span><span class="p">;</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">eats</span> <span class="o">=</span> <span class="n">food</span><span class="p">;</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">noOfLegs</span> <span class="o">=</span> <span class="n">legs</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isVegetarian</span><span class="p">()</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="n">vegetarian</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setVegetarian</span><span class="p">(</span><span class="kt">boolean</span> <span class="n">vegetarian</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">vegetarian</span> <span class="o">=</span> <span class="n">vegetarian</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="kd">public</span> <span class="n">String</span> <span class="nf">getEats</span><span class="p">()</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="n">eats</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setEats</span><span class="p">(</span><span class="n">String</span> <span class="n">eats</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">eats</span> <span class="o">=</span> <span class="n">eats</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">getNoOfLegs</span><span class="p">()</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="n">noOfLegs</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setNoOfLegs</span><span class="p">(</span><span class="kt">int</span> <span class="n">noOfLegs</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">noOfLegs</span> <span class="o">=</span> <span class="n">noOfLegs</span><span class="p">;</span>
+	<span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// SubClass</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Cat</span> <span class="kd">extends</span> <span class="n">Animal</span><span class="p">{</span>
+
+	<span class="kd">private</span> <span class="n">String</span> <span class="n">color</span><span class="p">;</span>
+
+	<span class="kd">public</span> <span class="nf">Cat</span><span class="p">(</span><span class="kt">boolean</span> <span class="n">veg</span><span class="p">,</span> <span class="n">String</span> <span class="n">food</span><span class="p">,</span> <span class="kt">int</span> <span class="n">legs</span><span class="p">)</span> <span class="p">{</span>
+		<span class="kd">super</span><span class="p">(</span><span class="n">veg</span><span class="p">,</span> <span class="n">food</span><span class="p">,</span> <span class="n">legs</span><span class="p">);</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">color</span><span class="o">=</span><span class="s">"White"</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="kd">public</span> <span class="nf">Cat</span><span class="p">(</span><span class="kt">boolean</span> <span class="n">veg</span><span class="p">,</span> <span class="n">String</span> <span class="n">food</span><span class="p">,</span> <span class="kt">int</span> <span class="n">legs</span><span class="p">,</span> <span class="n">String</span> <span class="n">color</span><span class="p">){</span>
+		<span class="kd">super</span><span class="p">(</span><span class="n">veg</span><span class="p">,</span> <span class="n">food</span><span class="p">,</span> <span class="n">legs</span><span class="p">);</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">color</span><span class="o">=</span><span class="n">color</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="kd">public</span> <span class="n">String</span> <span class="nf">getColor</span><span class="p">()</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="n">color</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setColor</span><span class="p">(</span><span class="n">String</span> <span class="n">color</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">color</span> <span class="o">=</span> <span class="n">color</span><span class="p">;</span>
+	<span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Overloading-a-method">
+<a class="anchor" href="#Overloading-a-method" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overloading a method<a class="anchor-link" href="#Overloading-a-method"> </a>
+</h3>
+<ul>
+<li>
+<p>same name, different parameters</p>
+</li>
+<li>
+<p>a feature in java, which allows a class to have more than one method with the same name</p>
+</li>
+<li>
+<p>ideal when you want to have two methods that essentially do the same thing</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">class</span> <span class="nc">CalculateSquare</span>
+ <span class="p">{</span> 
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">square</span><span class="p">()</span>
+ <span class="p">{</span> 
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"No Parameter Method Called"</span><span class="p">);</span>
+ <span class="p">}</span> 
+<span class="kd">public</span> <span class="kt">int</span> <span class="nf">square</span><span class="p">(</span> <span class="kt">int</span> <span class="n">number</span> <span class="p">)</span>
+ <span class="p">{</span>
+<span class="kt">int</span> <span class="n">square</span> <span class="o">=</span> <span class="n">number</span> <span class="o">*</span> <span class="n">number</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Method with Integer Argument Called:"</span><span class="o">+</span><span class="n">square</span><span class="p">);</span> 
+<span class="p">}</span>
+<span class="kd">public</span> <span class="kt">float</span> <span class="nf">square</span><span class="p">(</span> <span class="kt">float</span> <span class="n">number</span> <span class="p">)</span> 
+<span class="p">{</span>
+ <span class="kt">float</span> <span class="n">square</span> <span class="o">=</span> <span class="n">number</span> <span class="o">*</span> <span class="n">number</span><span class="p">;</span>
+ <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Method with float Argument Called:"</span><span class="o">+</span><span class="n">square</span><span class="p">);</span> 
+<span class="p">}</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">CalculateSquare</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CalculateSquare</span><span class="p">();</span>
+    <span class="n">obj</span><span class="p">.</span><span class="na">square</span><span class="p">();</span>
+    <span class="n">obj</span><span class="p">.</span><span class="na">square</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>   
+    <span class="n">obj</span><span class="p">.</span><span class="na">square</span><span class="p">(</span><span class="mf">2.5</span><span class="p">);</span>   
+  <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Overriding-a-method">
+<a class="anchor" href="#Overriding-a-method" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overriding a method<a class="anchor-link" href="#Overriding-a-method"> </a>
+</h3>
+<ul>
+<li>
+<p>same signature of a method</p>
+</li>
+<li>
+<p>occurs when a subclass has the same method as the parent class</p>
+</li>
+<li>
+<p>subclass provides a particular implementation of a method declared by one of its parent classes</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// A Simple Java program to demonstrate</span>
+<span class="c1">// Overriding and Access-Modifiers</span>
+  
+<span class="kd">class</span> <span class="nc">Parent</span> <span class="p">{</span>
+    <span class="c1">// private methods are not overridden</span>
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">m1</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"From parent m1()"</span><span class="p">);</span>
+    <span class="p">}</span>
+  
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">m2</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"From parent m2()"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+  
+<span class="kd">class</span> <span class="nc">Child</span> <span class="kd">extends</span> <span class="n">Parent</span> <span class="p">{</span>
+    <span class="c1">// new m1() method</span>
+    <span class="c1">// unique to Child class</span>
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">m1</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"From child m1()"</span><span class="p">);</span>
+    <span class="p">}</span>
+  
+    <span class="c1">// overriding method</span>
+    <span class="c1">// with more accessibility</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">m2</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"From child m2()"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+  
+<span class="c1">// Driver class</span>
+<span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Parent</span> <span class="n">obj1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Parent</span><span class="p">();</span>
+        <span class="n">obj1</span><span class="p">.</span><span class="na">m2</span><span class="p">();</span>
+        <span class="n">Parent</span> <span class="n">obj2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Child</span><span class="p">();</span>
+        <span class="n">obj2</span><span class="p">.</span><span class="na">m2</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Abstract-Class-&amp;-Abstract-Method">
+<a class="anchor" href="#Abstract-Class-&amp;-Abstract-Method" aria-hidden="true"><span class="octicon octicon-link"></span></a>Abstract Class &amp; Abstract Method<a class="anchor-link" href="#Abstract-Class-&amp;-Abstract-Method"> </a>
+</h3>
+<ul>
+<li>abstract class: cannot be instantiated, but can be subclassed</li>
+<li>abstract method: a method that has just the method definition, but does not contain implementation</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">Animal</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">abstract</span> <span class="kt">void</span> <span class="nf">animalSound</span><span class="p">();</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sleep</span><span class="p">()</span> <span class="p">{</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Zzz"</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Polymorphism">
+<a class="anchor" href="#Polymorphism" aria-hidden="true"><span class="octicon octicon-link"></span></a>Polymorphism<a class="anchor-link" href="#Polymorphism"> </a>
+</h3>
+<ul>
+<li>
+<p>any of overloading, overriding, late binding</p>
+</li>
+<li>
+<p>the ability of a class to provide different implementations of a method</p>
+</li>
+<li>
+<p>allows the ability to perform one thing in a variety of formats</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">class</span> <span class="nc">Animal</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">animalSound</span><span class="p">()</span> <span class="p">{</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The animal makes a sound"</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  
+  <span class="kd">class</span> <span class="nc">Pig</span> <span class="kd">extends</span> <span class="n">Animal</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">animalSound</span><span class="p">()</span> <span class="p">{</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The pig says: wee wee"</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  
+  <span class="kd">class</span> <span class="nc">Dog</span> <span class="kd">extends</span> <span class="n">Animal</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">animalSound</span><span class="p">()</span> <span class="p">{</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The dog says: bow wow"</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
