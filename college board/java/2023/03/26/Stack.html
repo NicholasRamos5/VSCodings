@@ -467,16 +467,16 @@ Stack is Empty
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span><span class="mi">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
             <span class="n">stack1</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
         <span class="p">}</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">stack1</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+        <span class="n">stack1</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span>
 
         <span class="n">Stack</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">stack2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span><span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
             <span class="n">stack2</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
         <span class="p">}</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">stack2</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+        <span class="n">stack2</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span>
 
-        <span class="n">StackMerger</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">sm1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StackMerger</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">(</span><span class="n">stack1</span><span class="p">,</span> <span class="n">stack2</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sm1</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+        <span class="n">StackMerger</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">stack12</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StackMerger</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">(</span><span class="n">stack1</span><span class="p">,</span> <span class="n">stack2</span><span class="p">);</span>
+        <span class="n">stack12</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
@@ -494,10 +494,7 @@ Stack is Empty
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[ 5, 4, 3, 2, 1 ]
-[ 5, 4, 3, 2, 1 ]
 [ 10, 9, 8, 7, 6 ]
-[ 10, 9, 8, 7, 6 ]
-[ 6, 1, 7, 2, 8, 3, 9, 4, 10, 5 ]
 [ 6, 1, 7, 2, 8, 3, 9, 4, 10, 5 ]
 </pre>
 </div>
