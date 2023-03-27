@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      4 min read
     
 </span></p>
 
@@ -256,7 +256,7 @@ window.onload = wrap_img;
         <span class="k">this</span><span class="p">.</span><span class="na">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="c1">// push method for a new element to the upper value</span>
+    <span class="c1">// push method for a new element to upper</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">push</span><span class="p">(</span><span class="n">T</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">newNode</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="na">upper</span><span class="p">);</span>
         <span class="k">this</span><span class="p">.</span><span class="na">upper</span> <span class="o">=</span> <span class="n">newNode</span><span class="p">;</span>
@@ -265,7 +265,6 @@ window.onload = wrap_img;
 
     <span class="c1">// peek method, return upper</span>
     <span class="kd">public</span> <span class="n">T</span> <span class="nf">peek</span><span class="p">()</span> <span class="p">{</span>
-        <span class="c1">// try/catch to either return upper or print message if upper doesn't exist</span>
         <span class="k">try</span> <span class="p">{</span>
             <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">upper</span><span class="p">.</span><span class="na">getData</span><span class="p">();</span>
         <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">NullPointerException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
@@ -274,9 +273,8 @@ window.onload = wrap_img;
         <span class="p">}</span>
     <span class="p">}</span>
 
-    <span class="c1">// pop method, return upper and remove </span>
+    <span class="c1">// pop method, return and remove upper</span>
     <span class="kd">public</span> <span class="n">T</span> <span class="nf">pop</span><span class="p">()</span> <span class="p">{</span>
-        <span class="c1">// try/catch to either return + pop upper or print message if upper doesn't exist</span>
         <span class="k">try</span> <span class="p">{</span>
             <span class="n">T</span> <span class="n">data</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">upper</span><span class="p">.</span><span class="na">getData</span><span class="p">();</span>
             <span class="k">this</span><span class="p">.</span><span class="na">upper</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">upper</span><span class="p">.</span><span class="na">getPrevious</span><span class="p">();</span>
@@ -288,12 +286,10 @@ window.onload = wrap_img;
         <span class="p">}</span>
     <span class="p">}</span>
 
-    <span class="c1">// get size method</span>
     <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getCount</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">count</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="c1">// isEmpty method, compare size to 0</span>
     <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isEmpty</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">count</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;</span>
     <span class="p">}</span>
@@ -302,7 +298,7 @@ window.onload = wrap_img;
     <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
         <span class="n">String</span> <span class="n">s</span> <span class="o">=</span> <span class="s">"[ "</span><span class="p">;</span>
         <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">currentNode</span> <span class="o">=</span> <span class="n">upper</span><span class="p">;</span>
-        <span class="c1">// gets upper node, then keeps going down to previous until previous is null</span>
+
         <span class="k">while</span> <span class="p">(</span><span class="n">currentNode</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">s</span> <span class="o">+=</span> <span class="n">currentNode</span><span class="p">.</span><span class="na">getData</span><span class="p">();</span>
             <span class="n">currentNode</span> <span class="o">=</span> <span class="n">currentNode</span><span class="p">.</span><span class="na">getPrevious</span><span class="p">();</span>
@@ -335,7 +331,6 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">StackTest</span> <span class="p">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">// test stack with Integer wrapper class</span>
         <span class="n">Stack</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">stackInt</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Pushing the Stack:"</span><span class="p">);</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
@@ -412,6 +407,98 @@ Nodes in Stack: 0
 Stack Empty: true
 Stack is Empty
 
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">StackMerger</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="n">Stack</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">s1</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="n">Stack</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">s2</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">Stack</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">s3</span><span class="p">;</span>
+    
+    <span class="c1">// constructor for Stackmerger</span>
+    <span class="kd">public</span> <span class="nf">StackMerger</span><span class="p">(</span><span class="n">Stack</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">s1</span><span class="p">,</span> <span class="n">Stack</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">s2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">s1</span> <span class="o">=</span> <span class="n">s1</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">s2</span> <span class="o">=</span> <span class="n">s2</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">merge</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">);</span>
+    <span class="p">}</span>
+    
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">merge</span><span class="p">(</span><span class="n">Stack</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">s1</span><span class="p">,</span> <span class="n">Stack</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">s2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Stack</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">mergedStack</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">();</span>
+        <span class="c1">// if both stacks are not empty, </span>
+        <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">s1</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">s2</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span> <span class="p">{</span>
+            <span class="n">mergedStack</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">s1</span><span class="p">.</span><span class="na">pop</span><span class="p">());</span>
+            <span class="n">mergedStack</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">s2</span><span class="p">.</span><span class="na">pop</span><span class="p">());</span>
+        <span class="p">}</span>
+        <span class="c1">// if s1 is empty, pop from s2 and push to mergedStack</span>
+        <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">s2</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span> <span class="p">{</span>
+            <span class="n">mergedStack</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">s2</span><span class="p">.</span><span class="na">pop</span><span class="p">());</span>
+        <span class="p">}</span>
+        <span class="c1">// if s2 is empty, pop from s1 and push to mergedStack</span>
+        <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">s1</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span> <span class="p">{</span>
+            <span class="n">mergedStack</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">s1</span><span class="p">.</span><span class="na">pop</span><span class="p">());</span>
+        <span class="p">}</span>
+        <span class="n">s3</span> <span class="o">=</span> <span class="n">mergedStack</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// toString method using Stack&lt;T&gt; toString</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">s3</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TesterTwo</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// test stack with Integer wrapper class</span>
+        <span class="n">Stack</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">stack1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span><span class="mi">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">stack1</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">stack1</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+
+        <span class="n">Stack</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">stack2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span><span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">stack2</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">stack2</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+
+        <span class="n">StackMerger</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">sm1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StackMerger</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">(</span><span class="n">stack1</span><span class="p">,</span> <span class="n">stack2</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sm1</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">TesterTwo</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[ 5, 4, 3, 2, 1 ]
+[ 5, 4, 3, 2, 1 ]
+[ 10, 9, 8, 7, 6 ]
+[ 10, 9, 8, 7, 6 ]
+[ 6, 1, 7, 2, 8, 3, 9, 4, 10, 5 ]
+[ 6, 1, 7, 2, 8, 3, 9, 4, 10, 5 ]
 </pre>
 </div>
 </div>
