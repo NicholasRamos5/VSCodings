@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      13 min read
+      12 min read
     
 </span></p>
 
@@ -539,28 +539,28 @@ window.onload = wrap_img;
         <span class="n">QueueManager</span> <span class="n">qNums</span> <span class="o">=</span> <span class="k">new</span> <span class="n">QueueManager</span><span class="p">(</span><span class="s">"Integers"</span><span class="p">,</span> <span class="n">numbers</span> <span class="p">);</span>
         <span class="n">qNums</span><span class="p">.</span><span class="na">printQueue</span><span class="p">();</span>
 
-        <span class="c1">// Create iterable Queue of NCS Generics</span>
-        <span class="n">Animal</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">Animal</span><span class="p">.</span><span class="na">KeyType</span><span class="p">.</span><span class="na">name</span><span class="p">);</span>
-        <span class="n">Alphabet</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">Alphabet</span><span class="p">.</span><span class="na">KeyType</span><span class="p">.</span><span class="na">letter</span><span class="p">);</span>
-        <span class="n">Cupcake</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">Cupcake</span><span class="p">.</span><span class="na">KeyType</span><span class="p">.</span><span class="na">flavor</span><span class="p">);</span>
-        <span class="c1">// Illustrates use of a series of repeating arguments</span>
-        <span class="n">QueueManager</span> <span class="n">qGenerics</span> <span class="o">=</span> <span class="k">new</span> <span class="n">QueueManager</span><span class="p">(</span><span class="s">"My Generics"</span><span class="p">,</span>
-                <span class="n">Alphabet</span><span class="p">.</span><span class="na">alphabetData</span><span class="p">(),</span>
-                <span class="n">Animal</span><span class="p">.</span><span class="na">animals</span><span class="p">(),</span>
-                <span class="n">Cupcake</span><span class="p">.</span><span class="na">cupcakes</span><span class="p">()</span>
-        <span class="p">);</span>
-        <span class="n">qGenerics</span><span class="p">.</span><span class="na">printQueue</span><span class="p">();</span>
+        <span class="c1">// // Create iterable Queue of NCS Generics</span>
+        <span class="c1">// Animal.setOrder(Animal.KeyType.name);</span>
+        <span class="c1">// Alphabet.setOrder(Alphabet.KeyType.letter);</span>
+        <span class="c1">// Cupcake.setOrder(Cupcake.KeyType.flavor);</span>
+        <span class="c1">// // Illustrates use of a series of repeating arguments</span>
+        <span class="c1">// QueueManager qGenerics = new QueueManager("My Generics",</span>
+        <span class="c1">//         Alphabet.alphabetData(),</span>
+        <span class="c1">//         Animal.animals(),</span>
+        <span class="c1">//         Cupcake.cupcakes()</span>
+        <span class="c1">// );</span>
+        <span class="c1">// qGenerics.printQueue();</span>
 
         <span class="c1">// Create iterable Queue of Mixed types of data</span>
         <span class="n">QueueManager</span> <span class="n">qMix</span> <span class="o">=</span> <span class="k">new</span> <span class="n">QueueManager</span><span class="p">(</span><span class="s">"Mixed"</span><span class="p">);</span>
         <span class="n">qMix</span><span class="p">.</span><span class="na">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Start"</span><span class="p">);</span>
         <span class="n">qMix</span><span class="p">.</span><span class="na">addList</span><span class="p">(</span>
                 <span class="n">words</span><span class="p">,</span>
-                <span class="n">numbers</span><span class="p">,</span>
-                <span class="n">Alphabet</span><span class="p">.</span><span class="na">alphabetData</span><span class="p">(),</span>
-                <span class="n">Animal</span><span class="p">.</span><span class="na">animals</span><span class="p">(),</span>
-                <span class="n">Cupcake</span><span class="p">.</span><span class="na">cupcakes</span><span class="p">()</span>
-        <span class="p">);</span>
+                <span class="n">numbers</span>
+                <span class="p">);</span>
+                <span class="c1">// Alphabet.alphabetData(),</span>
+                <span class="c1">// Animal.animals(),</span>
+                <span class="c1">// Cupcake.cupcakes() </span>
         <span class="n">qMix</span><span class="p">.</span><span class="na">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"End"</span><span class="p">);</span>
         <span class="n">qMix</span><span class="p">.</span><span class="na">printQueue</span><span class="p">();</span>
     <span class="p">}</span>
@@ -582,10 +582,8 @@ window.onload = wrap_img;
 Words data: seven slimy snakes sallying slowly slithered southward 
 Integers count: 10
 Integers data: 0 1 2 3 4 5 6 7 8 9 
-My Generics count: 41
-My Generics data: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Lion Pig Robin Cat Kitty Dog Red Velvet Orange Lemon Apple Blueberry Blackberry Strawberry Vanilla Chocolate 
-Mixed count: 58
-Mixed data: Start seven slimy snakes sallying slowly slithered southward 0 1 2 3 4 5 6 7 8 9 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Lion Pig Robin Cat Kitty Dog Red Velvet Orange Lemon Apple Blueberry Blackberry Strawberry Vanilla Chocolate End 
+Mixed count: 17
+Mixed data: Start seven slimy snakes sallying slowly slithered southward 0 1 2 3 4 5 6 7 8 9 End 
 </pre>
 </div>
 </div>
@@ -1024,21 +1022,19 @@ Queue After Shuffling: 1 2 3 5 4
     <span class="n">qNumbers</span><span class="p">.</span><span class="na">printIntQueue</span><span class="p">();</span>
 
     <span class="c1">// Add integers 1 through 5 to the stack</span>
-    <span class="n">stack</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">qNumbers</span><span class="p">.</span><span class="na">delete</span><span class="p">());</span>
-    <span class="n">stack</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">qNumbers</span><span class="p">.</span><span class="na">delete</span><span class="p">());</span>
-    <span class="n">stack</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">qNumbers</span><span class="p">.</span><span class="na">delete</span><span class="p">());</span>
-    <span class="n">stack</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">qNumbers</span><span class="p">.</span><span class="na">delete</span><span class="p">());</span>
-    <span class="n">stack</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">qNumbers</span><span class="p">.</span><span class="na">delete</span><span class="p">());</span>
+
+    <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="n">qNumbers</span><span class="p">.</span><span class="na">getCount</span><span class="p">();</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">count</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">stack</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">qNumbers</span><span class="p">.</span><span class="na">delete</span><span class="p">());</span>
+    <span class="p">}</span>
 
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Stack Full: "</span> <span class="o">+</span> <span class="n">stack</span><span class="p">);</span>
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Queue when Stacked: "</span><span class="p">);</span>
     <span class="n">qNumbers</span><span class="p">.</span><span class="na">printIntQueue</span><span class="p">();</span>
 
-    <span class="n">qNumbers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">stack</span><span class="p">.</span><span class="na">pop</span><span class="p">());</span>
-    <span class="n">qNumbers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">stack</span><span class="p">.</span><span class="na">pop</span><span class="p">());</span>
-    <span class="n">qNumbers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">stack</span><span class="p">.</span><span class="na">pop</span><span class="p">());</span>
-    <span class="n">qNumbers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">stack</span><span class="p">.</span><span class="na">pop</span><span class="p">());</span>
-    <span class="n">qNumbers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">stack</span><span class="p">.</span><span class="na">pop</span><span class="p">());</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">count</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">qNumbers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">stack</span><span class="p">.</span><span class="na">pop</span><span class="p">());</span>
+    <span class="p">}</span>
     
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Stack Final: "</span> <span class="o">+</span> <span class="n">stack</span><span class="p">);</span>
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Queue Final: "</span><span class="p">);</span>
