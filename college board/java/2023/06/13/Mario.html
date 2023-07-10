@@ -940,7 +940,7 @@ window.onload = wrap_img;
             c2.drawImage(this.image, this.position.x, this.position.y);
         }
     }
-    class tube {
+    class Tube {
         constructor(image) {
             this.position = {
                 x: 10,
@@ -959,7 +959,7 @@ window.onload = wrap_img;
     image2.onload = function() {
         const player2 = new Player2();
         const platform2 = new Platform2(image2);
-        const tube = new tube(image2);
+        const tube = new Tube(image2);
         const keys2 = {
             right: {
                 pressed: false
@@ -1035,7 +1035,13 @@ window.onload = wrap_img;
         });
     };
 
-    image2.src = 'https://samayass.github.io/samayaCSA/images/platform.png';
+    const imageTube = new Image();
+        imageTube.onload = function() {
+            image2.src = 'https://samayass.github.io/samayaCSA/images/platform.png';
+        };
+
+        imageTube.src = 'https://samayass.github.io/samayaCSA/images/platform.png'; 
+    
 </script>
 
 </div>
