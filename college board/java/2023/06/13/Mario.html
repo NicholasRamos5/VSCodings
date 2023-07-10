@@ -783,10 +783,11 @@ window.onload = wrap_img;
     <span class="p">}</span>
 
     <span class="kd">let</span> <span class="nx">image</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Image</span><span class="p">();</span>
+    <span class="kd">let</span> <span class="nx">imageTube</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Image</span><span class="p">();</span>
     <span class="nx">image</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
         <span class="kr">const</span> <span class="nx">player1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Player1</span><span class="p">();</span>
         <span class="kr">const</span> <span class="nx">platform</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Platform</span><span class="p">(</span><span class="nx">image</span><span class="p">);</span>
-        <span class="kr">const</span> <span class="nx">tube</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tube</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span> <span class="mf">10</span><span class="p">);</span>
+        <span class="kr">const</span> <span class="nx">tube</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tube</span><span class="p">({</span> <span class="nx">x</span><span class="o">:</span> <span class="mf">10</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mf">10</span> <span class="p">});</span>
         <span class="kr">const</span> <span class="nx">keys1</span> <span class="o">=</span> <span class="p">{</span>
             <span class="nx">right</span><span class="o">:</span> <span class="p">{</span>
                 <span class="nx">pressed</span><span class="o">:</span> <span class="kc">false</span>
