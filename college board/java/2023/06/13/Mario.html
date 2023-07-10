@@ -759,20 +759,17 @@ window.onload = wrap_img;
         <span class="p">}</span>
     <span class="p">}</span>
     <span class="kr">class</span> <span class="nx">Tube</span> <span class="p">{</span>
-    <span class="nx">constructor</span><span class="p">(</span> <span class="p">{</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">image</span><span class="p">,</span> <span class="nx">width</span><span class="p">,</span> <span class="nx">height</span> <span class="p">}</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="nx">constructor</span><span class="p">(</span> <span class="p">{</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">imageTube</span><span class="p">,</span> <span class="nx">width</span><span class="p">,</span> <span class="nx">height</span> <span class="p">}</span> <span class="p">)</span> <span class="p">{</span>
         <span class="k">this</span><span class="p">.</span><span class="nx">position</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="nx">x</span><span class="p">,</span> <span class="c1">// X-coordinate of the tube's position</span>
-            <span class="nx">y</span> <span class="c1">// Y-coordinate of the tube's position</span>
+            <span class="nx">x</span><span class="p">,</span> 
         <span class="p">}</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">image</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Image</span><span class="p">()</span> <span class="c1">// Create a new Image object for the tube</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">image</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">image</span> <span class="c1">// Set the source of the tube's image</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="nx">width</span> <span class="c1">// Width of the tube</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="nx">height</span> <span class="c1">// Height of the tube</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">image</span> <span class="o">=</span> <span class="nx">imageTube</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="nx">width</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="nx">height</span>
         <span class="k">this</span><span class="p">.</span><span class="nx">velocity</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="nx">x</span><span class="o">:</span> <span class="mf">0</span> <span class="c1">// Velocity in the X-direction (initially 0)</span>
+            <span class="nx">x</span><span class="o">:</span> <span class="mf">0</span>
         <span class="p">}</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">image</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-            <span class="c1">// Optional: If width and height are not provided, use the image's natural dimensions</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">imageTube</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
             <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">width</span><span class="p">)</span> <span class="p">{</span>
                 <span class="k">this</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">image</span><span class="p">.</span><span class="nx">naturalWidth</span><span class="p">;</span>
             <span class="p">}</span>
@@ -780,20 +777,17 @@ window.onload = wrap_img;
                 <span class="k">this</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">image</span><span class="p">.</span><span class="nx">naturalHeight</span><span class="p">;</span>
             <span class="p">}</span>
         <span class="p">}</span>
-
-        <span class="c1">// this.width = image.width</span>
-        <span class="c1">// this.height = image.height</span>
     <span class="p">}</span>
 
     <span class="nx">draw</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nx">c</span><span class="p">.</span><span class="nx">drawImage</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">image</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">width</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">height</span><span class="p">)</span> <span class="c1">// Draw the tube on the canvas</span>
+        <span class="nx">c</span><span class="p">.</span><span class="nx">drawImage</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">imageTube</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">width</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">height</span><span class="p">)</span>
     <span class="p">}</span>
     
     <span class="nx">update</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="nx">velocity</span><span class="p">.</span><span class="nx">x</span> <span class="c1">// Update the X-coordinate of the tube's position</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">draw</span><span class="p">()</span> <span class="c1">// Draw the updated tube on the canvas</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="nx">velocity</span><span class="p">.</span><span class="nx">x</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">draw</span><span class="p">()</span>
     <span class="p">}</span>
-<span class="p">}</span>
+    <span class="p">}</span>
 
     <span class="kd">let</span> <span class="nx">image</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Image</span><span class="p">();</span>
     <span class="nx">image</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
@@ -808,11 +802,23 @@ window.onload = wrap_img;
             <span class="p">}</span>
         <span class="p">};</span>
 
+        <span class="nx">tubes</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="k">new</span> <span class="nx">Tube</span><span class="p">(</span> <span class="p">{</span>
+            <span class="nx">x</span><span class="o">:</span> <span class="mf">10</span><span class="p">,</span> 
+            <span class="nx">y</span><span class="o">:</span> <span class="mf">10</span><span class="p">,</span>
+            <span class="nx">imageTube</span><span class="p">,</span>
+            <span class="nx">width</span><span class="o">:</span> <span class="mf">175</span><span class="p">,</span>
+            <span class="nx">height</span><span class="o">:</span> <span class="mf">200</span>
+        <span class="p">}</span> <span class="p">)]</span>
+
         <span class="kd">function</span> <span class="nx">animate1</span><span class="p">()</span> <span class="p">{</span>
             <span class="nx">requestAnimationFrame</span><span class="p">(</span><span class="nx">animate1</span><span class="p">);</span>
             <span class="nx">c1</span><span class="p">.</span><span class="nx">clearRect</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span> <span class="mf">0</span><span class="p">,</span> <span class="nx">canvas1</span><span class="p">.</span><span class="nx">width</span><span class="p">,</span> <span class="nx">canvas1</span><span class="p">.</span><span class="nx">height</span><span class="p">);</span>
             <span class="nx">player1</span><span class="p">.</span><span class="nx">update</span><span class="p">();</span>
             <span class="nx">platform</span><span class="p">.</span><span class="nx">draw</span><span class="p">();</span>
+            <span class="nx">tubes</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">tube</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                <span class="nx">tube</span><span class="p">.</span><span class="nx">update</span><span class="p">();</span>
+            <span class="p">})</span>
             <span class="k">if</span> <span class="p">(</span><span class="nx">keys1</span><span class="p">.</span><span class="nx">right</span><span class="p">.</span><span class="nx">pressed</span><span class="p">)</span> <span class="p">{</span>
                 <span class="nx">player1</span><span class="p">.</span><span class="nx">velocity</span><span class="p">.</span><span class="nx">x</span> <span class="o">=</span> <span class="mf">5</span><span class="p">;</span>
             <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">keys1</span><span class="p">.</span><span class="nx">left</span><span class="p">.</span><span class="nx">pressed</span><span class="p">)</span> <span class="p">{</span>
@@ -828,17 +834,7 @@ window.onload = wrap_img;
             <span class="p">)</span> <span class="p">{</span>
                 <span class="nx">player1</span><span class="p">.</span><span class="nx">velocity</span><span class="p">.</span><span class="nx">y</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
             <span class="p">}</span>
-
-            <span class="kd">let</span> <span class="nx">tubes</span> <span class="o">=</span> <span class="p">[]</span>
             
-            <span class="nx">tubes</span> <span class="o">=</span> <span class="p">[</span>
-        <span class="k">new</span> <span class="nx">Tube</span><span class="p">(</span> <span class="p">{</span> <span class="c1">// Create new Tube objects and add them to the tubes array</span>
-            <span class="nx">x</span><span class="o">:</span> <span class="mf">3350</span><span class="p">,</span> 
-            <span class="nx">y</span><span class="o">:</span> <span class="mf">317</span><span class="p">,</span>
-            <span class="nx">image</span><span class="o">:</span> <span class="s1">'images/tube.png'</span><span class="p">,</span>
-            <span class="nx">width</span><span class="o">:</span> <span class="mf">175</span><span class="p">,</span>
-            <span class="nx">height</span><span class="o">:</span> <span class="mf">200</span>
-        <span class="p">}</span> <span class="p">)]</span>
         <span class="p">}</span>
 
         <span class="nx">animate1</span><span class="p">();</span>
@@ -885,6 +881,8 @@ window.onload = wrap_img;
     <span class="p">};</span>
 
     <span class="nx">image</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'https://samayass.github.io/samayaCSA/images/platform.png'</span><span class="p">;</span>
+    <span class="nx">imageTube</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'https://NicholasRamos5.github.io/VSCodings/images/MarioItems/tube.png'</span><span class="p">;</span>
+    
 
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
