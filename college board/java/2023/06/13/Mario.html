@@ -768,11 +768,26 @@ window.onload = wrap_img;
             <span class="nx">c2</span><span class="p">.</span><span class="nx">drawImage</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">image</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
         <span class="p">}</span>
     <span class="p">}</span>
+    <span class="kr">class</span> <span class="nx">tube</span> <span class="p">{</span>
+        <span class="nx">constructor</span><span class="p">(</span><span class="nx">image</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">position</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="nx">x</span><span class="o">:</span> <span class="mf">10</span><span class="p">,</span>
+                <span class="nx">y</span><span class="o">:</span> <span class="mf">10</span>
+            <span class="p">}</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">image</span> <span class="o">=</span> <span class="nx">image</span><span class="p">;</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="mf">540</span><span class="p">;</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="mf">160</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="nx">draw</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">c2</span><span class="p">.</span><span class="nx">drawImage</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">image</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
 
     <span class="kr">const</span> <span class="nx">image2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Image</span><span class="p">();</span>
     <span class="nx">image2</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
         <span class="kr">const</span> <span class="nx">player2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Player2</span><span class="p">();</span>
         <span class="kr">const</span> <span class="nx">platform2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Platform2</span><span class="p">(</span><span class="nx">image2</span><span class="p">);</span>
+        <span class="kr">const</span> <span class="nx">tube</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">tube</span><span class="p">(</span><span class="nx">image2</span><span class="p">);</span>
         <span class="kr">const</span> <span class="nx">keys2</span> <span class="o">=</span> <span class="p">{</span>
             <span class="nx">right</span><span class="o">:</span> <span class="p">{</span>
                 <span class="nx">pressed</span><span class="o">:</span> <span class="kc">false</span>
@@ -787,6 +802,7 @@ window.onload = wrap_img;
             <span class="nx">c2</span><span class="p">.</span><span class="nx">clearRect</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span> <span class="mf">0</span><span class="p">,</span> <span class="nx">canvas2</span><span class="p">.</span><span class="nx">width</span><span class="p">,</span> <span class="nx">canvas2</span><span class="p">.</span><span class="nx">height</span><span class="p">);</span>
             <span class="nx">player2</span><span class="p">.</span><span class="nx">update</span><span class="p">();</span>
             <span class="nx">platform2</span><span class="p">.</span><span class="nx">draw</span><span class="p">();</span>
+            <span class="nx">tube</span><span class="p">.</span><span class="nx">draw</span><span class="p">();</span>
             <span class="k">if</span> <span class="p">(</span><span class="nx">keys2</span><span class="p">.</span><span class="nx">right</span><span class="p">.</span><span class="nx">pressed</span><span class="p">)</span> <span class="p">{</span>
                 <span class="nx">player2</span><span class="p">.</span><span class="nx">velocity</span><span class="p">.</span><span class="nx">x</span> <span class="o">=</span> <span class="mf">5</span><span class="p">;</span>
             <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">keys2</span><span class="p">.</span><span class="nx">left</span><span class="p">.</span><span class="nx">pressed</span><span class="p">)</span> <span class="p">{</span>
@@ -918,11 +934,26 @@ window.onload = wrap_img;
             c2.drawImage(this.image, this.position.x, this.position.y);
         }
     }
+    class tube {
+        constructor(image) {
+            this.position = {
+                x: 10,
+                y: 10
+            }
+            this.image = image;
+            this.width = 540;
+            this.height = 160;
+        }
+        draw() {
+            c2.drawImage(this.image, this.position.x, this.position.y);
+        }
+    }
 
     const image2 = new Image();
     image2.onload = function() {
         const player2 = new Player2();
         const platform2 = new Platform2(image2);
+        const tube = new tube(image2);
         const keys2 = {
             right: {
                 pressed: false
@@ -937,6 +968,7 @@ window.onload = wrap_img;
             c2.clearRect(0, 0, canvas2.width, canvas2.height);
             player2.update();
             platform2.draw();
+            tube.draw();
             if (keys2.right.pressed) {
                 player2.velocity.x = 5;
             } else if (keys2.left.pressed) {
