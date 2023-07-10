@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      4 min read
     
 </span></p>
 
@@ -725,7 +725,6 @@ window.onload = wrap_img;
     <span class="nx">canvas1</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="mf">770</span><span class="p">;</span>
     <span class="nx">canvas1</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="mf">300</span><span class="p">;</span>
     <span class="kr">const</span> <span class="nx">gravity1</span> <span class="o">=</span> <span class="mf">1.5</span><span class="p">;</span>
-
     <span class="kr">class</span> <span class="nx">Player1</span> <span class="p">{</span>
         <span class="nx">constructor</span><span class="p">()</span> <span class="p">{</span>
             <span class="k">this</span><span class="p">.</span><span class="nx">position</span> <span class="o">=</span> <span class="p">{</span>
@@ -753,7 +752,6 @@ window.onload = wrap_img;
                 <span class="k">this</span><span class="p">.</span><span class="nx">velocity</span><span class="p">.</span><span class="nx">y</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
         <span class="p">}</span>
     <span class="p">}</span>
-
     <span class="kr">class</span> <span class="nx">Platform</span> <span class="p">{</span>
         <span class="nx">constructor</span><span class="p">(</span><span class="nx">image</span><span class="p">)</span> <span class="p">{</span>
             <span class="k">this</span><span class="p">.</span><span class="nx">position</span> <span class="o">=</span> <span class="p">{</span>
@@ -769,35 +767,10 @@ window.onload = wrap_img;
         <span class="p">}</span>
     <span class="p">}</span>
 
-    <span class="kr">class</span> <span class="nx">Tube</span> <span class="p">{</span>
-        <span class="nx">constructor</span><span class="p">({</span> <span class="nx">imageTube</span><span class="p">,</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span> <span class="p">})</span> <span class="p">{</span>
-            <span class="k">this</span><span class="p">.</span><span class="nx">position</span> <span class="o">=</span> <span class="p">{</span>
-                <span class="nx">x</span><span class="p">,</span>
-                <span class="nx">y</span>
-            <span class="p">}</span>
-            <span class="k">this</span><span class="p">.</span><span class="nx">image</span> <span class="o">=</span> <span class="nx">imageTube</span><span class="p">;</span>
-            <span class="k">this</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="mf">175</span><span class="p">;</span>
-            <span class="k">this</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="mf">200</span><span class="p">;</span>
-            <span class="k">this</span><span class="p">.</span><span class="nx">velocity</span> <span class="o">=</span> <span class="p">{</span>
-                <span class="nx">x</span><span class="o">:</span> <span class="mf">0</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-
-        <span class="nx">draw</span><span class="p">()</span> <span class="p">{</span>
-            <span class="nx">c1</span><span class="p">.</span><span class="nx">drawImage</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">image</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">width</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">height</span><span class="p">);</span>
-        <span class="p">}</span>
-
-        <span class="nx">update</span><span class="p">()</span> <span class="p">{</span>
-            <span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="nx">velocity</span><span class="p">.</span><span class="nx">x</span><span class="p">;</span>
-            <span class="k">this</span><span class="p">.</span><span class="nx">draw</span><span class="p">();</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-
-    <span class="kr">const</span> <span class="nx">image</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Image</span><span class="p">();</span>
+    <span class="kd">let</span> <span class="nx">image</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Image</span><span class="p">();</span>
     <span class="nx">image</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
         <span class="kr">const</span> <span class="nx">player1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Player1</span><span class="p">();</span>
         <span class="kr">const</span> <span class="nx">platform</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Platform</span><span class="p">(</span><span class="nx">image</span><span class="p">);</span>
-       <span class="kr">const</span> <span class="nx">tube</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tube</span><span class="p">({</span> <span class="nx">imageTube</span><span class="o">:</span> <span class="nx">imageTube</span><span class="p">,</span> <span class="nx">x</span><span class="o">:</span> <span class="mf">10</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mf">10</span> <span class="p">});</span>
         <span class="kr">const</span> <span class="nx">keys1</span> <span class="o">=</span> <span class="p">{</span>
             <span class="nx">right</span><span class="o">:</span> <span class="p">{</span>
                 <span class="nx">pressed</span><span class="o">:</span> <span class="kc">false</span>
@@ -812,7 +785,6 @@ window.onload = wrap_img;
             <span class="nx">c1</span><span class="p">.</span><span class="nx">clearRect</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span> <span class="mf">0</span><span class="p">,</span> <span class="nx">canvas1</span><span class="p">.</span><span class="nx">width</span><span class="p">,</span> <span class="nx">canvas1</span><span class="p">.</span><span class="nx">height</span><span class="p">);</span>
             <span class="nx">player1</span><span class="p">.</span><span class="nx">update</span><span class="p">();</span>
             <span class="nx">platform</span><span class="p">.</span><span class="nx">draw</span><span class="p">();</span>
-            <span class="nx">tube</span><span class="p">.</span><span class="nx">update</span><span class="p">();</span>
             <span class="k">if</span> <span class="p">(</span><span class="nx">keys1</span><span class="p">.</span><span class="nx">right</span><span class="p">.</span><span class="nx">pressed</span><span class="p">)</span> <span class="p">{</span>
                 <span class="nx">player1</span><span class="p">.</span><span class="nx">velocity</span><span class="p">.</span><span class="nx">x</span> <span class="o">=</span> <span class="mf">5</span><span class="p">;</span>
             <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">keys1</span><span class="p">.</span><span class="nx">left</span><span class="p">.</span><span class="nx">pressed</span><span class="p">)</span> <span class="p">{</span>
@@ -873,12 +845,6 @@ window.onload = wrap_img;
         <span class="p">});</span>
     <span class="p">};</span>
 
-   <span class="kr">const</span> <span class="nx">imageTube</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Image</span><span class="p">();</span>
-    <span class="nx">imageTube</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kr">const</span> <span class="nx">tube</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tube</span><span class="p">({</span> <span class="nx">imageTube</span><span class="p">,</span> <span class="nx">x</span><span class="o">:</span> <span class="mf">10</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mf">10</span> <span class="p">});</span>
-    <span class="p">};</span>
-    <span class="nx">imageTube</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'https://NicholasRamos5.github.io/VSCodings/images/MarioItems/tube.png'</span><span class="p">;</span>
-
     <span class="nx">image</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'https://samayass.github.io/samayaCSA/images/platform.png'</span><span class="p">;</span>
 
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
@@ -908,7 +874,6 @@ window.onload = wrap_img;
     canvas1.width = 770;
     canvas1.height = 300;
     const gravity1 = 1.5;
-
     class Player1 {
         constructor() {
             this.position = {
@@ -936,7 +901,6 @@ window.onload = wrap_img;
                 this.velocity.y = 0;
         }
     }
-
     class Platform {
         constructor(image) {
             this.position = {
@@ -952,35 +916,10 @@ window.onload = wrap_img;
         }
     }
 
-    class Tube {
-        constructor({ x, y }) {
-            this.position = {
-                x,
-                y
-            }
-            this.image = imageTube;
-            this.width = 175;
-            this.height = 200;
-            this.velocity = {
-                x: 0
-            }
-        }
-
-        draw() {
-            c1.drawImage(this.image, this.position.x, this.position.y, this.width, this.height);
-        }
-
-        update() {
-            this.position.x += this.velocity.x;
-            this.draw();
-        }
-    }
-
-    const image = new Image();
+    let image = new Image();
     image.onload = function() {
         const player1 = new Player1();
         const platform = new Platform(image);
-        const tube = new Tube({ x: 10, y: 10 });
         const keys1 = {
             right: {
                 pressed: false
@@ -995,7 +934,6 @@ window.onload = wrap_img;
             c1.clearRect(0, 0, canvas1.width, canvas1.height);
             player1.update();
             platform.draw();
-            tube.update();
             if (keys1.right.pressed) {
                 player1.velocity.x = 5;
             } else if (keys1.left.pressed) {
@@ -1056,11 +994,7 @@ window.onload = wrap_img;
         });
     };
 
-    const imageTube = new Image();
-    imageTube.onload = function() {
-        image.src = 'https://samayass.github.io/samayaCSA/images/platform.png';
-    };
-    imageTube.src = 'https://NicholasRamos5.github.io/VSCodings/images/MarioItems/tube.png';
+    image.src = 'https://samayass.github.io/samayaCSA/images/platform.png';
 
 </script>
 
