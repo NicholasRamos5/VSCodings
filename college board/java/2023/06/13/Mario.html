@@ -548,7 +548,7 @@ window.onload = wrap_img;
     c = document.getElementById('canvas1').getContext('2d');
     canvas.width = 770;
     canvas.height = 300;
-    const gravity1 = 1.5;
+    player = new Player()
     class Platform {
         constructor(image) {
             this.position = {
@@ -565,7 +565,6 @@ window.onload = wrap_img;
     }
 
     let image = new Image();
-    image.onload = function() {
         const platform = new Platform(image);
         const keys1 = {
             right: {
@@ -579,9 +578,9 @@ window.onload = wrap_img;
         function animate1() {
             requestAnimationFrame(animate1);
             c.clearRect(0, 0, canvas.width, canvas.height);
-            
-            platform.draw();
             player.update();
+            platform.draw();
+            
             if (keys1.right.pressed) {
                 player.velocity.x = 5;
             } else if (keys1.left.pressed) {
@@ -639,8 +638,7 @@ window.onload = wrap_img;
                     player.velocity.y -= 20;
                     break;
             }
-        });
-    };
+        })
 
     image.src = 'https://samayass.github.io/samayaCSA/images/platform.png';
 
