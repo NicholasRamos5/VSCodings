@@ -324,7 +324,7 @@ window.onload = wrap_img;
     }
 
     player = new Player();
-    const keys = {
+    let keys = {
         right: {
             pressed: false
         },
@@ -566,8 +566,8 @@ window.onload = wrap_img;
     }
 
     let image = new Image();
-        const platform = new Platform(image);
-        const keys1 = {
+        let platform = new Platform(image);
+        keys = {
             right: {
                 pressed: false
             },
@@ -583,9 +583,9 @@ window.onload = wrap_img;
             platform.draw();
             player1.update();
             
-            if (keys1.right.pressed) {
+            if (keys.right.pressed) {
                 player1.velocity.x = 5;
-            } else if (keys1.left.pressed) {
+            } else if (keys.left.pressed) {
                 player1.velocity.x = -5;
             } else {
                 player1.velocity.x = 0;
@@ -606,14 +606,14 @@ window.onload = wrap_img;
             switch (keyCode) {
                 case 65:
                     console.log('left');
-                    keys1.left.pressed = true;
+                    keys.left.pressed = true;
                     break;
                 case 83:
                     console.log('down');
                     break;
                 case 68:
                     console.log('right');
-                    keys1.right.pressed = true;
+                    keys.right.pressed = true;
                     break;
                 case 87:
                     console.log('up');
@@ -626,14 +626,14 @@ window.onload = wrap_img;
             switch (keyCode) {
                 case 65:
                     console.log('left');
-                    keys1.left.pressed = false;
+                    keys.left.pressed = false;
                     break;
                 case 83:
                     console.log('down');
                     break;
                 case 68:
                     console.log('right');
-                    keys1.right.pressed = false;
+                    keys.right.pressed = false;
                     break;
                 case 87:
                     console.log('up');
@@ -810,13 +810,12 @@ window.onload = wrap_img;
     c = document.getElementById('canvas2').getContext('2d');
     canvas.width = 770;
     canvas.height = 300;
-    player2 = new Player()
-    platform2 = new Platform()
+    let player2 = new Player()
     class Tube {
         constructor(image) {
             this.position = {
                 x: 50,
-                y: 1500
+                y: 150
             }
             this.image = image;
             this.width = 20;
@@ -827,10 +826,12 @@ window.onload = wrap_img;
         }
     }
 
-    let image = new Image();
-    let imageTube = new Image()
+    let imagePlat = new Image();
+    let imageTube = new Image();
+
+        let platform2 = new Platform(imagePlat)
         let tube = new Tube(imageTube);
-        const keys = {
+        keys = {
             right: {
                 pressed: false
             },
@@ -840,10 +841,11 @@ window.onload = wrap_img;
         };
 
         function animate2() {
-            requestAnimationFrame(animate1);
+            requestAnimationFrame(animate2);
             c.clearRect(0, 0, canvas.width, canvas.height);
             
             platform2.draw();
+            tube.draw();
             player2.update();
             
             if (keys.right.pressed) {
@@ -905,8 +907,8 @@ window.onload = wrap_img;
             }
         })
 
-    image.src = 'https://samayass.github.io/samayaCSA/images/platform.png'
-    image2.src = 'https://samayass.github.io/samayaCSA/images/platform.png'
+    imagePlat.src = 'https://samayass.github.io/samayaCSA/images/platform.png'
+    imageTube.src = 'https://NicholasRamos5.github.io/VSCodings/images/tube.png'
 
 </script>
 
