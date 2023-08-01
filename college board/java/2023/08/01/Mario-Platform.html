@@ -372,12 +372,12 @@ window.onload = wrap_img;
         }
     }
     if (
-                player1.position.y + player1.height <= platform.position.y &&
-                player1.position.y + player1.height + player1.velocity.y > platform.position.y &&
-                player1.position.x + player1.width >= platform.position.x &&
-                player1.position.x <= platform.position.x + platform.width
+                player.position.y + player.height <= platform.position.y &&
+                player.position.y + player.height + player.velocity.y > platform.position.y &&
+                player.position.x + player.width >= platform.position.x &&
+                player.position.x <= platform.position.x + platform.width
             ) {
-                player1.velocity.y = 0;
+                player.velocity.y = 0;
             }
 
     function animate() {
