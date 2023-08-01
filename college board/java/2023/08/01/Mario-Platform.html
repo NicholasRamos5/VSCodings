@@ -216,14 +216,6 @@ window.onload = wrap_img;
             <span class="nx">pressed</span><span class="o">:</span> <span class="kc">false</span>
         <span class="p">}</span>
     <span class="p">}</span>
-    <span class="k">if</span> <span class="p">(</span>
-                <span class="nx">player</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span> <span class="o">+</span> <span class="nx">player</span><span class="p">.</span><span class="nx">height</span> <span class="o">&lt;=</span> <span class="nx">platform</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span> <span class="o">&amp;&amp;</span>
-                <span class="nx">player</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span> <span class="o">+</span> <span class="nx">player</span><span class="p">.</span><span class="nx">height</span> <span class="o">+</span> <span class="nx">player</span><span class="p">.</span><span class="nx">velocity</span><span class="p">.</span><span class="nx">y</span> <span class="o">&gt;</span> <span class="nx">platform</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span> <span class="o">&amp;&amp;</span>
-                <span class="nx">player</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span> <span class="o">+</span> <span class="nx">player</span><span class="p">.</span><span class="nx">width</span> <span class="o">&gt;=</span> <span class="nx">platform</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span> <span class="o">&amp;&amp;</span>
-                <span class="nx">player</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span> <span class="o">&lt;=</span> <span class="nx">platform</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span> <span class="o">+</span> <span class="nx">platform</span><span class="p">.</span><span class="nx">width</span>
-            <span class="p">)</span> <span class="p">{</span>
-                <span class="nx">player</span><span class="p">.</span><span class="nx">velocity</span><span class="p">.</span><span class="nx">y</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
-            <span class="p">}</span>
 
     <span class="kd">function</span> <span class="nx">animate</span><span class="p">()</span> <span class="p">{</span>
         <span class="nx">requestAnimationFrame</span><span class="p">(</span><span class="nx">animate</span><span class="p">);</span>
@@ -239,6 +231,16 @@ window.onload = wrap_img;
         <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
             <span class="nx">player</span><span class="p">.</span><span class="nx">velocity</span><span class="p">.</span><span class="nx">x</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
         <span class="p">}</span>
+
+        <span class="k">if</span> <span class="p">(</span>
+                <span class="nx">player</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span> <span class="o">+</span> <span class="nx">player</span><span class="p">.</span><span class="nx">height</span> <span class="o">&lt;=</span> <span class="nx">platform</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span> <span class="o">&amp;&amp;</span>
+                <span class="nx">player</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span> <span class="o">+</span> <span class="nx">player</span><span class="p">.</span><span class="nx">height</span> <span class="o">+</span> <span class="nx">player</span><span class="p">.</span><span class="nx">velocity</span><span class="p">.</span><span class="nx">y</span> <span class="o">&gt;</span> <span class="nx">platform</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span> <span class="o">&amp;&amp;</span>
+                <span class="nx">player</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span> <span class="o">+</span> <span class="nx">player</span><span class="p">.</span><span class="nx">width</span> <span class="o">&gt;=</span> <span class="nx">platform</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span> <span class="o">&amp;&amp;</span>
+                <span class="nx">player</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span> <span class="o">&lt;=</span> <span class="nx">platform</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span> <span class="o">+</span> <span class="nx">platform</span><span class="p">.</span><span class="nx">width</span>
+            <span class="p">)</span> 
+            <span class="p">{</span>
+                <span class="nx">player</span><span class="p">.</span><span class="nx">velocity</span><span class="p">.</span><span class="nx">y</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+            <span class="p">}</span>
     <span class="p">}</span>
 
     <span class="nx">animate</span><span class="p">();</span>
