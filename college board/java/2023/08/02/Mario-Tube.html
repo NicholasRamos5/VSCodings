@@ -197,11 +197,11 @@ window.onload = wrap_img;
                 <span class="nx">y</span><span class="o">:</span> <span class="mf">200</span>
             <span class="p">}</span>
             <span class="k">this</span><span class="p">.</span><span class="nx">image</span> <span class="o">=</span> <span class="nx">image</span><span class="p">;</span>
-            <span class="k">this</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="mf">540</span><span class="p">;</span>
-            <span class="k">this</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="mf">160</span><span class="p">;</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="mf">770</span><span class="p">;</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="mf">100</span><span class="p">;</span>
         <span class="p">}</span>
         <span class="nx">draw</span><span class="p">()</span> <span class="p">{</span>
-            <span class="nx">c</span><span class="p">.</span><span class="nx">drawImage</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">image</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
+            <span class="nx">c</span><span class="p">.</span><span class="nx">drawImage</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">image</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">width</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">height</span><span class="p">);</span>
         <span class="p">}</span>
     <span class="p">}</span>
 
@@ -383,11 +383,11 @@ window.onload = wrap_img;
                 y: 200
             }
             this.image = image;
-            this.width = 540;
-            this.height = 160;
+            this.width = 770;
+            this.height = 100;
         }
         draw() {
-            c.drawImage(this.image, this.position.x, this.position.y);
+            c.drawImage(this.image, this.position.x, this.position.y, this.width, this.height);
         }
     }
 
