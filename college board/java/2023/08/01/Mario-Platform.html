@@ -147,14 +147,14 @@ window.onload = wrap_img;
 <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
     <span class="p">#</span><span class="nn">canvas</span> <span class="p">{</span>
         <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="kc">black</span><span class="p">;</span>
+        <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="kc">white</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">canvas</span> <span class="na">id</span><span class="o">=</span><span class="s">"canvas"</span><span class="p">&gt;&lt;/</span><span class="nt">canvas</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
     <span class="kd">let</span> <span class="nx">canvas</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'canvas'</span><span class="p">);</span>
     <span class="kd">let</span> <span class="nx">c</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="s1">'2d'</span><span class="p">);</span>
-    <span class="nx">canvas</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="mf">770</span><span class="p">;</span>
+    <span class="nx">canvas</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="mf">650</span><span class="p">;</span>
     <span class="nx">canvas</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="mf">300</span><span class="p">;</span>
 
     <span class="kd">let</span> <span class="nx">gravity</span> <span class="o">=</span> <span class="mf">1.5</span><span class="p">;</span>
@@ -304,14 +304,14 @@ window.onload = wrap_img;
 <style>
     #canvas {
         margin: 0;
-        border: 1px solid black;
+        border: 1px solid white;
     }
 </style>
 <canvas id="canvas"></canvas>
 <script>
     let canvas = document.getElementById('canvas');
     let c = canvas.getContext('2d');
-    canvas.width = 770;
+    canvas.width = 650;
     canvas.height = 300;
 
     let gravity = 1.5;
