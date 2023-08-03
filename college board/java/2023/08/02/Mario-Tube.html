@@ -468,8 +468,8 @@ window.onload = wrap_img;
             }
         
         if (
-                player.position.x <= tube.position.x &&
-                player.position.x + player.velocity.x >= tube.position.x &&
+                player.position.x + player.width<= tube.position.x &&
+                player.position.x + player.width + player.velocity.x >= tube.position.x &&
                 player.position.y + player.height >= tube.position.y &&
                 player.position.y <= tube.position.y + tube.height
             ) 
