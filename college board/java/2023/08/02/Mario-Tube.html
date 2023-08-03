@@ -270,6 +270,13 @@ window.onload = wrap_img;
                 <span class="nx">player</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span> <span class="o">+=</span> <span class="mf">0.1</span>
                 <span class="nx">player</span><span class="p">.</span><span class="nx">velocity</span><span class="p">.</span><span class="nx">y</span> <span class="o">=</span> <span class="mf">0.0001</span>
                 <span class="nx">gravity</span> <span class="o">=</span> <span class="mf">0.2</span>
+
+                <span class="k">if</span> <span class="p">(</span><span class="nx">player</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span> <span class="o">+</span> <span class="nx">player</span><span class="p">.</span><span class="nx">height</span> <span class="o">==</span> <span class="nx">tube</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span> <span class="o">+</span> <span class="nx">tube</span><span class="p">.</span><span class="nx">height</span> <span class="o">||</span>
+                    <span class="nx">player</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span> <span class="o">+</span> <span class="nx">player</span><span class="p">.</span><span class="nx">height</span> <span class="o">&lt;=</span> <span class="nx">tube</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span> <span class="o">||</span>
+                    <span class="nx">player</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span> <span class="o">+</span> <span class="nx">player</span><span class="p">.</span><span class="nx">width</span> <span class="o">&lt;=</span> <span class="nx">tube</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span> <span class="o">||</span>
+                    <span class="nx">player</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span> <span class="o">&gt;=</span> <span class="nx">tube</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span> <span class="o">+</span> <span class="nx">tube</span><span class="p">.</span><span class="nx">width</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="nx">gravity</span> <span class="o">=</span> <span class="mf">1.5</span>
+                    <span class="p">}</span>
                 
             <span class="p">}</span>
         
@@ -480,6 +487,13 @@ window.onload = wrap_img;
                 player.position.y += 0.1
                 player.velocity.y = 0.0001
                 gravity = 0.2
+
+                if (player.position.y + player.height == tube.position.y + tube.height ||
+                    player.position.y + player.height <= tube.position.y ||
+                    player.position.x + player.width <= tube.position.x ||
+                    player.position.x >= tube.position.x + tube.width) {
+                        gravity = 1.5
+                    }
                 
             }
         
