@@ -268,12 +268,12 @@ window.onload = wrap_img;
             <span class="p">)</span> 
             <span class="p">{</span>
                 <span class="nx">player</span><span class="p">.</span><span class="nx">velocity</span><span class="p">.</span><span class="nx">y</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
-                <span class="nx">gravity</span> <span class="o">=</span> <span class="mf">0.02</span>
                 <span class="nx">player</span><span class="p">.</span><span class="nx">velocity</span><span class="p">.</span><span class="nx">y</span> <span class="o">=</span> <span class="mf">0.0001</span>
-                
-                <span class="k">if</span> <span class="p">(</span><span class="nx">player</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span> <span class="o">+</span> <span class="nx">player</span><span class="p">.</span><span class="nx">height</span> <span class="o">==</span> <span class="nx">tube</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span> <span class="o">+</span> <span class="nx">tube</span><span class="p">.</span><span class="nx">height</span><span class="p">)</span> <span class="p">{</span>
-                    <span class="nx">gravity</span> <span class="o">=</span> <span class="mf">1.5</span>
+
+                <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="nx">player</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span> <span class="o">+</span> <span class="nx">player</span><span class="p">.</span><span class="nx">height</span> <span class="o">==</span> <span class="nx">tube</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span> <span class="o">+</span> <span class="nx">tube</span><span class="p">.</span><span class="nx">height</span><span class="p">))</span> <span class="p">{</span>
+                    <span class="nx">gravity</span> <span class="o">=</span> <span class="mf">0.02</span>
                 <span class="p">}</span>
+                <span class="nx">gravity</span> <span class="o">=</span> <span class="mf">1.5</span>
 
             <span class="p">}</span>
         
@@ -482,12 +482,12 @@ window.onload = wrap_img;
             ) 
             {
                 player.velocity.y = 0;
-                gravity = 0.02
                 player.velocity.y = 0.0001
-                
-                if (player.position.y + player.height == tube.position.y + tube.height) {
-                    gravity = 1.5
+
+                while (!(player.position.y + player.height == tube.position.y + tube.height)) {
+                    gravity = 0.02
                 }
+                gravity = 1.5
 
             }
         
