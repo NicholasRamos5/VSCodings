@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      3 min read
     
 </span></p>
 
@@ -299,6 +299,26 @@ window.onload = wrap_img;
                 <span class="nx">player</span><span class="p">.</span><span class="nx">velocity</span><span class="p">.</span><span class="nx">x</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
             <span class="p">}</span>
 
+        <span class="k">if</span> <span class="p">(</span>
+                <span class="nx">player</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span> <span class="o">&gt;=</span> <span class="nx">tube</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span> <span class="o">&amp;&amp;</span>
+                <span class="nx">player</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span> <span class="o">+</span> <span class="nx">player</span><span class="p">.</span><span class="nx">velocity</span><span class="p">.</span><span class="nx">x</span> <span class="o">&lt;=</span> <span class="nx">tube</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span> <span class="o">&amp;&amp;</span>
+                <span class="nx">player</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span> <span class="o">+</span> <span class="nx">player</span><span class="p">.</span><span class="nx">height</span> <span class="o">&gt;=</span> <span class="nx">tube</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span> <span class="o">&amp;&amp;</span>
+                <span class="nx">player</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span> <span class="o">&lt;=</span> <span class="nx">tube</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span> <span class="o">+</span> <span class="nx">tube</span><span class="p">.</span><span class="nx">height</span>
+            <span class="p">)</span> 
+            <span class="p">{</span>
+                <span class="nx">player</span><span class="p">.</span><span class="nx">velocity</span><span class="p">.</span><span class="nx">x</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+            <span class="p">}</span>
+
+        <span class="k">if</span> <span class="p">(</span>
+                <span class="nx">player</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span> <span class="o">+</span> <span class="nx">player</span><span class="p">.</span><span class="nx">width</span> <span class="o">&lt;=</span> <span class="nx">tube</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span> <span class="o">+</span> <span class="nx">tube</span><span class="p">.</span><span class="nx">width</span> <span class="o">&amp;&amp;</span>
+                <span class="nx">player</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span> <span class="o">+</span> <span class="nx">player</span><span class="p">.</span><span class="nx">width</span> <span class="o">+</span> <span class="nx">player</span><span class="p">.</span><span class="nx">velocity</span><span class="p">.</span><span class="nx">x</span> <span class="o">&gt;=</span> <span class="nx">tube</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">x</span> <span class="o">+</span> <span class="nx">tube</span><span class="p">.</span><span class="nx">width</span> <span class="o">&amp;&amp;</span>
+                <span class="nx">player</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span> <span class="o">+</span> <span class="nx">player</span><span class="p">.</span><span class="nx">height</span> <span class="o">&gt;=</span> <span class="nx">tube</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span> <span class="o">&amp;&amp;</span>
+                <span class="nx">player</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span> <span class="o">&lt;=</span> <span class="nx">tube</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span> <span class="o">+</span> <span class="nx">tube</span><span class="p">.</span><span class="nx">height</span>
+            <span class="p">)</span> 
+            <span class="p">{</span>
+                <span class="nx">player</span><span class="p">.</span><span class="nx">velocity</span><span class="p">.</span><span class="nx">x</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+            <span class="p">}</span>
+
     <span class="p">}</span>
 
     <span class="nx">animate</span><span class="p">();</span>
@@ -508,6 +528,26 @@ window.onload = wrap_img;
         if (
                 player.position.x >= tube.position.x + tube.width &&
                 player.position.x + player.velocity.x <= tube.position.x + tube.width &&
+                player.position.y + player.height >= tube.position.y &&
+                player.position.y <= tube.position.y + tube.height
+            ) 
+            {
+                player.velocity.x = 0;
+            }
+
+        if (
+                player.position.x >= tube.position.x &&
+                player.position.x + player.velocity.x <= tube.position.x &&
+                player.position.y + player.height >= tube.position.y &&
+                player.position.y <= tube.position.y + tube.height
+            ) 
+            {
+                player.velocity.x = 0;
+            }
+
+        if (
+                player.position.x + player.width <= tube.position.x + tube.width &&
+                player.position.x + player.width + player.velocity.x >= tube.position.x + tube.width &&
                 player.position.y + player.height >= tube.position.y &&
                 player.position.y <= tube.position.y + tube.height
             ) 
