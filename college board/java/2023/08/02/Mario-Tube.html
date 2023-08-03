@@ -268,6 +268,13 @@ window.onload = wrap_img;
             <span class="p">)</span> 
             <span class="p">{</span>
                 <span class="nx">player</span><span class="p">.</span><span class="nx">velocity</span><span class="p">.</span><span class="nx">y</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+                <span class="nx">gravity</span> <span class="o">=</span> <span class="mf">0.02</span>
+                <span class="nx">player</span><span class="p">.</span><span class="nx">velocity</span><span class="p">.</span><span class="nx">y</span> <span class="o">=</span> <span class="mf">0.0001</span>
+                
+                <span class="k">if</span> <span class="p">(</span><span class="nx">player</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span> <span class="o">+</span> <span class="nx">player</span><span class="p">.</span><span class="nx">height</span> <span class="o">==</span> <span class="nx">tube</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">y</span> <span class="o">+</span> <span class="nx">tube</span><span class="p">.</span><span class="nx">height</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">gravity</span> <span class="o">=</span> <span class="mf">1.5</span>
+                <span class="p">}</span>
+
             <span class="p">}</span>
         
         <span class="k">if</span> <span class="p">(</span>
