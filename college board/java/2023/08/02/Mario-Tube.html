@@ -486,15 +486,14 @@ window.onload = wrap_img;
                 player.position.y += 0.1
                 player.velocity.y = 0.0001
                 gravity = 0.2
-
-                if (player.position.y + player.height == tube.position.y + tube.height ||
+            }
+            if (player.position.y + player.height == tube.position.y + tube.height ||
                     player.position.y + player.height <= tube.position.y ||
                     player.position.x + player.width <= tube.position.x ||
                     player.position.x >= tube.position.x + tube.width) {
                         gravity = 1.5
                     }
                 
-            }
         
         if (
                 player.position.x + player.width<= tube.position.x &&
